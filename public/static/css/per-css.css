@@ -1,0 +1,31 @@
+.per-contain .per-login {
+  padding: 20px;
+  background: #e6e6e6; }
+.per-contain .level-name {
+  font-style: bold;
+  text-transform: uppercase; }
+.per-contain h1 {
+  text-align: center; }
+  .per-contain h1 .level-name {
+    color: #e20e2d; }
+.per-contain a {
+  cursor: pointer; }
+.per-contain input {
+  width: 100%;
+  margin-bottom: 1em;
+  font-size: 1.5em; }
+  .per-contain input[type=submit] {
+    margin-bottom: 0;
+    border: 1px solid #b20b23;
+    background: #e20e2d;
+    color: #fff;
+    font-weight: bold;
+    transition: background .4s;
+    -webkit-appearance: none; }
+    .per-contain input[type=submit]:hover {
+      background: #b20b23; }
+.per-contain label {
+  position: absolute;
+  left: -99999999em; }
+
+/*# sourceMappingURL=per-css.css.map */
