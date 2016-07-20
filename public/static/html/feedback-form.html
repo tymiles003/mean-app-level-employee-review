@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>LEVEL Performance Feedback Request</title>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="../css/feedback.css">
+	</head>
+	<body class="feedback">
+		<div class="container">
+			<form action="thankyou.html">
+				<header class="hero-header">
+					<h1><img class="center-block img-responsive" src="../img/performance_feedback.jpg" alt="LEVEL Performance Feedback Request" /></h1>
+					<p>Thank you for actively participating in the Performance Enablement Program! Please complete this form in it's entirety. Your response will remain confidential and only be shared with the Team Member's manager.</p>
+				</header>
+				<section>
+					<div class="form-group">
+						<label for="your-name">Your Name<sup>*</sup></label>
+						<div class="row">
+							<div class="col-xs-6">
+								<input type="text" class="form-control" name="firstname" placeholder="First Name" required>
+							</div>
+							<div class="col-xs-6">
+								<input type="text" class="form-control" name="lastname" placeholder="Last Name" required>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="team-member-name">Team Member Name<sup>*</sup></label>
+						<div class="row">
+							<div class="col-xs-6">
+								<input type="text" class="form-control" name="team-member-firstname" placeholder="First Name" required>
+							</div>
+							<div class="col-xs-6">
+								<input type="text" class="form-control" name="team-member-lastname" placeholder="Last Name" required>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="form-group">
+								<label for="feedback-month">Feedback Month<sup>*</sup></label>
+								<select class="form-control" name="feedback-month" id="feedback-month" required>
+									<option disabled selected>Please select a month</option>
+									<option value="April">April</option>
+									<option value="August">August</option>
+									<option value="December">December</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="form-group">
+								<label for="feedback-year">Feedback Year<sup>*</sup></label>
+								<select class="form-control" name="feedback-year" id="feedback-year" required>
+									<option disabled selected>Please select a year</option>
+									<option value="2015">2015</option>
+									<option value="2016">2016</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="form-horizontal">
+						<h5>RESULTS: This individual&hellip;</h5>
+						<div class="form-group">
+							<label for="results-improvement" class="col-sm-6 control-label">proactively finds opportunities for improvement</label>
+							<div class="col-sm-6">
+								<select class="form-control" name="results-improvement" id="results-improvement">
+									<option value="Please select a rating" disabled selected>Please select a rating</option>
+									<option value="Not at All">Not at All</option>
+									<option value="Sometimes">Sometimes</option>
+									<option value="Neutral">Neutral</option>
+									<option value="Often">Often</option>
+									<option value="Always">Always</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="results-excellence" class="col-sm-6 control-label">is committed to excellence</label>
+							<div class="col-sm-6">
+								<select class="form-control" name="results-excellence" id="results-excellence">
+									<option value="Please select a rating" disabled selected>Please select a rating</option>
+									<option value="Not at All">Not at All</option>
+									<option value="Sometimes">Sometimes</option>
+									<option value="Neutral">Neutral</option>
+									<option value="Often">Often</option>
+									<option value="Always">Always</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="results-detail" class="col-sm-6 control-label">is attentive to detail</label>
+							<div class="col-sm-6">
+								<select class="form-control" name="results-detail" id="results-detail">
+									<option value="Please select a rating" disabled selected>Please select a rating</option>
+									<option value="Not at All">Not at All</option>
+									<option value="Sometimes">Sometimes</option>
+									<option value="Neutral">Neutral</option>
+									<option value="Often">Often</option>
+									<option value="Always">Always</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="results-deadlines" class="col-sm-6 control-label">meets commitments and deadlines</label>
+							<div class="col-sm-6">
+								<select class="form-control" name="results-deadlines" id="results-deadlines">
+									<option value="Please select a rating" disabled selected>Please select a rating</option>
+									<option value="Not at All">Not at All</option>
+									<option value="Sometimes">Sometimes</option>
+									<option value="Neutral">Neutral</option>
+									<option value="Often">Often</option>
+									<option value="Always">Always</option>
+								</select>
+							</div>
+						</div>
+
+						<h5>EXPERTISE: This individual&hellip;</h5>
+						<div class="form-group">
+							<label for="expertise-role" class="col-sm-6 control-label">understands their role and responsibilities</label>
+							<div class="col-sm-6">
+								<select class="form-control" name="expertise-role" id="expertise-role">
+									<option value="Please select a rating" disabled selected>Please select a rating</option>
+									<option value="Not at All">Not at All</option>
+									<option value="Sometimes">Sometimes</option>
+									<option value="Neutral">Neutral</option>
+									<option value="Often">Often</option>
+									<option value="Always">Always</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="expertise-improve" class="col-sm-6 control-label">is regularly looking to improve their skills</label>
+							<div class="col-sm-6">
+								<select class="form-control" name="expertise-improve" id="expertise-improve">
+									<option value="Please select a rating" disabled selected>Please select a rating</option>
+									<option value="Not at All">Not at All</option>
+									<option value="Sometimes">Sometimes</option>
+									<option value="Neutral">Neutral</option>
+									<option value="Often">Often</option>
+									<option value="Always">Always</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="expertise-skills" class="col-sm-6 control-label">has the necessary skills &amp; experience for their role</label>
+							<div class="col-sm-6">
+								<select class="form-control" name="expertise-skills" id="expertise-skills">
+									<option value="Please select a rating" disabled selected>Please select a rating</option>
+									<option value="Not at All">Not at All</option>
+									<option value="Sometimes">Sometimes</option>
+									<option value="Neutral">Neutral</option>
+									<option value="Often">Often</option>
+									<option value="Always">Always</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="expertise-manages" class="col-sm-6 control-label">manages their work autonomously</label>
+							<div class="col-sm-6">
+								<select class="form-control" name="expertise-manages" id="expertise-manages">
+									<option value="Please select a rating" disabled selected>Please select a rating</option>
+									<option value="Not at All">Not at All</option>
+									<option value="Sometimes">Sometimes</option>
+									<option value="Neutral">Neutral</option>
+									<option value="Often">Often</option>
+									<option value="Always">Always</option>
+								</select>
+							</div>
+						</div>
+
+						<h5>COLLABORATION: This individual&hellip;</h5>
+						<div class="form-group">
+							<label for="collaboration-shares" class="col-sm-6 control-label">shares information and ideas</label>
+							<div class="col-sm-6">
+								<select class="form-control" name="collaboration-shares" id="collaboration-shares">
+									<option value="Please select a rating" disabled selected>Please select a rating</option>
+									<option value="Not at All">Not at All</option>
+									<option value="Sometimes">Sometimes</option>
+									<option value="Neutral">Neutral</option>
+									<option value="Often">Often</option>
+									<option value="Always">Always</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="collaboration-communicates" class="col-sm-6 control-label">communicates well, both in writing and verbally</label>
+							<div class="col-sm-6">
+								<select class="form-control" name="collaboration-communicates" id="collaboration-communicates">
+									<option value="Please select a rating" disabled selected>Please select a rating</option>
+									<option value="Not at All">Not at All</option>
+									<option value="Sometimes">Sometimes</option>
+									<option value="Neutral">Neutral</option>
+									<option value="Often">Often</option>
+									<option value="Always">Always</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="collaboration-embodies" class="col-sm-6 control-label">embodies purpose, hustle, passion, pride</label>
+							<div class="col-sm-6">
+								<select class="form-control" name="collaboration-embodies" id="collaboration-embodies">
+									<option value="Please select a rating" disabled selected>Please select a rating</option>
+									<option value="Not at All">Not at All</option>
+									<option value="Sometimes">Sometimes</option>
+									<option value="Neutral">Neutral</option>
+									<option value="Often">Often</option>
+									<option value="Always">Always</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="supporting-comments">Supporting Comments<sup>*</sup></label>
+						<textarea class="form-control" name="supporting-comments" id="supporting-comments" cols="30" rows="10" required></textarea>
+					</div>
+					<button class="btn btn-default center-block" type="submit">Submit</button>
+				</section>
+			</form>
+		</div>
+	</body>
+</html>
