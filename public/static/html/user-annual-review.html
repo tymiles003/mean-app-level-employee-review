@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Manager- Annual Performance Assesment</title>
-
+		<title>Annual Performance Assesment</title>
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 		<!-- Optional theme -->
@@ -13,13 +12,86 @@
 
 	<body>
 		<div class="container">
-			<section class="title jumbotron col-lg-12 text-center">
-				<h1>LEVEL</h1>
-				<h2>Annual Performacne Assesment</h2>
-				<h8>To be completed by the Manager</h8>
+			<header class="hero-header">
+				<h1><img class="center-block img-responsive" src="../img/Annual_Performance_Assessment.jpg" alt="LEVEL Performance Feedback Request" /></h1>
+			</header>
+			<section>
+				<form action="#" class="row">
+					<div class="form-group col-lg-6">
+						<label for="exampleInputEmail1">Full Name</label>
+						<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Last, First">
+					</div>
+					<div class="form-group col-lg-6">
+						<label for="exampleInputPassword1">Job Title</label>
+						<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Title">
+					</div>
+				</form>
+				<form action="#" class="row">
+					<div class="form-group col-lg-6">
+						<label for="exampleInputEmail1">Manager Name</label>
+						<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Last, First">
+					</div>
+					<div class="form-group col-lg-6">
+						<label for="exampleInputName2">Manager Email</label>
+						<input type="text" class="form-control" id="" placeholder="email">
+					</div>
+				</form>
+				<form action="#" class="row">
+					<div class="col-lg-6">
+						<div class="form-group">
+							<label for="feedback-year">Feedback Year</label>
+							<select class="form-control" name="feedback-year" id="feedback-year" required>
+								<option disabled selected>Please select a year</option>
+								<option value="2015">2015/2016</option>
+							</select>
+						</div>
+					</div>
+				</form>
+			</section>
+			<section>
+				<div class="process-flow">
+					<h3>Performance Enablement Process Flow</h3>
+					<img src="../img/processflow_gotham.png" class="img-responsive" alt="Responsive image" />
+				</div>
+				<div class="performance-standards">
+					<h3>Performance Standards</h3>
+					<p>The following standards are used in all phases of the Performance Enablement Program to guide and align Level Team Members in achieving their goals and growing their careers.</p>
+				</div>
+				<div class="row">
+					<div class="results col-lg-4">
+						<ul>
+							<h4>RESULTS</h4>
+							<li>Acts on opportunities</li>
+							<li>Committed to excellence</li>
+							<li>Attentive to detail</li>
+							<li>Meets commitments</li>
+						</ul>
+					</div>
+					<div class="experties col-lg-4">
+						<ul>
+							<h4>EXPERTISE</h4>
+							<li>Understands role</li>
+							<li>Seeks improvement</li>
+							<li>Has necessary skills</li>
+							<li>Manages tasks autonomously</li>
+						</ul>
+					</div>
+					<div class="collaboration col-lg-4">
+						<ul>
+							<h4>COLLABORATION</h4>
+							<li>Shares information and ideas</li>
+							<li>Embodies the Level Values</li>
+						</ul>
+					</div>
+				</div>
+				<div class="nine-box">
+					<p>The 9-box grid is an individual assessment tool that evaluates both a Team Member's current contribution to the Agency and his or her potential level of contribution to the Agency.</p>
+					<p>When selecting a rating, consider recent performance and the individuals growth and development in the three standards: Results, Expertise, and Collaboration.</p>
+					<!-- <img src="../img/9-box.jpg" class="img-responsive" alt="Responsive image" /> -->
+				</div>
 			</section>
 			<section class="assessment">
-				<p> Please list performance details outlining the accomplishments and growth opportunities for your Team Member this performance year based on the 3 standards below: results, expertise, and collaboration.</p>
+				<p> Please list details outlining your annual goal status', as well as your accomplishments and growth opportunities for this past performance year within the 3 standards below: results, expertise, and collaboration.</p>
 				<form>
 					<div class="form-group goal-status">
 						<label for="exampleInputEmail1">GOAL STATUS</label>
