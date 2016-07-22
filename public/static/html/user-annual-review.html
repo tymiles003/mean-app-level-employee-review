@@ -2,24 +2,17 @@
 <html>
 	<head>
 		<title>Annual Performance Assesment</title>
-
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-		<!-- Optional theme -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-		<!-- Latest compiled and minified JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<link rel="stylesheet" type="text/css" href="../css/annual-review.css">
 	</head>
-
-	<body>
+	<body class="annual-assesment">
 		<div class="container">
-			<section class="title jumbotron text-center">
-				<h1>LEVEL</h1>
-				<h2>Annual Performacne Assesment</h2>
-			</section>
-
+			<header class="hero-header">
+				<h1><img class="center-block img-responsive" src="../img/Annual_Performance_Assessment.jpg" alt="LEVEL Performance Feedback Request" /></h1>
+			</header>
 			<section>
-				<form class="row">
+				<form action="#" class="row">
 					<div class="form-group col-lg-6">
 						<label for="exampleInputEmail1">Full Name</label>
 						<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Last, First">
@@ -28,8 +21,8 @@
 						<label for="exampleInputPassword1">Job Title</label>
 						<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Title">
 					</div>
-				 </form>
-				 <form class="row">
+				</form>
+				<form action="#" class="row">
 					<div class="form-group col-lg-6">
 						<label for="exampleInputEmail1">Manager Name</label>
 						<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Last, First">
@@ -38,9 +31,9 @@
 						<label for="exampleInputName2">Manager Email</label>
 						<input type="text" class="form-control" id="" placeholder="email">
 					</div>
-				  </form>
-				  <form action="" class="row">
-			 		<div class="col-lg-6">
+				</form>
+				<form action="#" class="row">
+					<div class="col-lg-6">
 						<div class="form-group">
 							<label for="feedback-year">Feedback Year</label>
 							<select class="form-control" name="feedback-year" id="feedback-year" required>
@@ -49,17 +42,15 @@
 							</select>
 						</div>
 					</div>
-				  </form>
+				</form>
 			</section>
-
 			<section>
 				<div class="process-flow">
-					<h3>Performance Enablement Process Flow</h3>
-					<img src="../img/processflow_gotham.png" class="img-responsive" alt="Responsive image"></img>
+					<h3 class="text-center">Performance Enablement Process Flow</h3>
+					<img src="../img/processflow_gotham.png" class="img-responsive" alt="Responsive image" />
 				</div>
-
 				<div class="performance-standards">
-				<h3>Performance Standards</h3>
+					<h3 class="text-center">Performance Standards</h3>
 					<p>The following standards are used in all phases of the Performance Enablement Program to guide and align Level Team Members in achieving their goals and growing their careers.</p>
 				</div>
 				<div class="row">
@@ -81,7 +72,7 @@
 							<li>Manages tasks autonomously</li>
 						</ul>
 					</div>
-						<div class="collaboration col-lg-4">
+					<div class="collaboration col-lg-4">
 						<ul>
 							<h4>COLLABORATION</h4>
 							<li>Shares information and ideas</li>
@@ -89,12 +80,12 @@
 						</ul>
 					</div>
 				</div>
-				<div class="nine-box"></div>
+				<div class="nine-box">
 					<p>The 9-box grid is an individual assessment tool that evaluates both a Team Member's current contribution to the Agency and his or her potential level of contribution to the Agency.</p>
 					<p>When selecting a rating, consider recent performance and the individuals growth and development in the three standards: Results, Expertise, and Collaboration.</p>
-					<!-- <img src="../img/9-box.jpg" class="img-responsive" alt="Responsive image"> -->
+					<!-- <img src="../img/9-box.jpg" class="img-responsive" alt="Responsive image" /> -->
+				</div>
 			</section>
-
 			<section class="assessment">
 				<p> Please list details outlining your annual goal status', as well as your accomplishments and growth opportunities for this past performance year within the 3 standards below: results, expertise, and collaboration.</p>
 				<form>
@@ -158,5 +149,4 @@
 			</section>
 		</div>
 	</body>
-
 </html>
