@@ -1,3 +1,8 @@
 .annual-assesment .hero-header h1 {
 	border-bottom: 1px solid #e3e3e3;
 }
+
+.bordered {
+	height: 100px;
+	border: 1px solid black;
+}
