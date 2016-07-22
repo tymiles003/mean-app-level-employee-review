@@ -3,6 +3,12 @@
 }
 
 .bordered {
-	height: 100px;
+	height: 150px;
 	border: 1px solid black;
+}
+
+.radio {
+	position: absolute;
+	margin: 0 auto;
+	bottom: 15px;
 }
