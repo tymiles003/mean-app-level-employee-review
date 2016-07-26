@@ -10,11 +10,11 @@ angular.module('mean').config(['$routeProvider',
             controller: 'IndexController'
         }).
         when('/signup', {
-            templateUrl: 'views/signup.html',
+            templateUrl: 'views/example-signup.html',
             controller: 'AuthenticationController'
         }).
         when('/signin', {
-            templateUrl: 'views/signin.html',
+            templateUrl: 'views/example-signin.html',
             controller: 'AuthenticationController'
         }).
         otherwise({
