@@ -18,16 +18,16 @@ angular.module('sugarsnaps').config(['$routeProvider',
         //     controller: 'AuthenticationController'
         // })
         .when('/register', {
-            templateUrl: 'views/register.html',
+            templateUrl: 'views/register-view.html',
             controller: 'RegisterCtrl'
         })
         .when('/login', {
-            templateUrl: 'views/login.html',
+            templateUrl: 'views/login-view.html',
             // controller: 'LogInCtrl'
         })
         .when('/dash-test', {
-            templateUrl: 'views/dash-test.html',
-            controller: 'RegisterCtrl'
+            templateUrl: 'views/dash-test-view.html',
+            controller: 'DashCtrl'
         })
         .otherwise({
             redirectTo: '/'
