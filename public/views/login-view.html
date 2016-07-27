@@ -2,7 +2,7 @@
 	<h1>LOG IN!!!</h1>
 </div>
 <div class="col-xs-offset-2 col-xs-8 col-md-offset-5 col-md-2">
-	<form data-ng-submit="register()" class="register form-horizontal" novalidate autocomplete="off">
+	<form data-ng-submit="logIn()" class="register form-horizontal" novalidate autocomplete="off">
 		<fieldset>
 			<div class="form-group">
 				<label for="email">Email</label>
@@ -13,7 +13,7 @@
 				<input type="password" id="password" name="password" class="form-control" data-ng-model="credentials.password" placeholder="Password">
 			</div>
 			<div class="text-center form-group">
-				<a href="/#!/login" class="show-signup">Log in</a>
+				<button type="submit" class="btn btn-primary">Log In</button>
 			</div>
 			<div data-ng-show="error" class="text-center text-danger">
 				<strong>{{error}}</strong>
