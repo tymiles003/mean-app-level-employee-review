@@ -7,16 +7,8 @@ angular.module('sugarsnaps').config(['$routeProvider',
         $routeProvider
         .when('/', {
             templateUrl: 'views/index.html',
-            // controller: 'IndexController'
+            controller: 'IndexController'
         })
-        // .when('/signup', {
-        //     templateUrl: 'views/example-signup.html',
-        //     controller: 'AuthenticationController'
-        // })
-        // .when('/signin', {
-        //     templateUrl: 'views/example-signin.html',
-        //     controller: 'AuthenticationController'
-        // })
         .when('/register', {
             templateUrl: 'views/register-view.html',
             controller: 'RegisterCtrl'
