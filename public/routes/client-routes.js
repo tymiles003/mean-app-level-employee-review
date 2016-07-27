@@ -7,7 +7,7 @@ angular.module('sugarsnaps').config(['$routeProvider',
         $routeProvider
         .when('/', {
             templateUrl: 'views/index.html',
-            controller: 'IndexController'
+            // controller: 'IndexController'
         })
         // .when('/signup', {
         //     templateUrl: 'views/example-signup.html',
@@ -23,11 +23,11 @@ angular.module('sugarsnaps').config(['$routeProvider',
         })
         .when('/login', {
             templateUrl: 'views/login.html',
-            controller: 'LogInCtrl'
+            // controller: 'LogInCtrl'
         })
-        .when('/dashTest', {
-            templateUrl: 'views/dashTest.html',
-            controller: 'DashTestCtrl'
+        .when('/dash-test', {
+            templateUrl: 'views/dash-test.html',
+            controller: 'RegisterCtrl'
         })
         .otherwise({
             redirectTo: '/'
