@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<title>LEVEL Project SugarSnaps</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+  	</head>
+  	<body>
+  		<h3 class="text-center">Example LEVEL Project SugarSnaps: based on <a href="https://github.com/meanjs/mean-simple-auth" target="_blank"> meanjs / mean-simple-auth </a>
+  		 </h3>
+  		<section ng-view></section>
+
+		<script>
+			window.user = <%- user || 'null' %>;
+		</script>
+
+		<!-- Ang Library Files - TODO: Upgrade this version to 1.5 and/or put this in package.json instead -->
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.js"></script>
+
+		<!-- Ang Main Module File -->
+		<!--<script src="client-app.js"></script>-->
+		<script src="example-client-app.js"></script>
+
+		<!-- Ang Controllers -->
+		<script src="controllers/example-auth-client-controller.js"></script>
+		<script src="controllers/example-index-client-controller.js"></script>
+
+		<!-- Ang Services File -->
+		<script src="services/example-auth-client-service.js"></script>
+
+		<!-- Ang Routing file -->
+		<script src="routes/client-routes.js"></script>
+		<!--<script src="routes/example-client-routes.js"></script>-->
+
+  	</body>
+</html>

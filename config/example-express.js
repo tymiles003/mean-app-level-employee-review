@@ -12,9 +12,9 @@ module.exports = function() {
     // Init express application
     var app = express();
 
-    // Configure server models
-    require('../app/models/user-server-model');
-
+    // Configure models
+    require('../app/models/user.server.model');
+		
 	// Enable logger (morgan)
     app.use(morgan('dev'));
 
@@ -34,14 +34,14 @@ module.exports = function() {
     // Connect flash for flash messages
     app.use(flash());
 
-    // Init Passport
+    // Init Passport 
     app.use(passport.initialize());
     app.use(passport.session());
 
     // Configure routing
-    require('../app/routes/index-server-routes')(app);
-    require('../app/routes/users-server-routes')(app);
-
+    require('../app/routes/index.server.routes')(app);
+    require('../app/routes/users.server.routes')(app);
+	
 	// Setting the app router and static folder
 	app.use(express.static(path.resolve('./public')));
 
