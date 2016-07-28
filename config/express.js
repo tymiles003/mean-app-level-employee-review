@@ -14,6 +14,8 @@ module.exports = function() {
 
     // Configure server models
     require('../app/models/user-server-model');
+    require('../app/models/employee-server-model');
+
 
 	// Enable logger (morgan)
     app.use(morgan('dev'));
