@@ -6,8 +6,8 @@ angular.module('sugarsnaps').config(['$routeProvider',
         // Application routing definition
         $routeProvider
         .when('/', {
-            templateUrl: 'views/index.html',
-            controller: 'IndexController'
+            templateUrl: 'views/index.html'
+            //controller: 'IndexController'
         })
         .when('/register', {
             templateUrl: 'views/register-view.html',
