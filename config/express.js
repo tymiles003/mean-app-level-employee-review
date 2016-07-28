@@ -15,6 +15,9 @@ module.exports = function() {
     // Configure server models
     require('../app/models/user-server-model');
     require('../app/models/employee-server-model');
+    require('../app/models/goal-server-model');
+    require('../app/models/peer-feedback-server-model');
+    require('../app/models/review-server-model');
 
 
 	// Enable logger (morgan)
@@ -40,7 +43,7 @@ module.exports = function() {
     app.use(passport.initialize());
     app.use(passport.session());
 
-    // Configure routing
+    // Configure server-side routing
     require('../app/routes/index-server-routes')(app);
     require('../app/routes/users-server-routes')(app);
 
