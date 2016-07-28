@@ -3,13 +3,13 @@
 // Define the main angular application module name
 var mainAppModuleName = 'sugarsnaps';
 
-// Define the main angular application module 
+// Define the main angular application module
 var mainAppModule = angular.module(mainAppModuleName, ['ngRoute']);
 
 //Configure application hashbang routing
 mainAppModule.config(['$locationProvider',
    function($locationProvider) {
-       $locationProvider.hashPrefix('!');
+       //$locationProvider.hashPrefix('!');
    }
 ]);
 

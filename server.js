@@ -4,7 +4,8 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 var mongoose = require('mongoose');
 
 // Configure Mongoose
-var db = mongoose.connect('mongodb://localhost/mean-passport');
+//var db = mongoose.connect('mongodb://localhost/mean-passport');
+var db = mongoose.connect('mongodb://localhost/sugarsnaps1');
 
 // Configure Express
 var express = require('./config/express');
