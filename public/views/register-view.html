@@ -2,31 +2,43 @@
 	<h1>SugarSnaps Register</h1>
 </div>
 <div class="col-xs-offset-2 col-xs-8 col-md-offset-5 col-md-2">
-<<<<<<< HEAD
 	<form name="regForm" ng-submit="register()" class="register form-horizontal" novalidate autocomplete="off">
 		<fieldset>
-			<div class="form-group" ng-class="{ 'has-error' : regForm.firsName.$invalid && !regForm.firsName.$pristine }">
+			<div class="form-group">
 				<label for="first-name">First Name</label>
 				<input type="text" id="first-name" name="firstName" class="form-control" ng-model="formInfo.firstname"  placeholder="First Name" required>
-				<div ng-messages="regForm.firstName.$error" ng-if="regForm.firstName.$dirty">
+				<div ng-messages="regForm.firstName.$error" ng-if="regForm.firstName.$touched">
 					 <div ng-message="required">This field is required</div>
 				</div>
 			</div>
 			<div class="form-group">
 				<label for="last-name">Last Name</label>
-				<input type="text" id="last-name" name="last-name" class="form-control" ng-model="formInfo.lastName" placeholder="Last Name">
+				<input type="text" id="last-name" name="lastName" class="form-control" ng-model="formInfo.lastName" placeholder="Last Name" required>
+				<div ng-messages="regForm.lastName.$error" ng-if="regForm.lastName.$touched">
+					 <div ng-message="required">This field is required</div>
+				</div>
 			</div>
 			<div class="form-group">
 				<label for="email">Email</label>
-				<input type="text" id="email" name="email" class="form-control" ng-model="formInfo.email" placeholder="Email">
+				<input type="text" id="email" name="email" class="form-control" ng-model="formInfo.email" placeholder="Email" required>
+				<div ng-messages="regForm.email.$error" ng-if="regForm.email.$touched">
+					 <div ng-message="required">This field is required</div>
+					 <!-- <div ng-message="email">Your email address is invalid</div> -->
+				</div>
 			</div>
 			<div class="form-group">
-				<label for="lion-login">Lion Login</label>
-				<input type="text" id="lion-login" name="lion-login" class="form-control" ng-model="formInfo.lionLogin" placeholder="Lion Login">
+				<label for="lion-login">Lion Log In</label>
+				<input type="text" id="lion-login" name="lionLogin" class="form-control" ng-model="formInfo.lionLogin" placeholder="lionLogin" required>
+				<div ng-messages="regForm.lionLogin.$error" ng-if="regForm.lionLogin.$touched">
+					 <div ng-message="required">This field is required</div>
+				</div>
 			</div>
 			<div class="form-group">
 				<label for="password">Password</label>
-				<input type="password" id="password" name="password" class="form-control" ng-model="formInfo.password" placeholder="Password">
+				<input type="password" id="password" name="password" class="form-control" ng-model="formInfo.password" placeholder="Password" required>
+				<div ng-messages="regForm.password.$error" ng-if="regForm.password.$touched">
+					 <div ng-message="required">This field is required</div>
+				</div>
 			</div>
 			<div class="text-center form-group">
 				<button class="btn btn-default center-block" type="submit">Register</button>
