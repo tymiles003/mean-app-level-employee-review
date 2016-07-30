@@ -15,7 +15,7 @@ angular.module('sugarsnaps').config(['$routeProvider',
         })
         .when('/login', {
             templateUrl: 'views/login-view.html',
-            // controller: 'LogInCtrl'
+            controller: 'LogInCtrl'
         })
         .when('/dash-test', {
             templateUrl: 'views/dash-test-view.html',

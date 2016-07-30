@@ -4,7 +4,7 @@
 var mainAppModuleName = 'sugarsnaps';
 
 // Define the main angular application module
-var mainAppModule = angular.module(mainAppModuleName, ['ngRoute']);
+var mainAppModule = angular.module(mainAppModuleName, ['ngRoute', 'ngMessages']);
 
 //Configure application hashbang routing
 mainAppModule.config(['$locationProvider',
