@@ -1,10 +1,10 @@
+@import "shared/base/colors";
+@import "shared/base/typography";
+
 @import "shared/abstracts/variables";
 @import "shared/abstracts/functions";
 @import "shared/abstracts/mixins";
 @import "shared/abstracts/placeholders";
-
-@import "shared/base/typography";
-@import "shared/base/colors";
 
 @import "shared/components/buttons";
 @import "shared/components/dropdown";

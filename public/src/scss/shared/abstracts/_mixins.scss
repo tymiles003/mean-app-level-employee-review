@@ -1,1 +1,49 @@
 // mixins
+@mixin button {
+	width: 250px;
+	padding: 16px 0;
+	border: 1px solid $red;
+	border-radius: 0;
+	background: $red;
+
+	&:hover {
+		border: 1px solid lighten($red, 10%);
+		background: lighten($red, 10%);
+	}
+
+	&:focus {
+		border: 1px solid $red;
+		background: $red;
+		-webkit-box-shadow: 0 0 1em $dark-grey;
+		-moz-box-shadow: 0 0 1em $dark-grey;
+		box-shadow: 0 0 1em $dark-grey;
+		outline: none;
+	}
+
+	&:active,
+	&:active:hover,
+	&:active:focus {
+		border: 1px solid $dark-grey;
+		background: $dark-grey;
+		outline: none;
+		box-shadow: none;
+	}
+
+	&.btn-alt {
+		border: 1px solid $grey;
+		background: $white;
+
+		&:focus {
+			-webkit-box-shadow: 0 0 1em $dark-grey;
+			-moz-box-shadow: 0 0 1em $dark-grey;
+			box-shadow: 0 0 1em $dark-grey;
+		}
+
+		&:active,
+		&:active:hover,
+		&:active:focus {
+			background: $lightest-grey;
+			box-shadow: none;
+		}
+	}
+}

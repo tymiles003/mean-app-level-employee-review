@@ -1,1 +1,20 @@
 // buttons
+.buttons {
+	text-align: center;
+}
+
+.btn {
+	@include button;
+}
+
+.btn ~ .btn {
+	display: block;
+	margin: 16px auto;
+}
+
+@media (min-width: 700px) {
+	.btn ~ .btn {
+		display: inline-block;
+		margin-left: 16px;
+	}
+}

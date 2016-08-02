@@ -8,17 +8,139 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="/built/styles/main.css">
 		<link rel="stylesheet" type="text/css" href="/built/styles/feedback.css">
+		<style>
+			@font-face {
+				font-family: gotham;
+				src: url(/assets/fonts/Gotham-Book.otf);
+				font-weight: 600;
+			}
+
+			@font-face {
+				font-family: gotham;
+				src: url(/assets/fonts/Gotham-Medium.otf);
+				font-weight: normal;
+				font-style: normal;
+			}
+
+			@font-face {
+				font-family: gotham;
+				src: url(/assets/fonts/Gotham-Bold.otf);
+				font-weight: bold;
+				font-style: normal;
+			}
+		</style>
 	</head>
 	<body class="feedback">
 		<div class="container">
 			<form action="dashboard.html">
+
+				<label class="rating-radio" style="display: none;">First radio
+					<input type="radio" name="radio">
+					<div class="rating-indicator"><div></div></div>
+				</label>
+
+				<div class="row container rating-9-box" style="display: none;">
+					<div class="horizontal-subheaders">
+						<div class="col-md-4 ratings-subheader">Limited performance</div>
+						<div class="col-md-4 ratings-subheader">Target performance</div>
+						<div class="col-md-4 ratings-subheader">High performance</div>
+					</div>
+					<div class="vertical-subheaders">
+						<div class="col-md-4 ratings-subheader">Limited potential</div>
+						<div class="col-md-4 ratings-subheader">Target potential</div>
+						<div class="col-md-4 ratings-subheader">High potential</div>
+					</div>
+					<div class="rating col-xs-12 col-md-4 box-04">
+						Capable of role expansion. Identify challeneges and begin mentoring and coaching more closely.
+						<div class="rating-wrapper">
+							<label class="rating-radio">1
+								<input type="radio" name="radio">
+								<div class="rating-indicator"><div></div></div>
+							</label>
+						</div>
+					</div>
+					<div class="rating col-xs-12 col-md-4 box-02">
+						Solid performance with potential for more responsibility.
+						<div class="rating-wrapper">
+							<label class="rating-radio">1
+								<input type="radio" name="radio">
+								<div class="rating-indicator"><div></div></div>
+							</label>
+						</div>
+					</div>
+					<div class="rating col-xs-12 col-md-4 box-01">
+						Consistent, self motivated high-performer and problem solver. prepare for the next level.
+						<div class="rating-wrapper">
+							<label class="rating-radio">1
+								<input type="radio" name="radio">
+								<div class="rating-indicator"><div></div></div>
+							</label>
+						</div>
+					</div>
+					<div class="rating col-xs-12 col-md-4 box-07">
+						Set a coaching plan to progress within current role. Focus on strech goals.
+						<div class="rating-wrapper">
+							<label class="rating-radio">1
+								<input type="radio" name="radio">
+								<div class="rating-indicator"><div></div></div>
+							</label>
+						</div>
+					</div>
+					<div class="rating col-xs-12 col-md-4 box-05">
+						Consider for additional role responsibility. Coaching and mentorship to drive motivation.
+						<div class="rating-wrapper">
+							<label class="rating-radio">1
+								<input type="radio" name="radio">
+								<div class="rating-indicator"><div></div></div>
+							</label>
+						</div>
+					</div>
+					<div class="rating col-xs-12 col-md-4 box-03">
+						Current role may have growth opportunities. Focus on strategic thinking and leadership opportunities.
+						<div class="rating-wrapper">
+							<label class="rating-radio">1
+								<input type="radio" name="radio">
+								<div class="rating-indicator"><div></div></div>
+							</label>
+						</div>
+					</div>
+					<div class="rating col-xs-12 col-md-4 box-09">
+						Low performance with little to no motivators. Consider disciplinary action.
+						<div class="rating-wrapper">
+							<label class="rating-radio">1
+								<input type="radio" name="radio">
+								<div class="rating-indicator"><div></div></div>
+							</label>
+						</div>
+					</div>
+					<div class="rating col-xs-12 col-md-4 box-08">
+						Effective performer who may have reached career potential. Focus on innovation.
+						<div class="rating-wrapper">
+							<label class="rating-radio">1
+								<input type="radio" name="radio">
+								<div class="rating-indicator"><div></div></div>
+							</label>
+						</div>
+					</div>
+					<div class="rating col-xs-12 col-md-4 box-06">
+						Experienced high-performer and valuable Team Member. Develop communication skills for success in the current role.
+						<div class="rating-wrapper">
+							<label class="rating-radio">1
+								<input type="radio" name="radio">
+								<div class="rating-indicator"><div></div></div>
+							</label>
+						</div>
+					</div>
+				</div>
+
 				<header class="hero-header">
 					<h1><img class="center-block img-responsive" src="../img/performance_feedback.jpg" alt="LEVEL Performance Feedback Request" /></h1>
 					<p>Thank you for actively participating in the Performance Enablement Program! Please complete this form in it's entirety. Your response will remain confidential and only be shared with the Team Member's manager.</p>
 				</header>
 				<section>
-					<div class="form-group">
-						<label for="your-name">Your Name<sup>*</sup></label>
+					<div class="form-group section">
+						<!-- <h2 class="section-header">Reviewer Details</h2> -->
+						<label for="your-name">Your Name<span class="required">*</span></label>
 						<div class="row">
 							<div class="col-xs-6">
 								<input type="text" class="form-control" name="firstname" placeholder="First Name" required>
@@ -28,8 +150,8 @@
 							</div>
 						</div>
 					</div>
-					<div class="form-group">
-						<label for="team-member-name">Team Member Name<sup>*</sup></label>
+					<div class="form-group section">
+						<label for="team-member-name">Team Member Name<span class="required">*</span></label>
 						<div class="row">
 							<div class="col-xs-6">
 								<input type="text" class="form-control" name="team-member-firstname" placeholder="First Name" required>
@@ -39,33 +161,35 @@
 							</div>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-xs-6">
-							<div class="form-group">
-								<label for="feedback-month">Feedback Month<sup>*</sup></label>
-								<select class="form-control" name="feedback-month" id="feedback-month" required>
-									<option value="-1">Please select a month</option>
-									<option value="1">April</option>
-									<option value="2">August</option>
-									<option value="3">December</option>
-								</select>
+					<div class="clearfix section">
+						<div class="row">
+							<div class="col-xs-6">
+								<div class="form-group">
+									<label for="feedback-month">Feedback Month<span class="required">*</span></label>
+									<select class="form-control" name="feedback-month" id="feedback-month" required>
+										<option value="-1">Please select a month</option>
+										<option value="1">April</option>
+										<option value="2">August</option>
+										<option value="3">December</option>
+									</select>
+								</div>
 							</div>
-						</div>
-						<div class="col-xs-6">
-							<div class="form-group">
-								<label for="feedback-year">Feedback Year<sup>*</sup></label>
-								<select class="form-control" name="feedback-year" id="feedback-year" required>
-									<option value="-1">Please select a year</option>
-									<option value="1">2015</option>
-									<option value="2">2016</option>
-								</select>
+							<div class="col-xs-6">
+								<div class="form-group">
+									<label for="feedback-year">Feedback Year<span class="required">*</span></label>
+									<select class="form-control" name="feedback-year" id="feedback-year" required>
+										<option value="-1">Please select a year</option>
+										<option value="1">2015</option>
+										<option value="2">2016</option>
+									</select>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="form-horizontal">
-						<h5>RESULTS: This individual&hellip;</h5>
+					<div class="form-horizontal ratings">
+						<h3 class="subsection-header">Results</h3>
 						<div class="form-group">
-							<label for="results-improvement" class="col-sm-6 control-label">proactively finds opportunities for improvement</label>
+							<label for="results-improvement" class="col-sm-6 control-label">This individual proactively finds opportunities for improvement</label>
 							<div class="col-sm-6">
 								<select class="form-control" name="results-improvement" id="results-improvement">
 									<option value="-1">Please select a rating</option>
@@ -78,7 +202,7 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="results-excellence" class="col-sm-6 control-label">is committed to excellence</label>
+							<label for="results-excellence" class="col-sm-6 control-label">This individual is committed to excellence</label>
 							<div class="col-sm-6">
 								<select class="form-control" name="results-excellence" id="results-excellence">
 									<option value="-1">Please select a rating</option>
@@ -91,7 +215,7 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="results-detail" class="col-sm-6 control-label">is attentive to detail</label>
+							<label for="results-detail" class="col-sm-6 control-label">This individual is attentive to detail</label>
 							<div class="col-sm-6">
 								<select class="form-control" name="results-detail" id="results-detail">
 									<option value="-1">Please select a rating</option>
@@ -104,7 +228,7 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="results-deadlines" class="col-sm-6 control-label">meets commitments and deadlines</label>
+							<label for="results-deadlines" class="col-sm-6 control-label">This individual meets commitments and deadlines</label>
 							<div class="col-sm-6">
 								<select class="form-control" name="results-deadlines" id="results-deadlines">
 									<option value="-1">Please select a rating</option>
@@ -117,9 +241,9 @@
 							</div>
 						</div>
 
-						<h5>EXPERTISE: This individual&hellip;</h5>
+						<h3 class="subsection-header">Expertise</h3>
 						<div class="form-group">
-							<label for="expertise-role" class="col-sm-6 control-label">understands their role and responsibilities</label>
+							<label for="expertise-role" class="col-sm-6 control-label">This individual understands their role and responsibilities</label>
 							<div class="col-sm-6">
 								<select class="form-control" name="expertise-role" id="expertise-role">
 									<option value="-1">Please select a rating</option>
@@ -132,7 +256,7 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="expertise-improve" class="col-sm-6 control-label">is regularly looking to improve their skills</label>
+							<label for="expertise-improve" class="col-sm-6 control-label">This individual is regularly looking to improve their skills</label>
 							<div class="col-sm-6">
 								<select class="form-control" name="expertise-improve" id="expertise-improve">
 									<option value="-1">Please select a rating</option>
@@ -145,7 +269,7 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="expertise-skills" class="col-sm-6 control-label">has the necessary skills &amp; experience for their role</label>
+							<label for="expertise-skills" class="col-sm-6 control-label">This individual has the necessary skills &amp; experience for their role</label>
 							<div class="col-sm-6">
 								<select class="form-control" name="expertise-skills" id="expertise-skills">
 									<option value="-1">Please select a rating</option>
@@ -158,7 +282,7 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="expertise-manages" class="col-sm-6 control-label">manages their work autonomously</label>
+							<label for="expertise-manages" class="col-sm-6 control-label">This individual manages their work autonomously</label>
 							<div class="col-sm-6">
 								<select class="form-control" name="expertise-manages" id="expertise-manages">
 									<option value="-1">Please select a rating</option>
@@ -171,9 +295,9 @@
 							</div>
 						</div>
 
-						<h5>COLLABORATION: This individual&hellip;</h5>
+						<h3 class="subsection-header">Collaboration</h3>
 						<div class="form-group">
-							<label for="collaboration-shares" class="col-sm-6 control-label">shares information and ideas</label>
+							<label for="collaboration-shares" class="col-sm-6 control-label">This individual shares information and ideas</label>
 							<div class="col-sm-6">
 								<select class="form-control" name="collaboration-shares" id="collaboration-shares">
 									<option value="-1">Please select a rating</option>
@@ -186,7 +310,7 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="collaboration-communicates" class="col-sm-6 control-label">communicates well, both in writing and verbally</label>
+							<label for="collaboration-communicates" class="col-sm-6 control-label">This individual communicates well, both in writing and verbally</label>
 							<div class="col-sm-6">
 								<select class="form-control" name="collaboration-communicates" id="collaboration-communicates">
 									<option value="-1">Please select a rating</option>
@@ -199,7 +323,7 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="collaboration-embodies" class="col-sm-6 control-label">embodies purpose, hustle, passion, pride</label>
+							<label for="collaboration-embodies" class="col-sm-6 control-label">This individual embodies purpose, hustle, passion, pride</label>
 							<div class="col-sm-6">
 								<select class="form-control" name="collaboration-embodies" id="collaboration-embodies">
 									<option value="-1">Please select a rating</option>
@@ -213,11 +337,14 @@
 						</div>
 					</div>
 
-					<div class="form-group">
-						<label for="supporting-comments">Supporting Comments<sup>*</sup></label>
+					<div class="form-group section">
+						<label for="supporting-comments">Supporting Comments<span class="required">*</span></label>
 						<textarea class="form-control" name="supporting-comments" id="supporting-comments" cols="30" rows="10" required></textarea>
 					</div>
-					<button class="btn btn-default center-block" type="submit">Submit</button>
+					<div class="section section-last center-block buttons">
+						<button class="btn btn-alt" type="submit">Save form</button>
+						<button class="btn btn-default" type="submit">Submit form</button>
+					</div>
 				</section>
 			</form>
 		</div>

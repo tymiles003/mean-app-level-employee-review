@@ -1,1 +1,136 @@
 // typography
+$body-copy: "Gotham", sans-serif;
+
+body {
+	font-family: $body-copy;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 20px;
+	color: $dark-grey;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	font-style: normal;
+}
+
+label {
+	font-weight: normal;
+	font-style: normal;
+	color: $grey;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	color: $light-grey !important;
+}
+input::-moz-placeholder { /* Firefox 19+ */
+	color: $light-grey !important;
+}
+input:-ms-input-placeholder { /* IE 10+ */
+	color: $light-grey !important;
+}
+input:-moz-placeholder { /* Firefox 18- */
+	color: $light-grey !important;
+}
+
+.form-control {
+	font-size: 16px;
+	line-height: 20px;
+	letter-spacing: 1px;
+	color: $dark-grey;
+	border: 1px solid $light-grey;
+}
+
+.ratings-subheader {
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 22px;
+	letter-spacing: 1px;
+	color: $dark-grey;
+	text-transform: uppercase;
+}
+
+.required {
+	color: $red;
+}
+
+.section-header {
+	font-size: 24px;
+	line-height: 30px;
+	letter-spacing: 2px;
+	color: $white;
+	text-transform: uppercase;
+}
+
+.subsection-header {
+	font-size: 36px;
+	font-weight: bold;
+	line-height: 44px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.ratings {
+	.control-label {
+		text-transform: none;
+		text-align: left;
+	}
+}
+
+.validation-error {
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 18px;
+	letter-spacing: 1px;
+	color: $white;
+	background: $red;
+	padding: 4px 8px;
+}
+
+.alert {
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 22px;
+	color: $white;
+	padding: 8px;
+	background: $orange;
+	border-radius: 0;
+}
+
+.btn-default {
+	font-size: 12px;
+	line-height: 15px;
+	font-weight: normal;
+	font-style: normal;
+	color: $white;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+
+	&:hover,
+	&:focus,
+	&:active,
+	&:active:hover,
+	&:active:focus {
+		color: $white;
+	}
+}
+
+.btn-alt {
+	font-size: 12px;
+	line-height: 15px;
+	font-weight: normal;
+	font-style: normal;
+	color: $grey;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+
+	&:hover,
+	&:focus,
+	&:active,
+	&:active:hover,
+	&:active:focus {
+		color: $red;
+	}
+}
