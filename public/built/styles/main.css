@@ -1,0 +1,279 @@
+body {
+  font-family: "Gotham", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  color: #252525; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-style: normal; }
+
+label {
+  font-weight: normal;
+  font-style: normal;
+  color: #727272;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+
+input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #b5b5b5 !important; }
+
+input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #b5b5b5 !important; }
+
+input:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #b5b5b5 !important; }
+
+input:-moz-placeholder {
+  /* Firefox 18- */
+  color: #b5b5b5 !important; }
+
+.form-control {
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 1px;
+  color: #252525;
+  border: 1px solid #b5b5b5; }
+
+.ratings-subheader {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 22px;
+  letter-spacing: 1px;
+  color: #252525;
+  text-transform: uppercase; }
+
+.required {
+  color: #cd1421; }
+
+.section-header {
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 2px;
+  color: #fafafa;
+  text-transform: uppercase; }
+
+.subsection-header {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 44px;
+  letter-spacing: 2px;
+  text-transform: uppercase; }
+
+.ratings .control-label {
+  text-transform: none;
+  text-align: left; }
+
+.validation-error {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 1px;
+  color: #fafafa;
+  background: #cd1421;
+  padding: 4px 8px; }
+
+.alert {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 22px;
+  color: #fafafa;
+  padding: 8px;
+  background: #f59b15;
+  border-radius: 0; }
+
+.btn-default {
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: normal;
+  font-style: normal;
+  color: #fafafa;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+  .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default:active:hover, .btn-default:active:focus {
+    color: #fafafa; }
+
+.btn-alt {
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: normal;
+  font-style: normal;
+  color: #727272;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+  .btn-alt:hover, .btn-alt:focus, .btn-alt:active, .btn-alt:active:hover, .btn-alt:active:focus {
+    color: #cd1421; }
+
+.buttons {
+  text-align: center; }
+
+.btn {
+  width: 250px;
+  padding: 16px 0;
+  border: 1px solid #cd1421;
+  border-radius: 0;
+  background: #cd1421; }
+  .btn:hover {
+    border: 1px solid #ea2a37;
+    background: #ea2a37; }
+  .btn:focus {
+    border: 1px solid #cd1421;
+    background: #cd1421;
+    -webkit-box-shadow: 0 0 1em #252525;
+    -moz-box-shadow: 0 0 1em #252525;
+    box-shadow: 0 0 1em #252525;
+    outline: none; }
+  .btn:active, .btn:active:hover, .btn:active:focus {
+    border: 1px solid #252525;
+    background: #252525;
+    outline: none;
+    box-shadow: none; }
+  .btn.btn-alt {
+    border: 1px solid #727272;
+    background: #fafafa; }
+    .btn.btn-alt:focus {
+      -webkit-box-shadow: 0 0 1em #252525;
+      -moz-box-shadow: 0 0 1em #252525;
+      box-shadow: 0 0 1em #252525; }
+    .btn.btn-alt:active, .btn.btn-alt:active:hover, .btn.btn-alt:active:focus {
+      background: #d0d8db;
+      box-shadow: none; }
+
+.btn ~ .btn {
+  display: block;
+  margin: 16px auto; }
+
+@media (min-width: 700px) {
+  .btn ~ .btn {
+    display: inline-block;
+    margin-left: 16px; } }
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  padding-right: 40px !important;
+  background: #fff url("/assets/images/select-triangle-large.png") no-repeat 98% center !important; }
+
+.rating-radio {
+  position: relative;
+  display: block;
+  margin-bottom: 24px;
+  cursor: pointer;
+  text-indent: -9999px; }
+
+.rating-radio input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0; }
+
+.rating-indicator {
+  margin: 0 auto;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #b5b5b5;
+  background: #fafafa; }
+
+.rating-radio .rating-indicator {
+  padding: 2px;
+  border-radius: 50%; }
+
+.rating-radio:hover input ~ .rating-indicator > div,
+.rating-radio input:focus ~ .rating-indicator > div,
+.rating-radio input:checked ~ .rating-indicator > div {
+  width: 16px;
+  height: 16px;
+  background: #cd1421;
+  border-radius: 50%; }
+
+.section-header {
+  margin-bottom: 24px;
+  min-height: 72px;
+  padding: 24px;
+  background: #b5b5b5; }
+
+.section {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #727272; }
+  .section:hover .section-header, .section:active .section-header {
+    background: #465b64; }
+  .section.section-last {
+    border-bottom: 0; }
+
+.form-control {
+  height: auto;
+  padding: 12px 16px;
+  border-radius: 0; }
+
+label {
+  margin-bottom: 6px; }
+
+.subsection-header {
+  margin-bottom: 32px; }
+
+.rating-9-box {
+  position: relative;
+  height: 876px; }
+  .rating-9-box .ratings-subheader {
+    border: none;
+    padding: 0; }
+  .rating-9-box .vertical-subheaders {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 876px;
+    height: 890px;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg); }
+  .rating-9-box .rating {
+    height: 288px;
+    padding: 16px;
+    border: 2px solid #fafafa;
+    background: #d0d8db; }
+  .rating-9-box .rating-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; }
+  .rating-9-box .box-01:hover,
+  .rating-9-box .box-01:active,
+  .rating-9-box input:checked ~ .box-01 {
+    color: #fafafa;
+    background: #cd1421; }
+  .rating-9-box .box-02:hover,
+  .rating-9-box .box-02:active,
+  .rating-9-box .box-03:hover,
+  .rating-9-box .box-03:active,
+  .rating-9-box input:checked ~ .box-02,
+  .rating-9-box input:checked ~ .box-03 {
+    color: #fafafa;
+    background: #a04148; }
+  .rating-9-box .box-04:hover,
+  .rating-9-box .box-04:active,
+  .rating-9-box .box-05:hover,
+  .rating-9-box .box-05:active,
+  .rating-9-box .box-06:hover,
+  .rating-9-box .box-06:active,
+  .rating-9-box input:checked ~ .box-04,
+  .rating-9-box input:checked ~ .box-05,
+  .rating-9-box input:checked ~ .box-06 {
+    color: #fafafa;
+    background: #727272; }
+  .rating-9-box .box-07:hover,
+  .rating-9-box .box-07:active,
+  .rating-9-box .box-08:hover,
+  .rating-9-box .box-08:active,
+  .rating-9-box input:checked ~ .box-07,
+  .rating-9-box input:checked ~ .box-08 {
+    background: #a5a5a5; }
+  .rating-9-box .box-09:hover,
+  .rating-9-box .box-09:active,
+  .rating-9-box input:checked ~ .box-09 {
+    background: #f2f2f2; }
