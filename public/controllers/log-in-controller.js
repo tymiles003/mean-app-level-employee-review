@@ -1,9 +1,14 @@
 'use strict';
 
-angular.module('sugarsnaps').controller('LogInCtrl', ['$scope', '$http',
-	function($scope, $http) {
+angular.module('sugarsnaps').controller('LogInCtrl', ['$scope',
+	function($scope, UserInfoService) {
 		$scope.logIn = function() {
-			window.location.href = 'https://www.google.com/';
+			if($scope.logInForm.$invalid) {
+				console.log('Please fill out the required fields');
+				return;
+			}else {
+				location.assign("http://localhost:3000/#/dash-test");
+			}
 		};
 	}
 ]);
