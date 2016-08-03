@@ -10,5 +10,5 @@ angular.module('sugarsnaps').factory('UserInfoService', function() {
 			return this.user;
 		}
 	}
-});683475
+});
 
