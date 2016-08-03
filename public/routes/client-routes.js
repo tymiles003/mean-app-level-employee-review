@@ -1,3 +1,4 @@
+
 'use strict';
 
 // Setting up route
@@ -21,8 +22,28 @@ angular.module('sugarsnaps').config(['$routeProvider',
             templateUrl: 'views/dash-test-view.html',
             controller: 'DashCtrl'
         })
+        .when('/goals', {
+            //templateUrl: 'views/goals-view.html',
+            //controller: 'GoalsCtrl'
+        })
+        .when('/peer-feedback', {
+            //templateUrl: 'views/peer-feedback-view.html',
+            //controller: 'PeerFeedbackCtrl'
+        })
+        .when('/reviews/halfway', {
+            //templateUrl: 'views/halfway-checkin-view.html',
+            //controller: 'HalfwayCheckinCtrl'
+        })
+        .when('/reviews/self', {
+            //templateUrl: 'views/self-assess-view.html',
+            //controller: 'SelfAssessCtrl'
+        })
+        .when('/reviews/annual', {
+            //templateUrl: 'views/annual-perform-view.html',
+            //controller: 'AnnualPerformCtrl'
+        })
         .otherwise({
-            redirectTo: '/'
+            redirectTo: '/login'
         });
     }
 ]);
