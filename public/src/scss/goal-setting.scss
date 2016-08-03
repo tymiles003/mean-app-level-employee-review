@@ -1,0 +1,29 @@
+@import "shared/abstracts/functions";
+@import "shared/abstracts/variables";
+@import "shared/base/colors";
+
+.annual-assessment {
+	.goals {
+		margin-bottom: 40px;
+		padding-bottom: 25px;
+		border-bottom: 1px solid $grey;
+
+		@include breakpoint(sm) {
+			margin-top: $section-spacing;
+			margin-bottom: $section-spacing;
+			padding-bottom: 9px;
+		}
+	}
+
+	.goal {
+		margin-bottom: $section-spacing;
+
+		&.goal-last {
+			margin-bottom: 0;
+		}
+	}
+
+	.due-date + div {
+		margin-top: 0;
+	}
+}

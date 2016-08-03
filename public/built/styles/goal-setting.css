@@ -1,0 +1,17 @@
+.annual-assessment .goals {
+  margin-bottom: 40px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #727272; }
+  @media (min-width: 768px) {
+    .annual-assessment .goals {
+      margin-top: 24px;
+      margin-bottom: 24px;
+      padding-bottom: 9px; } }
+
+.annual-assessment .goal {
+  margin-bottom: 24px; }
+  .annual-assessment .goal.goal-last {
+    margin-bottom: 0; }
+
+.annual-assessment .due-date + div {
+  margin-top: 0; }

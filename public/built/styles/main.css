@@ -1,3 +1,20 @@
+@font-face {
+  font-family: gotham;
+  src: url(/assets/fonts/Gotham-Book.otf);
+  font-weight: 600; }
+
+@font-face {
+  font-family: gotham;
+  src: url(/assets/fonts/Gotham-Medium.otf);
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: gotham;
+  src: url(/assets/fonts/Gotham-Bold.otf);
+  font-weight: bold;
+  font-style: normal; }
+
 body {
   font-family: "Gotham", sans-serif;
   font-size: 16px;
@@ -50,7 +67,7 @@ input:-moz-placeholder {
 .required {
   color: #cd1421; }
 
-.section-header {
+.section-header h2 {
   font-size: 24px;
   line-height: 30px;
   letter-spacing: 2px;
@@ -147,10 +164,12 @@ input:-moz-placeholder {
   display: block;
   margin: 16px auto; }
 
-@media (min-width: 700px) {
+@media (min-width: 768px) {
   .btn ~ .btn {
     display: inline-block;
-    margin-left: 16px; } }
+    margin-left: 16px; }
+    .btn ~ .btn + .btn-last {
+      margin-right: 16px; } }
 
 select {
   -webkit-appearance: none;
@@ -191,20 +210,41 @@ select {
   background: #cd1421;
   border-radius: 50%; }
 
+.hero-header h1 {
+  margin: 64px auto 60px; }
+
 .section-header {
+  margin-top: 0;
   margin-bottom: 24px;
   min-height: 72px;
   padding: 24px;
   background: #b5b5b5; }
+  .section-header h2 {
+    margin: 0; }
+  @media (min-width: 992px) {
+    .section-header {
+      margin-bottom: 0; }
+      .section-header.goals-team-member-details {
+        min-height: 246px; }
+      .section-header.goals-setting-details {
+        min-height: 2599px; } }
 
 .section {
-  margin-bottom: 24px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid #727272; }
+  margin-bottom: 16px;
+  padding-bottom: 9px; }
   .section:hover .section-header, .section:active .section-header {
     background: #465b64; }
   .section.section-last {
     border-bottom: 0; }
+  .section .name > div + div {
+    margin-top: 24px; }
+    @media (min-width: 768px) {
+      .section .name > div + div {
+        margin-top: 0; } }
+  @media (min-width: 992px) {
+    .section {
+      margin-bottom: 24px;
+      border-bottom: 1px solid #727272; } }
 
 .form-control {
   height: auto;
@@ -215,7 +255,8 @@ label {
   margin-bottom: 6px; }
 
 .subsection-header {
-  margin-bottom: 32px; }
+  margin-top: 0;
+  margin-bottom: 16px; }
 
 .rating-9-box {
   position: relative;
