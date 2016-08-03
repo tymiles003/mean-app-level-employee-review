@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('sugarsnaps').controller('LogInCtrl', ['$scope', '$http',
-	function($scope, $http, UserInfoService) {
+angular.module('sugarsnaps').controller('LogInCtrl', ['$scope',
+	function($scope, UserInfoService) {
 		$scope.logIn = function() {
 			if($scope.logInForm.$invalid) {
 				console.log('Please fill out the required fields');
