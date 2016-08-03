@@ -6,9 +6,19 @@
 		<title>LEVEL Halfway Check-in</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 		<style>
+			label {
+				display: block;
+			}
+
+			input[type='text'], textarea, select {
+				margin-top: 6px;
+			}
+
 			input[type='radio'] {
 				margin-right: 8px;
 			}
+
+
 			.nine-box-temp {
 				border: 1px dashed red;
 				height: 50px;
@@ -25,40 +35,46 @@
 				<p>Now that we are halfway through the performance year, LEVEL managers can use the recently received feedback, regular career meetings, and performance observations to complete a Nine-Box rating. When selecting a rating, consider recent performance and the individual's growth and development in the three standards: Results, Expertise, and Collaboration. Be sure to include comments that support your Nine-Box selection to ensure a constructive conversation.</p>
 			</section>
 			<form action="#">
+					<div class="row form-group">
+						<div class="col-xs-6">
+							<label>Team Member Name
+								<input type="text" name="emp-first-name" class="form-control" placeholder="Team Member First Name" required>
+							</label>
+						</div>
+						<div class="col-xs-6">
+							<label>&nbsp;
+								<input type="text" name="emp-last-name" class="form-control" placeholder="Team Member Last Name" required>
+							</label>
+						</div>
+					</div>
+					<div class="row form-group">
+						<div class="col-xs-6">
+							<label>Team Member Job Title
+								<input type="text" name="job-title" class="form-control" placeholder="Team Member Job Title">
+							</label>
+						</div>
+						<div class="col-xs-6">
+							<label>Performance Year
+								<select class="form-control" name="feedback-year" required>
+									<option value="1">2016/2017</option>
+								</select>
+							</label>
+						</div>
+					</div>
+					<div class="row form-group">
+						<div class="col-xs-6">
+							<label>Manager Name
+								<input type="text" name="man-first-name" class="form-control" placeholder="Manager First Name" required>
+							</label>
+						</div>
+						<div class="col-xs-6">
+							<label>&nbsp;
+								<input type="text" name="man-last-name" class="form-control" placeholder="Manager Last Name" required>
+							</label>
+						</div>
+					</div>
 				<section>
-					<label for="team-member-name">Team Member Name</label>
-					<div class="row form-group">
-						<div class="col-xs-6">
-							<input type="text" class="form-control" name="team-member-firstname" placeholder="First Name" required>
-						</div>
-						<div class="col-xs-6">
-							<input type="text" class="form-control" name="team-member-lastname" placeholder="Last Name" required>
-						</div>
-					</div>
-					<div class="row form-group">
-						<div class="col-xs-6">
-							<label for="exampleInputPassword1">Team Member Job Title</label>
-							<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Title">
-						</div>
-						<div class="col-xs-6">
-							<label for="feedback-year">Performance Year</label>
-							<select class="form-control" name="feedback-year" id="feedback-year" required>
-								<option value="1">2016/2017</option>
-							</select>
-						</div>
-					</div>
-					<label for="team-member-name">Manager Name</label>
-					<div class="row form-group">
-						<div class="col-xs-6">
-							<input type="text" class="form-control" name="team-member-firstname" placeholder="First Name" required>
-						</div>
-						<div class="col-xs-6">
-							<input type="text" class="form-control" name="team-member-lastname" placeholder="Last Name" required>
-						</div>
-					</div>
-				</section>
-				<section>
-					<label>Nine-Box Rating (UI Pending)</label>
+					<label>Nine-Box Rating <i>[UI Pending]</i></label>
 					<div class="row form-group">
 						<div class="col-xs-1 col-xs-offset-1 nine-box-temp">
 							<input type="radio" name="nine-box" value="1"> 1
@@ -89,11 +105,11 @@
 						</div>
 					</div>
 				</section>
-				<section>
 					<div class="row form-group">
 						<div class="col-xs-12">
-							<label for="supporting-comments">Supporting Comments</label>
-							<textarea class="form-control" name="supporting-comments" id="supporting-comments" rows="6" required></textarea>
+							<label>Supporting Comments
+								<textarea name="comments" class="form-control" rows="6" required></textarea>
+							</label>
 						</div>
 					</div>
 					<button class="btn btn-default center-block" type="submit">Submit</button>
