@@ -30,8 +30,8 @@
                 //controller: 'PeerFeedbackCtrl'
             })
             .when('/reviews/halfway', {
-                //templateUrl: 'views/halfway-checkin-view.html',
-                //controller: 'HalfwayCheckinCtrl'
+                templateUrl: 'views/halfway-checkin-view.html',
+                controller: 'HalfwayCheckinCtrl'
             })
             .when('/reviews/self', {
                 //templateUrl: 'views/self-assess-view.html',
