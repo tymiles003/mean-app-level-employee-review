@@ -1,9 +1,8 @@
 // forms
 
 .section {
-	margin-bottom: $section-spacing;
-	padding-bottom: $section-spacing;
-	border-bottom: 1px solid $grey;
+	margin-bottom: $element-spacing;
+	padding-bottom: 9px;
 
 	&:hover,
 	&:active {
@@ -15,11 +14,24 @@
 	&.section-last {
 		border-bottom: 0;
 	}
+
+	.name > div + div {
+		margin-top: 24px;
+
+		@include breakpoint(sm) {
+			margin-top: 0;
+		}
+	}
+
+	@include breakpoint(md) {
+		margin-bottom: $section-spacing;
+		border-bottom: 1px solid $grey;
+	}
 }
 
 .form-control {
 	height: auto;
-	padding: 12px 16px;
+	padding: 12px $element-spacing;
 	border-radius: 0;
 }
 
@@ -28,7 +40,8 @@ label {
 }
 
 .subsection-header {
-	margin-bottom: 32px;
+	margin-top: 0;
+	margin-bottom: $element-spacing;
 }
 
 .rating-9-box {

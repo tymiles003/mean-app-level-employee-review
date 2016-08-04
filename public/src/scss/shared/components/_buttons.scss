@@ -9,12 +9,16 @@
 
 .btn ~ .btn {
 	display: block;
-	margin: 16px auto;
+	margin: $element-spacing auto;
 }
 
-@media (min-width: 700px) {
+@include breakpoint(sm) {
 	.btn ~ .btn {
 		display: inline-block;
-		margin-left: 16px;
+		margin-left: $element-spacing;
+
+		+ .btn-last {
+			margin-right: $element-spacing;
+		}
 	}
 }
