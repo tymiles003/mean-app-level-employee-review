@@ -18,6 +18,7 @@ module.exports = function() {
     require('../app/models/goal-server-model');
     require('../app/models/peer-feedback-server-model');
     require('../app/models/review-server-model');
+    require('../app/models/halfway-server-model');
 
 
 	// Enable logger (morgan)
