@@ -1,0 +1,176 @@
+<div class="container">
+	<div class="text-center">
+		<h1>Goals Setting Page</h1>
+	</div>
+	<form name="goalSetting" ng-submit="submit(goalSetting)" class="goal-setting form-horizontal" novalidate autocomplete="off">
+		<section>
+			<div class="col-sm-6 form-group">
+				<label for="member-name">Team Member Name</label>
+				<input type="text" id="member-name" name="memberName" class="form-control" ng-model="goalSetting.firstname" placeholder="Last, First" required>
+				<div ng-messages="goalSetting.memberName.$error" ng-if="goalSetting.memberName.$touched">
+					 <div ng-message="required">This field is required</div>
+				</div>
+			</div>
+			<div class="col-sm-6 form-group">
+				<label for="member-title">Team Member Title</label>
+				<input type="text" id="member-title" name="memberTitle" class="form-control" ng-model="goalsetting.memberTitle" placeholder="Title" required>
+				<div ng-messages="goalSetting.memberTitle.$error" ng-if="goalSetting.memberTitle.$touched">
+					 <div ng-message="required">This field is required</div>
+				</div>
+			</div>
+			<div class="col-sm-6 form-group">
+				<label for="manager-name">Manager Name</label>
+				<input type="text" id="manager-name" name="managerName" class="form-control" ng-model="goalsetting.managerName" placeholder="Last, First" required>
+				<div ng-messages="goalSetting.managerName.$error" ng-if="goalSetting.managerName.$touched">
+					 <div ng-message="required">This field is required</div>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label for="feedback-year">Feedback Year</label>
+					<select id="feedback-year" name="feedbackYear" class="form-control" ng-model="goalsetting.feedbackYear" required>
+						<option value="-1">Please select a year</option>
+						<option value="1">2015/2016</option>
+						<option value="2">2016/2017</option>
+					</select>
+				</div>
+				<div ng-messages="goalSetting.feedbackYear.$error" ng-if="goalSetting.feedbackYear.$touched">
+					 <div ng-message="required">This field is required</div>
+				</div>
+			</div>
+		</section>
+		<section class="goal-setting">
+			<div class="intro-container">
+				<p>List your annual goal plan for the performance year based on the performance standards. 1-2 goals per standards. This form should be updated throughout the year as goals are completed, project change, etc</p>
+			</div>
+			<div class="field-input">
+				<div class="results">
+					<h3>Results</h3>
+					<div class="form-group goal-status">
+						<label for="#">Goal Description</label>
+						<textarea class="form-control" rows="3"></textarea>
+					</div>
+					<div class="row">
+						<div class="col-sm-4 col-sm-offset-2 form-group">
+							<label for="due date">Due Date:</label>
+							<textarea class="form-control" rows="1"></textarea>
+						</div>
+						<div class="col-sm-4 form-group">
+							<label for="goal-status">Goal Status</label>
+							<select class="form-control" name="goal-status" id="goal-status" required>
+								<option value="-1">Please select status</option>
+								<option value="1">No Status</option>
+								<option value="2">In Progress</option>
+								<option value="3">Completed</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group goal-status">
+						<label for="#">Goal Description</label>
+						<textarea class="form-control" rows="3"></textarea>
+					</div>
+					<div class="row">
+						<div class="col-sm-4 col-sm-offset-2 form-group">
+							<label for="due date">Due Date:</label>
+							<textarea class="form-control" rows="1"></textarea>
+						</div>
+						<div class="col-sm-4 form-group">
+							<label for="goal-status">Goal Status</label>
+							<select class="form-control" name="goal-status" id="goal-status" required>
+								<option value="-1">Please select status</option>
+								<option value="1">No Status</option>
+								<option value="2">In Progress</option>
+								<option value="3">Completed</option>
+							</select>
+						</div>
+					</div>
+					<hr>
+				</div>
+				<div class="expertise">
+					<h3>Expertise</h3>
+					<div class="form-group goal-status">
+						<label for="goal description">Goal Description</label>
+						<textarea class="form-control" rows="3"></textarea>
+					</div>
+					<div class="row">
+						<div class="col-sm-4 col-sm-offset-2 form-group">
+							<label for="due date">Due Date:</label>
+							<textarea class="form-control" rows="1"></textarea>
+						</div>
+						<div class="col-sm-4 form-group">
+							<label for="goal-status">Goal Status</label>
+							<select class="form-control" name="goal-status" id="goal-status" required>
+								<option value="-1">Please select status</option>
+								<option value="1">No Status</option>
+								<option value="2">In Progress</option>
+								<option value="3">Completed</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group goal-status">
+						<label for="#">Goal Description</label>
+						<textarea class="form-control" rows="3"></textarea>
+					</div>
+					<div class="row">
+						<div class="col-sm-4 col-sm-offset-2 form-group">
+							<label for="due date">Due Date:</label>
+							<textarea class="form-control" rows="1"></textarea>
+						</div>
+						<div class="col-sm-4 form-group">
+							<label for="goal-status">Goal Status</label>
+							<select class="form-control" name="goal-status" id="goal-status" required>
+								<option value="-1">Please select status</option>
+								<option value="1">No Status</option>
+								<option value="2">In Progress</option>
+								<option value="3">Completed</option>
+							</select>
+						</div>
+					</div>
+					<hr>
+				</div>
+				<div class="collaboration">
+					<h3>Collaboration</h3>
+					<div class="form-group goal-status">
+						<label for="goal description">Goal Description</label>
+						<textarea class="form-control" rows="3"></textarea>
+					</div>
+					<div class="row">
+						<div class="col-sm-4 col-sm-offset-2 form-group">
+							<label for="due date">Due Date:</label>
+							<textarea class="form-control" rows="1"></textarea>
+						</div>
+						<div class="col-sm-4 form-group">
+							<label for="goal-status">Goal Status</label>
+							<select class="form-control" name="goal-status" id="goal-status" required>
+								<option value="-1">Please select status</option>
+								<option value="1">No Status</option>
+								<option value="2">In Progress</option>
+								<option value="3">Completed</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group goal-status">
+						<label for="#">Goal Description</label>
+						<textarea class="form-control" rows="3"></textarea>
+					</div>
+					<div class="row">
+						<div class="col-sm-4 col-sm-offset-2 form-group">
+							<label for="due date">Due Date:</label>
+							<textarea class="form-control" rows="1"></textarea>
+						</div>
+						<div class="col-sm-4 form-group">
+							<label for="goal-status">Goal Status</label>
+							<select class="form-control" name="goal-status" id="goal-status" required>
+								<option value="-1">Please select status</option>
+								<option value="1">No Status</option>
+								<option value="2">In Progress</option>
+								<option value="3">Completed</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<button class="btn btn-default center-block" type="submit">Submit</button>
+		</section>
+	</form>
+</div>
