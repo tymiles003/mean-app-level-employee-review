@@ -6,9 +6,13 @@
 @import "shared/abstracts/mixins";
 @import "shared/abstracts/placeholders";
 
+@import "shared/vendors/flexbox";
+
 @import "shared/components/buttons";
 @import "shared/components/dropdown";
 @import "shared/components/radio";
+// ninebox needs to refer to flexbox
+@import "shared/components/ninebox";
 
 @import "shared/layout/navigation";
 @import "shared/layout/header";
@@ -20,5 +24,3 @@
 
 @import "shared/themes/theme";
 @import "shared/themes/admin";
-
-@import "shared/vendors/flexbox";

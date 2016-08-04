@@ -1,0 +1,186 @@
+// 9-box
+
+.rating-9-box {
+	@include flexbox;
+	@include flex-direction(row);
+	@include flex-wrap(wrap);
+	
+	margin-top: 30px;
+	position: relative;
+	
+	.vertical-subheaders, .horizontal-subheaders {
+		display: none;
+	}
+
+	.rating {
+		padding: 16px 40px 16px 16px;
+		border: 2px solid $white;
+		background: $lightest-grey;
+	}
+
+	.rating-label {
+		cursor: pointer;
+
+		.label-title {
+			display: block;
+		}
+
+		.label-desc {
+			display: block;
+			text-transform: none;
+			font-weight: 600;
+			font-style: normal;
+			color: $dark-grey;
+		}
+	}
+
+	.rating-wrapper {
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 100%;
+		width: 32px;
+
+		.rating-indicator {
+			position: absolute;
+			top: 50%;
+			margin-top: -12px;
+		}
+
+		.rating-radio {
+			margin: 0;
+			position: absolute;
+    		height: 100%;
+		}
+	}
+
+	.box-1:hover,
+	.box-1:active,
+	input:checked ~ .box-1 {
+		color: $white;
+		background: $red;
+	}
+
+	.box-2:hover,
+	.box-2:active,
+	.box-3:hover,
+	.box-3:active,
+	input:checked ~ .box-2,
+	input:checked ~ .box-3 {
+		color: $white;
+		background: desaturate($red, 40%);
+	}
+
+	.box-4:hover,
+	.box-4:active,
+	.box-5:hover,
+	.box-5:active,
+	.box-6:hover,
+	.box-6:active,
+	input:checked ~ .box-4,
+	input:checked ~ .box-5,
+	input:checked ~ .box-6 {
+		color: $white;
+		background: $grey;
+	}
+
+	.box-7:hover,
+	.box-7:active,
+	.box-8:hover,
+	.box-8:active,
+	input:checked ~ .box-7,
+	input:checked ~ .box-8 {
+		background: lighten($grey, 20%);
+	}
+
+	.box-9:hover,
+	.box-9:active,
+	input:checked ~ .box-9 {
+		background: lighten($grey, 50%);
+	}
+
+	@for $i from 1 through 6 {
+		.box-#{$i}:hover > .rating-label,
+		.box-#{$i}:hover > .rating-label > .label-desc {
+			color: $white;
+		}
+	}
+
+	@for $i from 7 through 9 {
+		.box-#{$i}:hover > .rating-label {
+			color: $dark-grey;
+		}
+	}
+	
+	@for $i from 1 through 9 {
+		.box-#{$i} {
+			order: $i;
+		}
+	}
+	@media screen and (min-width: 992px) {
+		
+		height: 876px;
+
+		.rating {
+			height: 288px;
+			padding: 16px;
+		}
+
+		.rating-label {
+			.label-title{
+				display: none;
+			}
+		}
+
+		.rating-wrapper {
+			top: auto;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: auto;
+
+			.rating-indicator {
+				position: relative;
+			}
+
+			.rating-radio {
+				height: auto;
+				margin: auto auto 24px auto;
+				position: relative;
+			}
+		}
+
+		.ratings-subheader {
+			border: none;
+			padding-left: 2px;
+			font-size: 14px;
+		}
+
+		.vertical-subheaders, .horizontal-subheaders {
+			width: 100%;
+			display: block;
+		}
+
+		.vertical-subheaders {
+			width: 864px;
+			position: absolute;
+			top: 442px;
+			left: -442px;
+			-webkit-transform: rotate(-90deg);
+			-ms-transform: rotate(-90deg);
+			transform: rotate(-90deg);
+		}
+
+		@for $i from 1 through 9 {
+			.box-#{$i} {
+				order: unset;
+			}
+		}
+	}
+
+	@media screen and (min-width: 1200px) {
+		.ratings-subheader {
+			font-size: 16px;
+		}
+	}
+}
