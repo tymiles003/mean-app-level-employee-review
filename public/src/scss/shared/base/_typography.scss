@@ -1,4 +1,24 @@
 // typography
+@font-face {
+	font-family: gotham;
+	src: url(/assets/fonts/Gotham-Book.otf);
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: gotham;
+	src: url(/assets/fonts/Gotham-Medium.otf);
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: gotham;
+	src: url(/assets/fonts/Gotham-Bold.otf);
+	font-weight: bold;
+	font-style: normal;
+}
+
 $body-copy: "Gotham", sans-serif;
 
 body {
@@ -57,11 +77,13 @@ input:-moz-placeholder { /* Firefox 18- */
 }
 
 .section-header {
-	font-size: 24px;
-	line-height: 30px;
-	letter-spacing: 2px;
-	color: $white;
-	text-transform: uppercase;
+	h2 {
+		font-size: 24px;
+		line-height: 30px;
+		letter-spacing: 2px;
+		color: $white;
+		text-transform: uppercase;
+	}
 }
 
 .subsection-header {

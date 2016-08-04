@@ -1,7 +1,28 @@
 // header
+.hero-header h1 {
+	margin: 64px auto 60px;
+}
+
 .section-header {
-	margin-bottom: 24px;
+	margin-top: 0;
+	margin-bottom: $section-spacing;
 	min-height: 72px;
-	padding: 24px;
+	padding: $section-spacing;
 	background: $light-grey;
+
+	h2 {
+		margin: 0;
+	}
+
+	@include breakpoint(md) {
+		margin-bottom: 0;
+
+		&.goals-team-member-details {
+			min-height: 246px;
+		}
+
+		&.goals-setting-details {
+			min-height: 2599px;
+		}
+	}
 }
