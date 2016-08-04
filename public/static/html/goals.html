@@ -8,7 +8,7 @@
 	</head>
 	<body class="annual-assessment">
 		<div class="container">
-			<form action="dashboard.html">
+			<form name="goalSetting" ng-submit="submit(goalSetting)" action="dashboard.html">
 				<header class="hero-header">
 					<h1><img class="center-block img-responsive" src="/assets/images/header-goals-large.png" alt="LEVEL - Goal Setting"></h1>
 				</header>
@@ -21,7 +21,10 @@
 							<label for="team-member-name">Team Member Name<span class="required">*</span></label>
 							<div class="row name">
 								<div class="col-xs-12 col-sm-6">
-									<input type="text" class="form-control" name="team-member-firstname" placeholder="First Name" required>
+									<input type="text" class="form-control" name="teamMemberName" placeholder="First Name" ng-model="goalSetting.teamMemberName" required>
+									<div ng-messages="goalSetting.teamMemberName.$error" ng-if="goalSetting.teamMemberName.$touched">
+										 <div ng-message="required">This field is required</div>
+									</div>
 								</div>
 								<div class="col-xs-12 col-sm-6">
 									<input type="text" class="form-control" name="team-member-lastname" placeholder="Last Name" required>
