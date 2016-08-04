@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('sugarsnaps').controller('DashCtrl', ['$scope', '$http',
-	function($scope, $http) {
-		$scope.name = 'scott';
-	}
-]);
+angular.module('sugarsnaps').controller('DashCtrl', function(UserInfoService, $scope) {
+	$scope.name = 'scott';
+	$scope.user = UserInfoService.getFirstName();
+
+});
