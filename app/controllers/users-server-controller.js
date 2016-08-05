@@ -35,7 +35,7 @@ var getErrorMessage = function(err) {
  * Signout
  */
 exports.signout = function(req, res) {
-	req.logout();
+	req.logout(); // passport method
 	res.redirect('/');
 };
 
@@ -50,8 +50,8 @@ exports.signup = function(req, res) {
 	// Add missing user fields
 	user.provider = 'local';
 
-	// Then save the user 
-	user.save(function(err) {
+	// Then save the user
+	user.save(function(err) { // is this the mongoose method to save to the db?!
 		if (err) {
 			return res.send(400, {
 				message: getErrorMessage(err)
