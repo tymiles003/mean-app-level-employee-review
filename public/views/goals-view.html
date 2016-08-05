@@ -1,0 +1,274 @@
+<title>LEVEL Goal Setting</title>
+<div class="container">
+	<form name="goalSetting" ng-submit="submit(goalSetting)" novalidate autocomplete="off">
+		<header class="hero-header">
+			<h1><img class="center-block img-responsive" src="/assets/images/header-goals-large.png" alt="LEVEL - Goal Setting"></h1>
+		</header>
+		<section class="section clearfix">
+			<div class="section-header goals-team-member-details col-md-3">
+				<h2>Team Member Details</h2>
+			</div>
+			<div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-1">
+				<div class="row form-group">
+					<label for="team-member-name">Team Member Name<span class="required">*</span></label>
+					<div class="row name">
+						<div class="col-xs-12 col-sm-6">
+							<input type="text" name="memberFirstName" class="form-control" placeholder="First Name" ng-model="userGoals.teamMemberFName" required>
+							<div ng-messages="goalSetting.memberFirstName.$error" ng-if="goalSetting.memberFirstName.$touched">
+								 <div ng-message="required" class="required">This field is required</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6">
+							<input type="text" name="memberLastName" class="form-control" placeholder="Last Name" ng-model="userGoals.teamMemberLName" required>
+							<div ng-messages="goalSetting.memberLastName.$error" ng-if="goalSetting.memberLastName.$touched">
+								 <div ng-message="required" class="required">This field is required</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="row">
+						<div class="col-sm-6 form-group">
+							<label for="team-member-title">Team Member Title<span class="required">*</span></label>
+							<input type="text" name="memberTitle" class="form-control" name="team-member-title" placeholder="Title" ng-model="userGoals.teamMemberTitle" required>
+							<div ng-messages="goalSetting.memberTitle.$error" ng-if="goalSetting.memberTitle.$touched">
+								 <div ng-message="required" class="required">This field is required</div>
+							</div>
+						</div>
+						<div class="col-sm-6 form-group">
+							<label for="feedback-year">Feedback Year<span class="required">*</span></label>
+							<select class="form-control" name="feedbackYear" id="feedback-year" ng-model="userGoals.feedbackYear" required>
+								<option value="-1">Please select a year</option>
+								<option value="1">2015/2016</option>
+								<option value="2">2016/2017</option>
+							</select>
+							<div ng-messages="goalSetting.feedbackYear.$error" ng-if="goalSetting.feedbackYear.$touched">
+								 <div ng-message="required" class="required">This field is required</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row form-group">
+					<label for="team-member-manager-name">Team Member Manager<span class="required">*</span></label>
+					<div class="row name">
+						<div class="col-xs-12 col-sm-6">
+							<input type="text" name="memberManagerFirstName" class="form-control"  placeholder="First Name" ng-model="userGoals.memberManagerFName" required>
+							<div ng-messages="goalSetting.memberManagerFirstName.$error" ng-if="goalSetting.memberManagerFirstName.$touched">
+								 <div ng-message="required" class="required">This field is required</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6">
+							<input type="text" name="memberManagerLastName" class="form-control"  placeholder="Last Name" ng-model="userGoals.memberManagerLName" required>
+							<div ng-messages="goalSetting.memberManagerLastName.$error" ng-if="goalSetting.memberManagerLastName.$touched">
+								 <div ng-message="required" class="required">This field is required</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section clearfix goals">
+			<div class="section-header goals-setting-details col-md-3">
+				<h2>Goals</h2>
+			</div>
+			<div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-1">
+				<div class="row">
+					<p>List your annual goal plan for the performance year based on the performance standards. 1‑2 goals per standard. This form should be updated throughout the year as goals are completed, projects change, etc.</p>
+				</div>
+
+				<div class="results row">
+					<div class="row goal">
+						<div class="col-md-12">
+							<h3 class="subsection-header">Results</h3>
+						</div>
+						<div class="col-md-12">
+							<div class="row">
+								<div class="col-xs-12 col-sm-6 form-group due-date">
+									<label for="results-due-date-01">Due Date<span class="required">*</span></label>
+									<input class="form-control" name="resultDueDate" placeholder="MM/DD/YYYY" ng-model="userGoals.resultGoalDueDateOne" required>
+									<div ng-messages="goalSetting.resultDueDate.$error" ng-if="goalSetting.resultDueDate.$touched">
+										<div ng-message="required" class="required">This field is required</div>
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-6 form-group goal-status">
+									<label for="results-goal-status-01">Goal 1 Status<span class="required">*</span></label>
+									<select class="form-control" name="resultGoalStatus" id="results-goal-status-01" ng-model="userGoals.resultGoalStatusOne" required>
+										<option value="-1">Please select status</option>
+										<option value="1">No Status</option>
+										<option value="2">In Progress</option>
+										<option value="3">Completed</option>
+									</select>
+									<div ng-messages="goalSetting.resultGoalStatus.$error" ng-if="goalSetting.resultGoalStatus.$touched">
+										<div ng-message="required" class="required">This field is required</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12 form-group">
+							<label for="results-goal-01">Goal 1 Description<span class="required">*</span></label>
+							<textarea class="form-control" name="resultsGoal01" rows="11" ng-model="userGoals.resultsGoalOne" required></textarea>
+							<div ng-messages="goalSetting.resultsGoalOne.$error" ng-if="goalSetting.resultsGoal01.$touched">
+								 <div ng-message="required" class="required">This field is required</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row goal">
+						<div class="col-md-12">
+							<div class="row">
+								<div class="col-xs-12 col-sm-6 form-group due-date">
+									<label for="results-due-date-02">Due Date</label>
+									<input class="form-control" name="results-due-date-02" placeholder="MM/DD/YYYY" ng-model="userGoals.resultGoalDueDateTwo">
+								</div>
+								<div class="col-xs-12 col-sm-6 form-group goal-status">
+									<label for="results-goal-status-02">Goal 2 Status</label>
+									<select class="form-control" name="results-goal-status-01" id="results-goal-status-02" ng-model="userGoals.resultGoalStatusTwo">
+										<option value="-1">Please select status</option>
+										<option value="1">No Status</option>
+										<option value="2">In Progress</option>
+										<option value="3">Completed</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12 form-group">
+							<label for="results-goal-02">Goal 2 Description</label>
+							<textarea class="form-control" name="results-goal-02" rows="11" ng-model="userGoals.resultsGoalTwo"></textarea>
+						</div>
+					</div>
+				</div>
+
+				<div class="expertise row">
+					<div class="row goal">
+						<div class="col-md-12">
+							<h3 class="subsection-header">Expertise</h3>
+						</div>
+						<div class="col-md-12">
+							<div class="row">
+								<div class="col-xs-12 col-sm-6 form-group due-date">
+									<label for="expertise-due-date-01">Due Date<span class="required">*</span></label>
+									<input class="form-control" name="expertiseDueDate" placeholder="MM/DD/YYYY" ng-model="userGoals.expertiseGoalDueDateOne" required>
+									<div ng-messages="goalSetting.expertiseDueDate.$error" ng-if="goalSetting.expertiseDueDate.$touched">
+										<div ng-message="required" class="required">This field is required</div>
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-6 form-group goal-status">
+									<label for="expertise-goal-status-01">Goal 1 Status<span class="required">*</span></label>
+									<select class="form-control" name="expertiseGoalStatus" id="expertise-goal-status-01" ng-model="userGoals.expertiseGoalStatusOne" required>
+										<option value="-1">Please select status</option>
+										<option value="1">No Status</option>
+										<option value="2">In Progress</option>
+										<option value="3">Completed</option>
+									</select>
+									<div ng-messages="goalSetting.expertiseGoalStatus.$error" ng-if="goalSetting.expertiseGoalStatus.$touched">
+										<div ng-message="required" class="required">This field is required</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12 form-group">
+							<label for="expertise-goal-01">Goal 1 Description<span class="required">*</span></label>
+							<textarea class="form-control" name="expertiseGoal01" rows="11" ng-model="userGoals.expertiseGoalOne" required></textarea>
+							<div ng-messages="goalSetting.expertiseGoal01.$error" ng-if="goalSetting.expertiseGoal01.$touched">
+								 <div ng-message="required" class="required">This field is required</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row goal">
+						<div class="col-md-12">
+							<div class="row">
+								<div class="col-xs-12 col-sm-6 form-group due-date">
+									<label for="expertise-due-date-01">Due Date</label>
+									<input class="form-control" name="expertise-due-date-01" placeholder="MM/DD/YYYY" ng-model="userGoals.expertiseGoalDueDateTwo">
+								</div>
+								<div class="col-xs-12 col-sm-6 form-group goal-status">
+									<label for="expertise-goal-status-01">Goal 2 Status</label>
+									<select class="form-control" name="expertise-goal-status-01" id="expertise-goal-status-01" ng-model="userGoals.expertiseGoalStatusTwo">
+										<option value="-1">Please select status</option>
+										<option value="1">No Status</option>
+										<option value="2">In Progress</option>
+										<option value="3">Completed</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12 form-group">
+							<label for="expertise-goal-01">Goal 2 Description</label>
+							<textarea class="form-control" name="expertise-goal-01" rows="11" ng-model="userGoals.expertiseGoalOne"></textarea>
+						</div>
+					</div>
+				</div>
+
+				<div class="collaboration row">
+					<div class="row goal">
+						<div class="col-md-12">
+							<h3 class="subsection-header">Collaboration</h3>
+						</div>
+						<div class="col-md-12">
+							<div class="row">
+								<div class="col-xs-12 col-sm-6 form-group due-date">
+									<label for="collaboration-due-date-01">Due Date<span class="required">*</span></label>
+									<input class="form-control" name="collaborationDueDate" placeholder="MM/DD/YYYY" ng-model="userGoals.collaborationGoalDueDateOne" required>
+									<div ng-messages="goalSetting.collaborationDueDate.$error" ng-if="goalSetting.collaborationDueDate.$touched">
+										<div ng-message="required" class="required">This field is required</div>
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-6 form-group goal-status">
+									<label for="collaboration-goal-status-01">Goal 1 Status<span class="required">*</span></label>
+									<select class="form-control" name="collaborationGoalStatus" id="collaboration-goal-status-01" ng-model="userGoals.collaborationGoalStatusOne" required>
+										<option value="-1">Please select status</option>
+										<option value="1">No Status</option>
+										<option value="2">In Progress</option>
+										<option value="3">Completed</option>
+									</select>
+									<div ng-messages="goalSetting.collaborationGoalStatus.$error" ng-if="goalSetting.collaborationGoalStatus.$touched">
+										<div ng-message="required" class="required">This field is required</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12 form-group">
+							<label for="collaboration-goal-01">Goal 1 Description<span class="required">*</span></label>
+							<textarea class="form-control" name="collaborationGoal01" rows="11" ng-model="userGoals.collaborationsGoalOne" required></textarea>
+							<div ng-messages="goalSetting.collaborationGoal01.$error" ng-if="goalSetting.collaborationGoal01.$touched">
+								 <div ng-message="required" class="required">This field is required</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row goal goal-last">
+						<div class="col-md-12">
+							<div class="row">
+								<div class="col-xs-12 col-sm-6 form-group due-date">
+									<label for="collaboration-due-date-01">Due Date</label>
+									<input class="form-control" name="collaboration-due-date-01" placeholder="MM/DD/YYYY" ng-model="userGoals.collaborationGoalDueDateTwo">
+								</div>
+								<div class="col-xs-12 col-sm-6 form-group goal-status">
+									<label for="collaboration-goal-status-01">Goal 2 Status</label>
+									<select class="form-control" name="collaboration-goal-status-01" id="collaboration-goal-status-01" ng-model="userGoals.collaborationGoalStatusTwo">
+										<option value="-1">Please select status</option>
+										<option value="1">No Status</option>
+										<option value="2">In Progress</option>
+										<option value="3">Completed</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12 form-group">
+							<label for="collaboration-goal-01">Goal 2 Description</label>
+							<textarea class="form-control" name="collaboration-goal-01" rows="11" ng-model="userGoals.collaborationsGoalTwo"></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section section-last center-block buttons">
+			<button class="btn btn-alt" type="submit">Save form</button>
+			<button class="btn btn-default" type="submit">Submit form</button>
+			<button class="btn btn-alt btn-last" type="reset">Clear form</button>
+		</section>
+	</form>
+</div>
