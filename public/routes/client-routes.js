@@ -22,8 +22,8 @@
                 controller: 'DashCtrl'
             })
             .when('/goals', {
-                //templateUrl: 'views/goals-view.html',
-                //controller: 'GoalsCtrl'
+                templateUrl: 'views/goals-view.html',
+                controller: 'GoalsCtrl'
             })
             .when('/peer-feedback', {
                 //templateUrl: 'views/peer-feedback-view.html',
