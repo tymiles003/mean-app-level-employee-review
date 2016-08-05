@@ -1,0 +1,193 @@
+// 9-box
+
+.rating-9-box {
+	@include flexbox;
+	@include flex-direction(row);
+	@include flex-wrap(wrap);
+	
+	margin-top: 30px;
+	position: relative;
+	
+	.vertical-subheaders, .horizontal-subheaders {
+		display: none;
+	}
+
+	.rating {
+		padding: 16px 40px 16px 16px;
+		border: 2px solid $white;
+		background: $lightest-grey;
+	}
+
+	.rating-label {
+		cursor: pointer;
+
+		.label-title {
+			display: block;
+		}
+
+		.label-desc {
+			display: block;
+			text-transform: none;
+			font-weight: 600;
+			font-style: normal;
+			color: $dark-grey;
+		}
+	}
+
+	.rating-wrapper {
+		width: 32px;
+		height: 100%;
+		position: absolute;
+		right: 0;
+		top: 0;
+
+		.rating-indicator {
+			margin-top: -12px;
+			position: absolute;
+			top: 50%;
+		}
+
+		.rating-radio {
+			margin: 0;
+			position: absolute;
+    		height: 100%;
+		}
+	}
+
+	.rating:hover .rating-indicator > div,
+	.rating:active .rating-indicator > div,
+	.rating.checked .rating-indicator > div {
+		width: 16px;
+		height: 16px;
+		border-radius: 50%;
+	    background: $red;
+	}
+
+	// Box color changes on hover and active
+
+	@mixin box-font-colors ($i, $font-color) {
+		.box-#{$i}:hover,
+		.box-#{$i}:hover > .label-desc,
+		.box-#{$i}:active,
+		.box-#{$i}:active > .label-desc,
+		.box-#{$i}.checked,
+		.box-#{$i}.checked > .label-desc,{
+			color: $font-color;
+		}
+	}
+
+	@mixin box-background-colors ($i, $background-color) {
+		.box-#{$i}:hover,
+		.box-#{$i}:hover > .label-desc,
+		.box-#{$i}:active,
+		.box-#{$i}:active > .label-desc,
+		.box-#{$i}.checked,
+		.box-#{$i}.checked > .label-desc,{
+			background: $background-color;
+		}
+	}
+
+	@for $i from 1 through 1 {
+		@include box-background-colors ($i, $red);
+	}
+
+	@for $i from 2 through 3 {
+		@include box-background-colors ($i, desaturate($red, 40%));
+	}
+
+	@for $i from 4 through 6 {
+		@include box-background-colors ($i, $grey);
+	}
+
+	@for $i from 7 through 8 {
+		@include box-background-colors ($i, lighten($grey, 20%));
+	}
+
+	@for $i from 9 through 9 {
+		@include box-background-colors ($i, lighten($grey, 50%));
+	}
+
+	// Change text to white on dark boxes for hover
+	@for $i from 1 through 6 {
+		@include box-font-colors ($i, $white);
+	}
+	
+	// Change text to black on light boxes for hover
+	@for $i from 7 through 9 {
+		@include box-font-colors ($i, $dark-grey);
+	}
+	
+	// Re-ordering with flexbox
+	@for $i from 1 through 9 {
+		.box-#{$i} {
+			order: $i;
+		}
+	}
+
+	@include breakpoint(md) {
+		
+		height: 876px;
+
+		.rating {
+			height: 288px;
+			padding: 16px;
+		}
+
+		.rating-label {
+			.label-title{
+				display: none;
+			}
+		}
+
+		.rating-wrapper {
+			top: auto;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: auto;
+
+			.rating-indicator {
+				position: relative;
+			}
+
+			.rating-radio {
+				height: auto;
+				margin: auto auto 24px auto;
+				position: relative;
+			}
+		}
+
+		.ratings-subheader {
+			border: none;
+			padding-left: 2px;
+			font-size: 14px;
+		}
+
+		.vertical-subheaders, .horizontal-subheaders {
+			width: 100%;
+			display: block;
+		}
+
+		.vertical-subheaders {
+			width: 864px;
+			position: absolute;
+			top: 442px;
+			left: -442px;
+			-webkit-transform: rotate(-90deg);
+			-ms-transform: rotate(-90deg);
+			transform: rotate(-90deg);
+		}
+
+		@for $i from 1 through 9 {
+			.box-#{$i} {
+				order: unset;
+			}
+		}
+	}
+
+	@include breakpoint(lg) {
+		.ratings-subheader {
+			font-size: 16px;
+		}
+	}
+}
