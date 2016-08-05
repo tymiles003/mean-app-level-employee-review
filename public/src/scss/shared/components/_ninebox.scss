@@ -35,16 +35,16 @@
 	}
 
 	.rating-wrapper {
+		width: 32px;
+		height: 100%;
 		position: absolute;
 		right: 0;
 		top: 0;
-		height: 100%;
-		width: 32px;
 
 		.rating-indicator {
+			margin-top: -12px;
 			position: absolute;
 			top: 50%;
-			margin-top: -12px;
 		}
 
 		.rating-radio {
@@ -54,70 +54,77 @@
 		}
 	}
 
-	.box-1:hover,
-	.box-1:active,
-	input:checked ~ .box-1 {
-		color: $white;
-		background: $red;
+	.rating:hover .rating-indicator > div,
+	.rating:active .rating-indicator > div,
+	.rating.checked .rating-indicator > div {
+		width: 16px;
+		height: 16px;
+		border-radius: 50%;
+	    background: $red;
 	}
 
-	.box-2:hover,
-	.box-2:active,
-	.box-3:hover,
-	.box-3:active,
-	input:checked ~ .box-2,
-	input:checked ~ .box-3 {
-		color: $white;
-		background: desaturate($red, 40%);
+	// Box color changes on hover and active
+
+	@mixin box-font-colors ($i, $font-color) {
+		.box-#{$i}:hover,
+		.box-#{$i}:hover > .label-desc,
+		.box-#{$i}:active,
+		.box-#{$i}:active > .label-desc,
+		.box-#{$i}.checked,
+		.box-#{$i}.checked > .label-desc,{
+			color: $font-color;
+		}
 	}
 
-	.box-4:hover,
-	.box-4:active,
-	.box-5:hover,
-	.box-5:active,
-	.box-6:hover,
-	.box-6:active,
-	input:checked ~ .box-4,
-	input:checked ~ .box-5,
-	input:checked ~ .box-6 {
-		color: $white;
-		background: $grey;
+	@mixin box-background-colors ($i, $background-color) {
+		.box-#{$i}:hover,
+		.box-#{$i}:hover > .label-desc,
+		.box-#{$i}:active,
+		.box-#{$i}:active > .label-desc,
+		.box-#{$i}.checked,
+		.box-#{$i}.checked > .label-desc,{
+			background: $background-color;
+		}
 	}
 
-	.box-7:hover,
-	.box-7:active,
-	.box-8:hover,
-	.box-8:active,
-	input:checked ~ .box-7,
-	input:checked ~ .box-8 {
-		background: lighten($grey, 20%);
+	@for $i from 1 through 1 {
+		@include box-background-colors ($i, $red);
 	}
 
-	.box-9:hover,
-	.box-9:active,
-	input:checked ~ .box-9 {
-		background: lighten($grey, 50%);
+	@for $i from 2 through 3 {
+		@include box-background-colors ($i, desaturate($red, 40%));
 	}
 
+	@for $i from 4 through 6 {
+		@include box-background-colors ($i, $grey);
+	}
+
+	@for $i from 7 through 8 {
+		@include box-background-colors ($i, lighten($grey, 20%));
+	}
+
+	@for $i from 9 through 9 {
+		@include box-background-colors ($i, lighten($grey, 50%));
+	}
+
+	// Change text to white on dark boxes for hover
 	@for $i from 1 through 6 {
-		.box-#{$i}:hover > .rating-label,
-		.box-#{$i}:hover > .rating-label > .label-desc {
-			color: $white;
-		}
-	}
-
-	@for $i from 7 through 9 {
-		.box-#{$i}:hover > .rating-label {
-			color: $dark-grey;
-		}
+		@include box-font-colors ($i, $white);
 	}
 	
+	// Change text to black on light boxes for hover
+	@for $i from 7 through 9 {
+		@include box-font-colors ($i, $dark-grey);
+	}
+	
+	// Re-ordering with flexbox
 	@for $i from 1 through 9 {
 		.box-#{$i} {
 			order: $i;
 		}
 	}
-	@media screen and (min-width: 992px) {
+
+	@include breakpoint(md) {
 		
 		height: 876px;
 
@@ -178,7 +185,7 @@
 		}
 	}
 
-	@media screen and (min-width: 1200px) {
+	@include breakpoint(lg) {
 		.ratings-subheader {
 			font-size: 16px;
 		}
