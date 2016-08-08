@@ -18,9 +18,10 @@ module.exports = function() {
     require('../app/models/goal-server-model');
     require('../app/models/peer-feedback-server-model');
     require('../app/models/review-server-model');
+    require('../app/models/halfway-server-model');
 
 
-	// Enable logger (morgan)
+    // Enable logger (morgan)
     app.use(morgan('dev'));
 
     // Use Express middlewares
@@ -29,7 +30,7 @@ module.exports = function() {
     app.use(methodOverride());
     app.use(cookieParser());
     app.use(session({
-    	secret: 'MEAN'
+        secret: 'MEAN'
     }));
 
     // Set view engine
@@ -46,9 +47,10 @@ module.exports = function() {
     // Configure server-side routing
     require('../app/routes/index-server-routes')(app);
     require('../app/routes/users-server-routes')(app);
+    require('../app/routes/api-server-routes')(app);
 
-	// Setting the app router and static folder
-	app.use(express.static(path.resolve('./public')));
+    // Setting the app router and static folder
+    app.use(express.static(path.resolve('./public')));
 
     return app;
 };

@@ -40,10 +40,10 @@
             .when('/reviews/annual', {
                 //templateUrl: 'views/annual-perform-view.html',
                 //controller: 'AnnualPerformCtrl'
-            })
-            .otherwise({
-                redirectTo: '/login'
             });
+            // .otherwise({
+            //     redirectTo: '/login'
+            // });
         }
     ]);
 })();
