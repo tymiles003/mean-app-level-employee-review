@@ -107,8 +107,12 @@ input:-moz-placeholder { /* Firefox 18- */
 	line-height: 18px;
 	letter-spacing: 1px;
 	color: $white;
-	background: $red;
+	background: $orange;
 	padding: 4px 8px;
+}
+
+.ng-invalid.ng-touched {
+	border: 1px solid $orange;
 }
 
 .alert {
