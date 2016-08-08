@@ -1,1 +1,95 @@
+
+<!-- Temp File: halfway-checkin-view.html: Designed to test saving data from Ang to Express to MongoDB -->
+
+<div class="container">
+	<header class="hero-header">
+		<h1><img class="center-block img-responsive" src="/assets/images/header-halfway-check-large.png" alt="LEVEL Halfway Checkin"></h1>
+	</header>
+	<section>
+		<p>Now that we are halfway through the performance year, LEVEL managers can use the recently received feedback, regular career meetings, and performance observations to complete a Nine-Box rating. When selecting a rating, consider recent performance and the individual's growth and development in the three standards: Results, Expertise, and Collaboration. Be sure to include comments that support your Nine-Box selection to ensure a constructive conversation.</p>
+	</section>
+
+	<form action="#">
+		<div class="row form-group">
+			<div class="col-xs-6">
+				<label>Team Member Name
+					<input type="text" name="emp-first-name" class="form-control" placeholder="Team Member First Name" required>
+				</label>
+			</div>
+			<div class="col-xs-6">
+				<label>&nbsp;
+					<input type="text" name="emp-last-name" class="form-control" placeholder="Team Member Last Name" required>
+				</label>
+			</div>
+		</div>
+		<div class="row form-group">
+			<div class="col-xs-6">
+				<label>Team Member Job Title
+					<input type="text" name="job-title" class="form-control" placeholder="Team Member Job Title">
+				</label>
+			</div>
+			<div class="col-xs-6">
+				<label>Performance Year
+					<select class="form-control" name="feedback-year" required>
+						<option value="1">2016/2017</option>
+					</select>
+				</label>
+			</div>
+		</div>
+		<div class="row form-group">
+			<div class="col-xs-6">
+				<label>Manager Name
+					<input type="text" name="man-first-name" class="form-control" placeholder="Manager First Name" required>
+				</label>
+			</div>
+			<div class="col-xs-6">
+				<label>&nbsp;
+					<input type="text" name="man-last-name" class="form-control" placeholder="Manager Last Name" required>
+				</label>
+			</div>
+		</div>
+		<section>
+			<label>Nine-Box Rating <i>[UI Pending]</i></label>
+				<div class="row form-group">
+					<div class="col-xs-1 col-xs-offset-1 nine-box-temp">
+						<input type="radio" name="nine-box" value="1"> 1
+					</div>
+					<div class="col-xs-1 nine-box-temp">
+						<input type="radio" name="nine-box" value="2"> 2
+					</div>
+					<div class="col-xs-1 nine-box-temp">
+						<input type="radio" name="nine-box" value="3"> 3
+					</div>
+					<div class="col-xs-1 nine-box-temp">
+						<input type="radio" name="nine-box" value="4"> 4
+					</div>
+					<div class="col-xs-1 nine-box-temp">
+						<input type="radio" name="nine-box" value="5"> 5
+					</div>
+					<div class="col-xs-1 nine-box-temp">
+						<input type="radio" name="nine-box" value="6"> 6
+					</div>
+					<div class="col-xs-1 nine-box-temp">
+						<input type="radio" name="nine-box" value="7"> 7
+					</div>
+					<div class="col-xs-1 nine-box-temp">
+						<input type="radio" name="nine-box" value="8"> 8
+					</div>
+					<div class="col-xs-1 nine-box-temp">
+						<input type="radio" name="nine-box" value="9"> 9
+					</div>
+				</div>
+			</section>
+			<div class="row form-group">
+				<div class="col-xs-12">
+					<label>Supporting Comments
+						<textarea name="comments" class="form-control" rows="6" required></textarea>
+					</label>
+				</div>
+			</div>
+			<button class="btn btn-default center-block" type="submit">Submit</button>
+		</section>
+	</form>
+</div>
+
 <div>HEY THERE {{name}}!</div>
