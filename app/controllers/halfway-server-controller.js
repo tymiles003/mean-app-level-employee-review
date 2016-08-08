@@ -11,21 +11,24 @@ var mongoose = require('mongoose'),
 	Halfway = mongoose.model('Halfway');
 
 // TODO: Follow controller step by step  -- use users controller to help you save data to db
+// I think you need a new halfway here
 
 	// local test data to tray and post to the db
-	var halfwayTestData = {
-		empFirstName: 'Scott',
-		empLastName: 'Kao',
-		manFirstName: 'Kevin',
-		manLastName: 'So'
-	};
 
 	// method that tries to post the data
 	exports.postData = function(req, res, next) {
-		console.log(JSON.stringify(halfwayTestData))
+
+		var halfwayTestData = {
+			empFirstName: 'Scott',
+			empLastName: 'Kao',
+			manFirstName: 'Kevin',
+			manLastName: 'So'
+		};
+
+		console.log('hi: ', JSON.stringify(halfwayTestData))
 	};
 
 	// MONGOOSE
-	// data.save();// 
+	// data.save();//
 
 })();
