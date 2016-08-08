@@ -7,7 +7,7 @@ angular.module('sugarsnaps').controller('LogInCtrl', ['$scope',
 				console.log('Please fill out the required fields');
 				return;
 			}else {
-				location.assign("http://localhost:3000/#/dash-test");
+				location.assign("http://localhost:3000/#/dashboard");
 			}
 		};
 	}
