@@ -2,9 +2,9 @@
 <div class="container">
 	<form name="goalSetting" ng-submit="submit(goalSetting)" novalidate autocomplete="off">
 		<header class="hero-header">
-			<h1><img class="center-block img-responsive" src="/assets/images/header-goals-large.png" alt="LEVEL - Goal Setting"></h1>
+			<h1 class="header-goals">LEVEL - Goal Setting</h1>
 		</header>
-		<section class="section clearfix">
+		<section class="section flex-section row">
 			<div class="section-header goals-team-member-details col-md-3">
 				<h2>Team Member Details</h2>
 			</div>
@@ -68,7 +68,7 @@
 			</div>
 		</section>
 
-		<section class="section clearfix goals">
+		<section class="section flex-section row goals">
 			<div class="section-header goals-setting-details col-md-3">
 				<h2>Goals</h2>
 			</div>
@@ -108,13 +108,13 @@
 						<div class="col-md-12 form-group">
 							<label for="results-goal-01">Goal 1 Description<span class="required">*</span></label>
 							<textarea class="form-control" name="resultsGoal01" rows="11" ng-model="userGoals.resultsGoalOne" required></textarea>
-							<div ng-messages="goalSetting.resultsGoalOne.$error" ng-if="goalSetting.resultsGoal01.$touched">
+							<div ng-messages="goalSetting.resultsGoal01.$error" ng-if="goalSetting.resultsGoal01.$touched">
 								 <div ng-message="required" class="required">This field is required</div>
 							</div>
 						</div>
 					</div>
 
-					<div class="row goal">
+					<!-- <div class="row goal">
 						<div class="col-md-12">
 							<div class="row">
 								<div class="col-xs-12 col-sm-6 form-group due-date">
@@ -136,7 +136,7 @@
 							<label for="results-goal-02">Goal 2 Description</label>
 							<textarea class="form-control" name="results-goal-02" rows="11" ng-model="userGoals.resultsGoalTwo"></textarea>
 						</div>
-					</div>
+					</div> -->
 				</div>
 
 				<div class="expertise row">
@@ -176,7 +176,7 @@
 						</div>
 					</div>
 
-					<div class="row goal">
+					<!-- <div class="row goal">
 						<div class="col-md-12">
 							<div class="row">
 								<div class="col-xs-12 col-sm-6 form-group due-date">
@@ -196,9 +196,9 @@
 						</div>
 						<div class="col-md-12 form-group">
 							<label for="expertise-goal-01">Goal 2 Description</label>
-							<textarea class="form-control" name="expertise-goal-01" rows="11" ng-model="userGoals.expertiseGoalOne"></textarea>
+							<textarea class="form-control" name="expertise-goal-01" rows="11" ng-model="userGoals.expertiseGoalTwo"></textarea>
 						</div>
-					</div>
+					</div> -->
 				</div>
 
 				<div class="collaboration row">
@@ -238,7 +238,7 @@
 						</div>
 					</div>
 
-					<div class="row goal goal-last">
+					<!-- <div class="row goal goal-last">
 						<div class="col-md-12">
 							<div class="row">
 								<div class="col-xs-12 col-sm-6 form-group due-date">
@@ -260,7 +260,7 @@
 							<label for="collaboration-goal-01">Goal 2 Description</label>
 							<textarea class="form-control" name="collaboration-goal-01" rows="11" ng-model="userGoals.collaborationsGoalTwo"></textarea>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</section>
