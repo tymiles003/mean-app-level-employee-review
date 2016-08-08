@@ -17,9 +17,9 @@
                 templateUrl: 'views/login-view.html',
                 controller: 'LogInCtrl'
             })
-            .when('/dash-test', {
-                templateUrl: 'views/dash-test-view.html',
-                controller: 'DashCtrl'
+            .when('/dashboard', {
+                templateUrl: 'views/dashboard-view.html',
+                controller: 'DashboardCtrl'
             })
             .when('/goals', {
                 templateUrl: 'views/goals-view.html',

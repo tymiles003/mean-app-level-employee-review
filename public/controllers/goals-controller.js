@@ -12,7 +12,7 @@ angular.module('sugarsnaps').controller('GoalsCtrl', ['$scope',
 				return;
 			}else {
 				console.log('regForm: ', JSON.stringify($scope.userGoals));
-				location.assign("http://localhost:3000/#/dash-test");
+				location.assign("http://localhost:3000/#/dashboard");
 			}
 		};
 	}
