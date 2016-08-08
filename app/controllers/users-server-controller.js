@@ -5,7 +5,7 @@
  */
 var mongoose = require('mongoose'),
 	passport = require('passport'),
-	User = mongoose.model('User');
+	User = mongoose.model('User'); // include your model ?!
 
 /**
  * Get the error message from error object
@@ -44,7 +44,7 @@ exports.signout = function(req, res) {
  */
 exports.signup = function(req, res) {
 	// Init Variables
-	var user = new User(req.body);
+	var user = new User(req.body); // inits a var that is an instantiation of the model!
 	var message = null;
 
 	// Add missing user fields
@@ -65,7 +65,7 @@ exports.signup = function(req, res) {
 				if (err) {
 					res.send(400, err);
 				} else {
-					res.jsonp(user);
+					res.jsonp(user); // respond with the user schema wrapped in jsonp (?!)
 				}
 			});
 		}

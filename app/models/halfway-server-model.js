@@ -1,7 +1,7 @@
 var mongoose = require('mongoose'),
 	Schema = mongoose.Schema;
 
-var HalfwaySchema = new Schema({
+var HalfwaySchema = new Schema({	// Instatiate a NEW Halfway Schema -- db expects it
 	// todo: write schema object props here
 
 	empFirstName: {
