@@ -1,6 +1,6 @@
 (function(){
 
-	'user strict';
+	'use strict';
 
 	angular.module(ssApp).controller('LogInCtrl', ['$scope', '$http', '$location',
 		function($scope, $http, $location) {
