@@ -1,0 +1,135 @@
+.level-name {
+  text-transform: uppercase; }
+
+.per-dash-contain {
+  position: relative; }
+  .per-dash-contain .per-dash-cycle {
+    text-transform: uppercase; }
+  .per-dash-contain .per-sidebar {
+    width: 200px;
+    height: 100%;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 58px;
+    position: absolute;
+    background: #b5b5b5; }
+    @media (max-width: 767px) {
+      .per-dash-contain .per-sidebar {
+        width: 150px; } }
+    .per-dash-contain .per-sidebar ul {
+      -webkit-padding-start: 0;
+      padding-left: 40px; }
+      @media (max-width: 767px) {
+        .per-dash-contain .per-sidebar ul {
+          padding-left: 20px; } }
+      .per-dash-contain .per-sidebar ul li {
+        list-style-type: none;
+        cursor: pointer; }
+        .per-dash-contain .per-sidebar ul li a {
+          color: #252525;
+          margin-left: -40px;
+          padding-left: 40px;
+          display: block;
+          cursor: pointer; }
+          @media (max-width: 767px) {
+            .per-dash-contain .per-sidebar ul li a {
+              margin-left: -20px;
+              padding-left: 20px; } }
+          .per-dash-contain .per-sidebar ul li a.per-side-active {
+            background: #d0d8db;
+            position: relative; }
+            .per-dash-contain .per-sidebar ul li a.per-side-active:after {
+              width: 0;
+              height: 0;
+              border-top: 10px solid transparent;
+              border-bottom: 10px solid transparent;
+              border-left: 10px solid transparent;
+              border-right: 10px solid #fff;
+              content: "";
+              display: block;
+              position: absolute;
+              right: 0;
+              top: 20px; }
+          .per-dash-contain .per-sidebar ul li a:hover {
+            background: rgba(208, 216, 219, 0.5); }
+  .per-dash-contain .per-dash {
+    padding-left: 220px;
+    background: #fff; }
+    @media (max-width: 767px) {
+      .per-dash-contain .per-dash {
+        padding-left: 170px; } }
+    .per-dash-contain .per-dash .per-dash-head {
+      padding-top: 20px; }
+      .per-dash-contain .per-dash .per-dash-head .per-dash-user {
+        margin-top: 0;
+        display: inline-block;
+        font-size: 30px;
+        font-weight: bold;
+        font-style: normal;
+        line-height: 36px;
+        letter-spacing: 1px;
+        text-transform: uppercase; }
+        .per-dash-contain .per-dash .per-dash-head .per-dash-user img {
+          width: 36px;
+          height: 36px;
+          display: inline-block;
+          vertical-align: top; }
+      .per-dash-contain .per-dash .per-dash-head .per-dash-date {
+        text-align: right; }
+    .per-dash-contain .per-dash .per-dash-content {
+      line-height: 24px; }
+      .per-dash-contain .per-dash .per-dash-content p,
+      .per-dash-contain .per-dash .per-dash-content ul {
+        margin-bottom: 24px; }
+      .per-dash-contain .per-dash .per-dash-content .quick-links {
+        font-size: 18px;
+        font-weight: normal;
+        font-style: normal;
+        line-height: 26px; }
+      .per-dash-contain .per-dash .per-dash-content a {
+        color: #999;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        border-bottom: 1px solid #ccc; }
+        .per-dash-contain .per-dash .per-dash-content a:hover {
+          color: #cd1421; }
+    .per-dash-contain .per-dash .per-dash-tracker {
+      margin: 10px auto 28px;
+      padding: 10px;
+      display: block;
+      font-size: 24px;
+      font-weight: normal;
+      font-style: normal;
+      line-height: 30px;
+      letter-spacing: 2px;
+      background: #cd1421;
+      color: #fff; }
+      @media (min-width: 992px) {
+        .per-dash-contain .per-dash .per-dash-tracker {
+          margin-bottom: 24px;
+          width: 720px;
+          height: 50px;
+          background: url(/assets/images/april-medium.png) no-repeat center center;
+          background-size: 720px 50px; }
+          .per-dash-contain .per-dash .per-dash-tracker span {
+            display: none; } }
+      @media (min-width: 1200px) {
+        .per-dash-contain .per-dash .per-dash-tracker {
+          width: 920px;
+          height: 50px;
+          background: url(/assets/images/april-large.png) no-repeat center center;
+          background-size: 920px 50px; } }
+    @media (min-width: 992px) {
+      .per-dash-contain .per-dash .per-dash-info {
+        text-align: right; } }
+    .per-dash-contain .per-dash .per-dash-info .per-dash-cycle-end {
+      display: block;
+      margin-top: 8px;
+      color: #cd1421;
+      font-size: 24px;
+      font-weight: bold;
+      font-style: normal;
+      line-height: 30px;
+      letter-spacing: 1px;
+      text-transform: uppercase; }

@@ -1,4 +1,44 @@
-<div class="text-center">
-	<h1>This is $scope: {{name}}!!!</h1>
-	<h1>This is user.name: {{user}}!!!</h1>
-</div>
+<main class="container per-dash-contain">
+	<nav class="per-sidebar">
+		<ul>
+			<li><a href="#">To-Do</a></li>
+			<li><a href="#" class="per-side-active">Resources</a></li>
+			<li><a href="#">Direct Report Info</a></li>
+		</ul>
+	</nav>
+	<section class="per-dash">
+		<div class="row per-dash-head">
+			<div class="col-xs-6">
+				<h1 class="per-dash-user"><img src="/assets/images/profile-large-2x.png" alt="User profile image"/> {{name}} Prior-Pfeifer</h1>
+			</div>
+			<div class="col-xs-6">
+				<p class="per-dash-date">Today is <span id="date"></span> April 1, 2016</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="per-dash-tracker clearfix"><span class="per-dash-cycle">April: Feedback Collection</span></div>
+			</div>
+		</div>
+		<div class="row per-dash-content">
+			<div class="col-md-8">
+				<p><span class="level-name">Level</span>'s Performance Enablement program is in place as a conduit for Team Member and Manager relationships, where Team Members work to grow their career through meeting and surpassing goals and expectations set each year.</p>
+				<p>These resources are here as a quick referal to <span class="level-name">Level</span>'s standards and expectations for all of our team members. For further details, please refer to the <a href="http://intranet.level-studios.com/program-policies/" target="_blank">Performance Management section</a> of <span class="level-name">Level</span>'s intranet.</p>
+
+				<h3 class="quick-links">Quick Links</h3>
+				<ul>
+					<li><a href="goals.html">Goal Setting</a></li>
+					<li><a href="feedback-form.html">Performance Feedback Request</a></li>
+					<li><a href="halfway-check-in.html">Halfway Check-In</a></li>
+					<li><a href="user-annual-review.html">Annual Self Assessment</a></li>
+					<li><a href="manager-annual-review.html">Annual Performance Review</a></li>
+				</ul>
+			</div>
+			<div class="col-md-4 per-dash-info">
+				<p><span class="per-dash-cycle">Feedback<br />Collection</span><br />
+				cycle ends:<br />
+				<span class="per-dash-cycle-end">April 30</span></p>
+			</div>
+		</div>
+	</section>
+</main>
