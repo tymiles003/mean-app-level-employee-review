@@ -7,12 +7,12 @@ angular.module(ssApp).controller('GoalsCtrl', ['$scope', '$http', '$location',
 
 		$scope.submit = function() {
 
-			if($scope.goalSetting.$invalid) {
+			if ($scope.goalSetting.$invalid) {
 				console.log('Please fill out the required fields');
 				return;
-			}else {
+			} else {
 				console.log('goalsFormInfo: ', JSON.stringify($scope.goalsFormInfo));
-				location.path('/dashboard');
+				$location.path('/dashboard');
 			}
 		};
 	}
