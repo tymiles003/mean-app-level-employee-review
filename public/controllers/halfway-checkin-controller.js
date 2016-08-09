@@ -4,6 +4,13 @@
 
 	angular.module(mainAppModuleName).controller('HalfwayCheckinCtrl', [ '$scope', '$http',
 		function($scope, $http){
-			$scope.name = "BillyBob";
+
+			// make object for form fields to be props of..
+			$scope.halfwayFormInfo = {};
+
+			$scope.saveHalfwayForm = function() {
+				console.log('halfwayFormInfo includes...: ', JSON.stringify($scope.halfwayFormInfo));
+			}
+
 		}]);
 })();
