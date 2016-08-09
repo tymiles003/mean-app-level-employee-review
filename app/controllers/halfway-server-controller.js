@@ -1,31 +1,23 @@
-// a real js program -- writing a controller is where the coding happens
 (function(){
 
 	'use strict';
 
-	/**
-	 * Module dependencies
-	 */
-var mongoose = require('mongoose'),
-	//User = mongoose.model('User'); // include your model ?!
-	Halfway = mongoose.model('Halfway');
+	// Module dependencie
+	var mongoose = require('mongoose'),
+	Halfway = mongoose.model('Halfway'); // include your mongoose model
 
-// TODO: Follow controller step by step  -- use users controller to help you save data to db
-// I think you need a new halfway here
-
-	// local test data to tray and post to the db
-
-	// method that tries to post the data
+	// Express middleware method:
+	// processes the request, save data to mongo db, issue a response (return back the data too?)
 	exports.postData = function(req, res, next) {
 
-		var halfwayTestData = {
-			empFirstName: 'Scott',
-			empLastName: 'Kao',
-			manFirstName: 'Kevin',
-			manLastName: 'So'
-		};
+		console.log('YES! Server postData Function called!');
 
-		console.log('hi: ', JSON.stringify(halfwayTestData))
+		// 	var user = new User(req.body); // from users-server-controller.js
+		var halfway = new Halfway(req.body);
+
+		console.log('heres the halfway object', halfway);
+
+		res.send('hi from server side'); // test to send something back to the client (here, a string)
 	};
 
 	// MONGOOSE

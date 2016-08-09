@@ -6,7 +6,8 @@
         function($routeProvider) {
             $routeProvider
             .when('/', {
-                templateUrl: 'views/index.html'
+                redirectTo: '/login'
+                //templateUrl: 'views/index.html'
                 //controller: 'IndexController'
             })
             .when('/register', {
