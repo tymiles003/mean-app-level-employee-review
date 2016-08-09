@@ -1,6 +1,6 @@
 (function(){
 
-	'user strict';
+	'use strict';
 
 	angular.module(ssApp).controller('LogInCtrl', ['$scope', '$http', '$location',
 		function($scope, $http, $location) {
@@ -8,7 +8,7 @@
 
 			$scope.logIn = function() {
 				if($scope.logInForm.$invalid) {
-					console.log('Please fill out the required fields');
+					console.log('Please Please Please fill out the required fields');
 					return;
 				} else {
 					console.log('Here is the credentials: ' + JSON.stringify($scope.credentials));
