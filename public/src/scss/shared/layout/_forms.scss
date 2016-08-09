@@ -29,14 +29,30 @@
 	}
 }
 
+.section-header {
+	@include transition(background);
+}
+
 .form-control {
 	height: auto;
 	padding: 12px $element-spacing;
 	border-radius: 0;
+	box-shadow: none;
+
+	@include transition(box-shadow);
+
+	&:focus,
+	&:active {
+		@include focus-outline;
+	}
 }
 
 label {
 	margin-bottom: 6px;
+}
+
+input, textarea {
+	@include transition(box-shadow);
 }
 
 .subsection-header {
