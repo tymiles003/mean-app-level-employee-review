@@ -8,7 +8,7 @@
 
 			$scope.logIn = function() {
 				if($scope.logInForm.$invalid) {
-					console.log('Please Please Please fill out the required fields');
+					console.log('Please fill out the required fields');
 					return;
 				} else {
 					console.log('Here is the credentials: ' + JSON.stringify($scope.credentials));
