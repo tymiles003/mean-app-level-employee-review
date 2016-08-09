@@ -8,14 +8,8 @@
 
 			$scope.register = function(){
 				$scope.firstName = JSON.stringify($scope.registerFormInfo.firstname);
-
-				if($scope.regForm.$invalid) {
-					console.log('Please fill out the required fields');
-					return;
-				}else {
-					console.log('Here is the registerFormInfo: ' + JSON.stringify($scope.registerFormInfo));
-					$location.path('/dashboard');
-				}
+				console.log('Here is the registerFormInfo: ' + JSON.stringify($scope.registerFormInfo));
+				$location.path('/dashboard');
 			}
 		}
 	]);
