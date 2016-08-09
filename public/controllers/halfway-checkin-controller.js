@@ -2,8 +2,9 @@
 
 	'use strict';
 
-	angular.module(mainAppModuleName).controller('HalfwayCheckinCtrl', [ '$scope', '$http', '$location',
-		function($scope, $http, $location){
+	angular.module(ssApp).controller('HalfwayCheckinCtrl', [ '$scope', '$http',
+		function($scope, $http){
+
 			// make object for form fields to be props of..
 			$scope.halfwayFormInfo = {};
 
@@ -22,6 +23,6 @@
 							$location.path('/login');
 						}
 					);
-		}
+			}
 	}]);
 })();
