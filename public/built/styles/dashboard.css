@@ -1,6 +1,3 @@
-.level-name {
-  text-transform: uppercase; }
-
 .per-dash-contain {
   position: relative; }
   .per-dash-contain .per-dash-cycle {
@@ -79,6 +76,8 @@
         text-align: right; }
     .per-dash-contain .per-dash .per-dash-content {
       line-height: 24px; }
+      .per-dash-contain .per-dash .per-dash-content h2 {
+        margin-top: 0; }
       .per-dash-contain .per-dash .per-dash-content p,
       .per-dash-contain .per-dash .per-dash-content ul {
         margin-bottom: 24px; }
@@ -110,7 +109,7 @@
           margin-bottom: 24px;
           width: 720px;
           height: 50px;
-          background: url(/assets/images/april-medium.png) no-repeat center center;
+          background: url(/assets/images/sept-medium.png) no-repeat center center;
           background-size: 720px 50px; }
           .per-dash-contain .per-dash .per-dash-tracker span {
             display: none; } }
@@ -118,7 +117,7 @@
         .per-dash-contain .per-dash .per-dash-tracker {
           width: 920px;
           height: 50px;
-          background: url(/assets/images/april-large.png) no-repeat center center;
+          background: url(/assets/images/sept-large.png) no-repeat center center;
           background-size: 920px 50px; } }
     @media (min-width: 992px) {
       .per-dash-contain .per-dash .per-dash-info {

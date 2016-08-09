@@ -2,8 +2,8 @@
 
 	'use strict';
 
-	angular.module(ssApp).controller('HalfwayCheckinCtrl', [ '$scope', '$http',
-		function($scope, $http){
+	angular.module(ssApp).controller('HalfwayCheckinCtrl', ['$scope', '$http', '$location',
+		function($scope, $http, $location){
 
 			// make object for form fields to be props of..
 			$scope.halfwayFormInfo = {};
@@ -16,7 +16,7 @@
 					.then(
 						// success callback
 						function(response){
-							$location.path('/goals');
+							//$location.path('/goals');
 						},
 						// failure callback
 						function(response){
