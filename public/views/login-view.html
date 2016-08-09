@@ -12,9 +12,9 @@
 				<form name="logInForm" data-ng-submit="logIn()" class="register" novalidate autocomplete="off">
 					<fieldset>
 						<div class="col-sm-12 form-group">
-							<label for="email">Email<span class="required">*</span></label>
-							<input type="text" id="email" name="email" class="form-control" data-ng-model="credentials.email" placeholder="Email" required>
-							<div ng-messages="logInForm.email.$error" ng-if="logInForm.email.$touched">
+							<label for="email">Lion Log In<span class="required">*</span></label>
+							<input type="text" id="lion-login" name="lionLogIn" class="form-control" data-ng-model="credentials.lionLogIn" placeholder="Lion Log In" required>
+							<div ng-messages="logInForm.lionLogIn.$error" ng-if="logInForm.lionLogIn.$touched">
 								 <div ng-message="required" class="validation-error">This field is required</div>
 							</div>
 						</div>
