@@ -3,11 +3,6 @@
 
 $sidebarW: 200px;
 
-// Add to typography
-.level-name {
-	text-transform: uppercase;
-}
-
 // content
 .per-dash-contain {
 	position: relative;
@@ -123,6 +118,10 @@ $sidebarW: 200px;
 		.per-dash-content {
 			line-height: 24px;
 
+			h2 {
+				margin-top: 0;
+			}
+
 			p,
 			ul {
 				margin-bottom: 24px;
@@ -164,7 +163,7 @@ $sidebarW: 200px;
 				width: 720px;
 				height: 50px;
 
-				background: url(/assets/images/april-medium.png) no-repeat center center;
+				background: url(/assets/images/sept-medium.png) no-repeat center center;
 				background-size: 720px 50px;
 
 				span{
@@ -176,7 +175,7 @@ $sidebarW: 200px;
 				width: 920px;
 				height: 50px;
 
-				background: url(/assets/images/april-large.png) no-repeat center center;
+				background: url(/assets/images/sept-large.png) no-repeat center center;
 				background-size: 920px 50px;
 			}
 		}

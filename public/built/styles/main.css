@@ -129,6 +129,9 @@ input:-moz-placeholder {
   .btn-alt:hover, .btn-alt:focus, .btn-alt:active, .btn-alt:active:hover, .btn-alt:active:focus {
     color: #cd1421; }
 
+.level-name {
+  text-transform: uppercase; }
+
 .buttons {
   text-align: center; }
 
