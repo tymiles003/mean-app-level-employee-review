@@ -2,24 +2,21 @@
 
 	'use strict';
 
-	// Module dependencie
+	// Module dependencies
 	var mongoose = require('mongoose'),
-	Halfway = mongoose.model('Halfway'); // include your mongoose model
+		Halfway = mongoose.model('Halfway'); // include your mongoose model
 
 	// Express middleware method:
-	// processes the request, save data to mongo db, issue a response (return back the data too?)
+	// process the request, save data to mongo db, issue a response (return back the data too?)
 	exports.postData = function(req, res, next) {
 
-		// 	var user = new User(req.body); // from users-server-controller.js
 		var halfway = new Halfway(req.body);
-		console.log('Hey! heres the halfway object', halfway);
+		console.log('Halfway object comin at ya', halfway);
 
-		// try saving the data to the db
-		halfway.save( function(err) {
+		// save the object to the db -- successful, so obviously db connection is open
+		halfway.save(function(err, halfway) {
 			if (err) return console.error('theres an error', err);
 		});
-
-		//res.send('hi from server side'); // gotta send something back to the client (here, a string)
 	};
 
 })();
