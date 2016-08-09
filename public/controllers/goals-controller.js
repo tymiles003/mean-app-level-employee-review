@@ -1,6 +1,6 @@
 'use strict'
 
-angular.module('sugarsnaps').controller('GoalsCtrl', ['$scope',
+angular.module(ssApp).controller('GoalsCtrl', ['$scope',
 	function($scope) {
 
 		$scope.userGoals = {};

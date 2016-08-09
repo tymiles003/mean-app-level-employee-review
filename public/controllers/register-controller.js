@@ -2,7 +2,7 @@
 
 	'use strict';
 
-	angular.module(mainAppModuleName).controller('RegisterCtrl', ['$scope', '$http',
+	angular.module(ssApp).controller('RegisterCtrl', ['$scope', '$http',
 		function($scope, $http) {
 			$scope.formInfo = {}
 
