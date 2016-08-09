@@ -1,9 +1,9 @@
 'use strict'
 
-angular.module('sugarsnaps').controller('GoalsCtrl', ['$scope',
-	function($scope) {
+angular.module(ssApp).controller('GoalsCtrl', ['$scope', '$http', '$location',
+	function($scope, $http, $location) {
 
-		$scope.userGoals = {};
+		$scope.goalsFormInfo = {};
 
 		$scope.submit = function() {
 
@@ -11,8 +11,8 @@ angular.module('sugarsnaps').controller('GoalsCtrl', ['$scope',
 				console.log('Please fill out the required fields');
 				return;
 			}else {
-				console.log('regForm: ', JSON.stringify($scope.userGoals));
-				location.assign("http://localhost:3000/#/dashboard");
+				console.log('goalsFormInfo: ', JSON.stringify($scope.goalsFormInfo));
+				location.path('/dashboard');
 			}
 		};
 	}

@@ -1,21 +1,22 @@
-'use strict';
+(function() {
 
-angular.module('sugarsnaps').controller('RegisterCtrl', ['$scope', '$http',
-	function($scope, $http) {
+	'use strict';
 
-		$scope.formInfo = {};
+	angular.module(ssApp).controller('RegisterCtrl', ['$scope', '$http', '$location',
+		function($scope, $http, $location) {
+			$scope.registerFormInfo = {}
 
-		$scope.register = function() {
-			// console.log('Here is the form info: ' + JSON.stringify($scope.formInfo));
-			// $scope.firstName = JSON.stringify($scope.formInfo.firstname);
+			$scope.register = function(){
+				$scope.firstName = JSON.stringify($scope.registerFormInfo.firstname);
 
-			if($scope.regForm.$invalid) {
-				console.log('Please fill out the required fields');
-				return;
-			}else {
-				location.assign("http://localhost:3000/#/dashboard");
+				if($scope.regForm.$invalid) {
+					console.log('Please fill out the required fields');
+					return;
+				}else {
+					console.log('Here is the registerFormInfo: ' + JSON.stringify($scope.registerFormInfo));
+					$location.path('/dashboard');
+				}
 			}
-
-		};
-	}
-]);
+		}
+	]);
+})();

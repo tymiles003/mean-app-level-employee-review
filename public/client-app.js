@@ -2,10 +2,10 @@
 'use strict';
 
 // Define the main angular application module name
-var mainAppModuleName = 'sugarsnaps';
+var ssApp = 'sugarsnaps';
 
 // Define the main angular application module
-var mainAppModule = angular.module(mainAppModuleName, ['ngRoute', 'ngMessages']);
+var mainAppModule = angular.module(ssApp, ['ngRoute', 'ngMessages']);
 
 //Configure application hashbang routing
 mainAppModule.config(['$locationProvider',
@@ -16,5 +16,5 @@ mainAppModule.config(['$locationProvider',
 
 // Init the AngularJS application
 angular.element(document).ready(function() {
-   angular.bootstrap(document, [mainAppModuleName]);
+   angular.bootstrap(document, [ssApp]);
 });

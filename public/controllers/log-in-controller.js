@@ -1,14 +1,20 @@
-'use strict';
+(function(){
 
-angular.module('sugarsnaps').controller('LogInCtrl', ['$scope',
-	function($scope, UserInfoService) {
-		$scope.logIn = function() {
-			if($scope.logInForm.$invalid) {
-				console.log('Please fill out the required fields');
-				return;
-			}else {
-				location.assign("http://localhost:3000/#/dashboard");
+	'user strict';
+
+	angular.module(ssApp).controller('LogInCtrl', ['$scope', '$http', '$location',
+		function($scope, $http, $location) {
+			$scope.credentials = {};
+
+			$scope.logIn = function() {
+				if($scope.logInForm.$invalid) {
+					console.log('Please fill out the required fields');
+					return;
+				} else {
+					console.log('Here is the credentials: ' + JSON.stringify($scope.credentials));
+					$location.path('/dashboard');
+				}
 			}
-		};
-	}
-]);
+		}
+	]);
+})();

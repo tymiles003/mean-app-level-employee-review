@@ -13,15 +13,15 @@
 					<label for="team-member-name">Team Member Name<span class="required">*</span></label>
 					<div class="row name">
 						<div class="col-xs-12 col-sm-6">
-							<input type="text" name="memberFirstName" class="form-control" placeholder="First Name" ng-model="userGoals.teamMemberFName" required>
+							<input type="text" name="memberFirstName" class="form-control" placeholder="First Name" ng-model="goalsFormInfo.teamMemberFName" required>
 							<div ng-messages="goalSetting.memberFirstName.$error" ng-if="goalSetting.memberFirstName.$touched">
-								 <div ng-message="required" class="required">This field is required</div>
+								 <div ng-message="required" class="validation-error">This field is required</div>
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-6">
-							<input type="text" name="memberLastName" class="form-control" placeholder="Last Name" ng-model="userGoals.teamMemberLName" required>
+							<input type="text" name="memberLastName" class="form-control" placeholder="Last Name" ng-model="goalsFormInfo.teamMemberLName" required>
 							<div ng-messages="goalSetting.memberLastName.$error" ng-if="goalSetting.memberLastName.$touched">
-								 <div ng-message="required" class="required">This field is required</div>
+								 <div ng-message="required" class="validation-error">This field is required</div>
 							</div>
 						</div>
 					</div>
@@ -30,20 +30,20 @@
 					<div class="row">
 						<div class="col-sm-6 form-group">
 							<label for="team-member-title">Team Member Title<span class="required">*</span></label>
-							<input type="text" name="memberTitle" class="form-control" name="team-member-title" placeholder="Title" ng-model="userGoals.teamMemberTitle" required>
+							<input type="text" name="memberTitle" class="form-control" name="team-member-title" placeholder="Title" ng-model="goalsFormInfo.teamMemberTitle" required>
 							<div ng-messages="goalSetting.memberTitle.$error" ng-if="goalSetting.memberTitle.$touched">
-								 <div ng-message="required" class="required">This field is required</div>
+								 <div ng-message="required" class="validation-error">This field is required</div>
 							</div>
 						</div>
 						<div class="col-sm-6 form-group">
 							<label for="feedback-year">Feedback Year<span class="required">*</span></label>
-							<select class="form-control" name="feedbackYear" id="feedback-year" ng-model="userGoals.feedbackYear" required>
+							<select class="form-control" name="feedbackYear" id="feedback-year" ng-model="goalsFormInfo.feedbackYear" required>
 								<option value="-1">Please select a year</option>
 								<option value="1">2015/2016</option>
 								<option value="2">2016/2017</option>
 							</select>
 							<div ng-messages="goalSetting.feedbackYear.$error" ng-if="goalSetting.feedbackYear.$touched">
-								 <div ng-message="required" class="required">This field is required</div>
+								 <div ng-message="required" class="validation-error">This field is required</div>
 							</div>
 						</div>
 					</div>
@@ -52,15 +52,15 @@
 					<label for="team-member-manager-name">Team Member Manager<span class="required">*</span></label>
 					<div class="row name">
 						<div class="col-xs-12 col-sm-6">
-							<input type="text" name="memberManagerFirstName" class="form-control"  placeholder="First Name" ng-model="userGoals.memberManagerFName" required>
+							<input type="text" name="memberManagerFirstName" class="form-control"  placeholder="First Name" ng-model="goalsFormInfo.memberManagerFName" required>
 							<div ng-messages="goalSetting.memberManagerFirstName.$error" ng-if="goalSetting.memberManagerFirstName.$touched">
-								 <div ng-message="required" class="required">This field is required</div>
+								 <div ng-message="required" class="validation-error">This field is required</div>
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-6">
-							<input type="text" name="memberManagerLastName" class="form-control"  placeholder="Last Name" ng-model="userGoals.memberManagerLName" required>
+							<input type="text" name="memberManagerLastName" class="form-control"  placeholder="Last Name" ng-model="goalsFormInfo.memberManagerLName" required>
 							<div ng-messages="goalSetting.memberManagerLastName.$error" ng-if="goalSetting.memberManagerLastName.$touched">
-								 <div ng-message="required" class="required">This field is required</div>
+								 <div ng-message="required" class="validation-error">This field is required</div>
 							</div>
 						</div>
 					</div>
@@ -86,30 +86,30 @@
 							<div class="row">
 								<div class="col-xs-12 col-sm-6 form-group due-date">
 									<label for="results-due-date-01">Due Date<span class="required">*</span></label>
-									<input class="form-control" name="resultDueDate" placeholder="MM/DD/YYYY" ng-model="userGoals.resultGoalDueDateOne" required>
+									<input class="form-control" name="resultDueDate" placeholder="MM/DD/YYYY" ng-model="goalsFormInfo.resultGoalDueDateOne" required>
 									<div ng-messages="goalSetting.resultDueDate.$error" ng-if="goalSetting.resultDueDate.$touched">
-										<div ng-message="required" class="required">This field is required</div>
+										<div ng-message="required" class="validation-error">This field is required</div>
 									</div>
 								</div>
 								<div class="col-xs-12 col-sm-6 form-group goal-status">
 									<label for="results-goal-status-01">Goal 1 Status<span class="required">*</span></label>
-									<select class="form-control" name="resultGoalStatus" id="results-goal-status-01" ng-model="userGoals.resultGoalStatusOne" required>
+									<select class="form-control" name="resultGoalStatus" id="results-goal-status-01" ng-model="goalsFormInfo.resultGoalStatusOne" required>
 										<option value="-1">Please select status</option>
 										<option value="1">No Status</option>
 										<option value="2">In Progress</option>
 										<option value="3">Completed</option>
 									</select>
 									<div ng-messages="goalSetting.resultGoalStatus.$error" ng-if="goalSetting.resultGoalStatus.$touched">
-										<div ng-message="required" class="required">This field is required</div>
+										<div ng-message="required" class="validation-error">This field is required</div>
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="col-md-12 form-group">
 							<label for="results-goal-01">Goal 1 Description<span class="required">*</span></label>
-							<textarea class="form-control" name="resultsGoal01" rows="11" ng-model="userGoals.resultsGoalOne" required></textarea>
+							<textarea class="form-control" name="resultsGoal01" rows="11" ng-model="goalsFormInfo.resultsGoalOne" required></textarea>
 							<div ng-messages="goalSetting.resultsGoal01.$error" ng-if="goalSetting.resultsGoal01.$touched">
-								 <div ng-message="required" class="required">This field is required</div>
+								 <div ng-message="required" class="validation-error">This field is required</div>
 							</div>
 						</div>
 					</div>
@@ -119,11 +119,11 @@
 							<div class="row">
 								<div class="col-xs-12 col-sm-6 form-group due-date">
 									<label for="results-due-date-02">Due Date</label>
-									<input class="form-control" name="results-due-date-02" placeholder="MM/DD/YYYY" ng-model="userGoals.resultGoalDueDateTwo">
+									<input class="form-control" name="results-due-date-02" placeholder="MM/DD/YYYY" ng-model="goalsFormInfo.resultGoalDueDateTwo">
 								</div>
 								<div class="col-xs-12 col-sm-6 form-group goal-status">
 									<label for="results-goal-status-02">Goal 2 Status</label>
-									<select class="form-control" name="results-goal-status-01" id="results-goal-status-02" ng-model="userGoals.resultGoalStatusTwo">
+									<select class="form-control" name="results-goal-status-01" id="results-goal-status-02" ng-model="goalsFormInfo.resultGoalStatusTwo">
 										<option value="-1">Please select status</option>
 										<option value="1">No Status</option>
 										<option value="2">In Progress</option>
@@ -134,7 +134,7 @@
 						</div>
 						<div class="col-md-12 form-group">
 							<label for="results-goal-02">Goal 2 Description</label>
-							<textarea class="form-control" name="results-goal-02" rows="11" ng-model="userGoals.resultsGoalTwo"></textarea>
+							<textarea class="form-control" name="results-goal-02" rows="11" ng-model="goalsFormInfo.resultsGoalTwo"></textarea>
 						</div>
 					</div> -->
 				</div>
@@ -148,30 +148,30 @@
 							<div class="row">
 								<div class="col-xs-12 col-sm-6 form-group due-date">
 									<label for="expertise-due-date-01">Due Date<span class="required">*</span></label>
-									<input class="form-control" name="expertiseDueDate" placeholder="MM/DD/YYYY" ng-model="userGoals.expertiseGoalDueDateOne" required>
+									<input class="form-control" name="expertiseDueDate" placeholder="MM/DD/YYYY" ng-model="goalsFormInfo.expertiseGoalDueDateOne" required>
 									<div ng-messages="goalSetting.expertiseDueDate.$error" ng-if="goalSetting.expertiseDueDate.$touched">
-										<div ng-message="required" class="required">This field is required</div>
+										<div ng-message="required" class="validation-error">This field is required</div>
 									</div>
 								</div>
 								<div class="col-xs-12 col-sm-6 form-group goal-status">
 									<label for="expertise-goal-status-01">Goal 1 Status<span class="required">*</span></label>
-									<select class="form-control" name="expertiseGoalStatus" id="expertise-goal-status-01" ng-model="userGoals.expertiseGoalStatusOne" required>
+									<select class="form-control" name="expertiseGoalStatus" id="expertise-goal-status-01" ng-model="goalsFormInfo.expertiseGoalStatusOne" required>
 										<option value="-1">Please select status</option>
 										<option value="1">No Status</option>
 										<option value="2">In Progress</option>
 										<option value="3">Completed</option>
 									</select>
 									<div ng-messages="goalSetting.expertiseGoalStatus.$error" ng-if="goalSetting.expertiseGoalStatus.$touched">
-										<div ng-message="required" class="required">This field is required</div>
+										<div ng-message="required" class="validation-error">This field is required</div>
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="col-md-12 form-group">
 							<label for="expertise-goal-01">Goal 1 Description<span class="required">*</span></label>
-							<textarea class="form-control" name="expertiseGoal01" rows="11" ng-model="userGoals.expertiseGoalOne" required></textarea>
+							<textarea class="form-control" name="expertiseGoal01" rows="11" ng-model="goalsFormInfo.expertiseGoalOne" required></textarea>
 							<div ng-messages="goalSetting.expertiseGoal01.$error" ng-if="goalSetting.expertiseGoal01.$touched">
-								 <div ng-message="required" class="required">This field is required</div>
+								 <div ng-message="required" class="validation-error">This field is required</div>
 							</div>
 						</div>
 					</div>
@@ -181,11 +181,11 @@
 							<div class="row">
 								<div class="col-xs-12 col-sm-6 form-group due-date">
 									<label for="expertise-due-date-01">Due Date</label>
-									<input class="form-control" name="expertise-due-date-01" placeholder="MM/DD/YYYY" ng-model="userGoals.expertiseGoalDueDateTwo">
+									<input class="form-control" name="expertise-due-date-01" placeholder="MM/DD/YYYY" ng-model="goalsFormInfo.expertiseGoalDueDateTwo">
 								</div>
 								<div class="col-xs-12 col-sm-6 form-group goal-status">
 									<label for="expertise-goal-status-01">Goal 2 Status</label>
-									<select class="form-control" name="expertise-goal-status-01" id="expertise-goal-status-01" ng-model="userGoals.expertiseGoalStatusTwo">
+									<select class="form-control" name="expertise-goal-status-01" id="expertise-goal-status-01" ng-model="goalsFormInfo.expertiseGoalStatusTwo">
 										<option value="-1">Please select status</option>
 										<option value="1">No Status</option>
 										<option value="2">In Progress</option>
@@ -196,7 +196,7 @@
 						</div>
 						<div class="col-md-12 form-group">
 							<label for="expertise-goal-01">Goal 2 Description</label>
-							<textarea class="form-control" name="expertise-goal-01" rows="11" ng-model="userGoals.expertiseGoalTwo"></textarea>
+							<textarea class="form-control" name="expertise-goal-01" rows="11" ng-model="goalsFormInfo.expertiseGoalTwo"></textarea>
 						</div>
 					</div> -->
 				</div>
@@ -210,30 +210,30 @@
 							<div class="row">
 								<div class="col-xs-12 col-sm-6 form-group due-date">
 									<label for="collaboration-due-date-01">Due Date<span class="required">*</span></label>
-									<input class="form-control" name="collaborationDueDate" placeholder="MM/DD/YYYY" ng-model="userGoals.collaborationGoalDueDateOne" required>
+									<input class="form-control" name="collaborationDueDate" placeholder="MM/DD/YYYY" ng-model="goalsFormInfo.collaborationGoalDueDateOne" required>
 									<div ng-messages="goalSetting.collaborationDueDate.$error" ng-if="goalSetting.collaborationDueDate.$touched">
-										<div ng-message="required" class="required">This field is required</div>
+										<div ng-message="required" class="validation-error">This field is required</div>
 									</div>
 								</div>
 								<div class="col-xs-12 col-sm-6 form-group goal-status">
 									<label for="collaboration-goal-status-01">Goal 1 Status<span class="required">*</span></label>
-									<select class="form-control" name="collaborationGoalStatus" id="collaboration-goal-status-01" ng-model="userGoals.collaborationGoalStatusOne" required>
+									<select class="form-control" name="collaborationGoalStatus" id="collaboration-goal-status-01" ng-model="goalsFormInfo.collaborationGoalStatusOne" required>
 										<option value="-1">Please select status</option>
 										<option value="1">No Status</option>
 										<option value="2">In Progress</option>
 										<option value="3">Completed</option>
 									</select>
 									<div ng-messages="goalSetting.collaborationGoalStatus.$error" ng-if="goalSetting.collaborationGoalStatus.$touched">
-										<div ng-message="required" class="required">This field is required</div>
+										<div ng-message="required" class="validation-error">This field is required</div>
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="col-md-12 form-group">
 							<label for="collaboration-goal-01">Goal 1 Description<span class="required">*</span></label>
-							<textarea class="form-control" name="collaborationGoal01" rows="11" ng-model="userGoals.collaborationsGoalOne" required></textarea>
+							<textarea class="form-control" name="collaborationGoal01" rows="11" ng-model="goalsFormInfo.collaborationsGoalOne" required></textarea>
 							<div ng-messages="goalSetting.collaborationGoal01.$error" ng-if="goalSetting.collaborationGoal01.$touched">
-								 <div ng-message="required" class="required">This field is required</div>
+								 <div ng-message="required" class="validation-error">This field is required</div>
 							</div>
 						</div>
 					</div>
@@ -243,11 +243,11 @@
 							<div class="row">
 								<div class="col-xs-12 col-sm-6 form-group due-date">
 									<label for="collaboration-due-date-01">Due Date</label>
-									<input class="form-control" name="collaboration-due-date-01" placeholder="MM/DD/YYYY" ng-model="userGoals.collaborationGoalDueDateTwo">
+									<input class="form-control" name="collaboration-due-date-01" placeholder="MM/DD/YYYY" ng-model="goalsFormInfo.collaborationGoalDueDateTwo">
 								</div>
 								<div class="col-xs-12 col-sm-6 form-group goal-status">
 									<label for="collaboration-goal-status-01">Goal 2 Status</label>
-									<select class="form-control" name="collaboration-goal-status-01" id="collaboration-goal-status-01" ng-model="userGoals.collaborationGoalStatusTwo">
+									<select class="form-control" name="collaboration-goal-status-01" id="collaboration-goal-status-01" ng-model="goalsFormInfo.collaborationGoalStatusTwo">
 										<option value="-1">Please select status</option>
 										<option value="1">No Status</option>
 										<option value="2">In Progress</option>
@@ -258,7 +258,7 @@
 						</div>
 						<div class="col-md-12 form-group">
 							<label for="collaboration-goal-01">Goal 2 Description</label>
-							<textarea class="form-control" name="collaboration-goal-01" rows="11" ng-model="userGoals.collaborationsGoalTwo"></textarea>
+							<textarea class="form-control" name="collaboration-goal-01" rows="11" ng-model="goalsFormInfo.collaborationsGoalTwo"></textarea>
 						</div>
 					</div> -->
 				</div>
