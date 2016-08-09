@@ -2,19 +2,19 @@
 
 	'use strict';
 
-	angular.module(ssApp).controller('RegisterCtrl', ['$scope', '$http',
-		function($scope, $http) {
-			$scope.formInfo = {}
+	angular.module(ssApp).controller('RegisterCtrl', ['$scope', '$http', '$location',
+		function($scope, $http, $location) {
+			$scope.registerFormInfo = {}
 
 			$scope.register = function(){
-				$scope.firstName = JSON.stringify($scope.formInfo.firstname);
+				$scope.firstName = JSON.stringify($scope.registerFormInfo.firstname);
 
 				if($scope.regForm.$invalid) {
 					console.log('Please fill out the required fields');
 					return;
 				}else {
-					console.log('Here is the form info: ' + JSON.stringify($scope.formInfo));
-					location.assign("http://localhost:3000/#/dashboard");
+					console.log('Here is the registerFormInfo: ' + JSON.stringify($scope.registerFormInfo));
+					$location.path('/dashboard');
 				}
 			}
 		}
