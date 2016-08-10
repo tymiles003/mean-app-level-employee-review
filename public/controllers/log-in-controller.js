@@ -1,4 +1,4 @@
-(function(){
+(function() {
 
 	'use strict';
 
@@ -7,13 +7,16 @@
 			$scope.credentials = {};
 
 			$scope.logIn = function() {
-				if($scope.logInForm.$invalid) {
-					console.log('Please fill out the required fields');
-					return;
-				} else {
-					console.log('Here is the credentials: ' + JSON.stringify($scope.credentials));
-					$location.path('/dashboard');
-				}
+				console.log('Here is the credentials: ' + JSON.stringify($scope.credentials));
+				$location.path('/dashboard');
+				// $http.post('#', $scope.credentials)
+				// 	.then(
+				// 		// success callback
+				// 		function(response) {
+				// 			$location.path('/dashboard');
+				// 		}
+				// 	)
+				// }
 			}
 		}
 	]);
