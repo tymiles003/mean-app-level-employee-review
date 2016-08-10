@@ -2,7 +2,7 @@
 
 .section {
 	margin-bottom: $element-spacing;
-	padding-bottom: 9px;
+	padding-bottom: $section-spacing;
 
 	&:hover,
 	&:active {
@@ -11,8 +11,9 @@
 		}
 	}
 
-	&.section-last {
-		border-bottom: 0;
+	&:last-child {
+		padding-top: 40px;
+		border-top: 1px solid $light-grey;
 	}
 
 	.name > div + div {
@@ -23,9 +24,20 @@
 		}
 	}
 
+	@include breakpoint(sm) {
+		&:last-child {
+			padding-top: $section-spacing;
+		}
+	}
+
 	@include breakpoint(md) {
 		margin-bottom: $section-spacing;
-		border-bottom: 1px solid $grey;
+		border-bottom: 1px solid $light-grey;
+		&:last-child {
+			padding-top: 0;
+			border-top: 0;
+			border-bottom: 0;
+		}
 	}
 }
 
@@ -58,4 +70,8 @@ input, textarea {
 .subsection-header {
 	margin-top: 0;
 	margin-bottom: $element-spacing;
+}
+
+.form-group:last-child {
+	margin-bottom: 0;
 }

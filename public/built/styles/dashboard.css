@@ -86,13 +86,6 @@
         font-weight: normal;
         font-style: normal;
         line-height: 26px; }
-      .per-dash-contain .per-dash .per-dash-content a {
-        color: #999;
-        text-decoration: none;
-        transition: all 0.2s ease;
-        border-bottom: 1px solid #ccc; }
-        .per-dash-contain .per-dash .per-dash-content a:hover {
-          color: #cd1421; }
     .per-dash-contain .per-dash .per-dash-tracker {
       margin: 10px auto 28px;
       padding: 10px;
