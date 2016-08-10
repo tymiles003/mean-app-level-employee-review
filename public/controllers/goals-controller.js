@@ -9,7 +9,13 @@
 
 			$scope.submit = function() {
 				console.log('goalsFormInfo: ', JSON.stringify($scope.goalsFormInfo));
-				$location.path('/dashboard');
+
+				$http.post('/perform-api/goals', $scope.goalsFormInfo)
+					.then(
+						function(response) {
+							$location.path('/dashboard');
+						}
+					)
 			};
 		}
 	]);
