@@ -166,3 +166,15 @@ input:-moz-placeholder { /* Firefox 18- */
 .level-name {
 	text-transform: uppercase;
 }
+
+a {
+	color: #999;
+	text-decoration: none;
+	transition: all 0.2s ease;
+	border-bottom: 1px solid #ccc;
+
+	&:hover {
+		text-decoration: none;
+		color: $red;
+	}
+}

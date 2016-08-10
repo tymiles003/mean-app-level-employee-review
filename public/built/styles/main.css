@@ -132,6 +132,15 @@ input:-moz-placeholder {
 .level-name {
   text-transform: uppercase; }
 
+a {
+  color: #999;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid #ccc; }
+  a:hover {
+    text-decoration: none;
+    color: #cd1421; }
+
 .buttons {
   text-align: center; }
 
@@ -605,20 +614,28 @@ select {
 
 .section {
   margin-bottom: 16px;
-  padding-bottom: 9px; }
+  padding-bottom: 24px; }
   .section:hover .section-header, .section:active .section-header {
     background: #465b64; }
-  .section.section-last {
-    border-bottom: 0; }
+  .section:last-child {
+    padding-top: 40px;
+    border-top: 1px solid #b5b5b5; }
   .section .name > div + div {
     margin-top: 24px; }
     @media (min-width: 768px) {
       .section .name > div + div {
         margin-top: 0; } }
+  @media (min-width: 768px) {
+    .section:last-child {
+      padding-top: 24px; } }
   @media (min-width: 992px) {
     .section {
       margin-bottom: 24px;
-      border-bottom: 1px solid #727272; } }
+      border-bottom: 1px solid #b5b5b5; }
+      .section:last-child {
+        padding-top: 0;
+        border-top: 0;
+        border-bottom: 0; } }
 
 .section-header {
   transition: 0.5s background; }
@@ -645,3 +662,6 @@ input, textarea {
 .subsection-header {
   margin-top: 0;
   margin-bottom: 16px; }
+
+.form-group:last-child {
+  margin-bottom: 0; }
