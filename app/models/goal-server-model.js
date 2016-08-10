@@ -19,7 +19,7 @@ var GoalSchema = new Schema({
 	feedbackYear: {
 		type: Number,
 		required: true
-	}
+	},
 	memberManagerFName: {
 		type: String,
 		required: true
@@ -29,7 +29,7 @@ var GoalSchema = new Schema({
 		required: true
 	},
 	resultGoalDueDateOne: {
-		type: String, //Number?
+		type: Date,
 		required: true
 	},
 	resultGoalStatusOne: {
@@ -40,20 +40,8 @@ var GoalSchema = new Schema({
 		type: String,
 		required: true
 	},
-	resultGoalDueDateTwo: {
-		type: String,  //Number?
-		required: false
-	},
-	resultGoalStatusTwo: {
-		type: String,
-		required: false
-	},
-	resultsGoalTwo: {
-		type: String,
-		required: false
-	},
 	expertiseDueDateOne: {
-		type: String, //Number?
+		type: Date,
 		required: true
 	},
 	expertiseGoalStatusOne: {
@@ -64,20 +52,8 @@ var GoalSchema = new Schema({
 		type: String,
 		required: true
 	},
-	expertiseGoalDueDateTwo: {
-		type: String,  //Number?
-		required: false
-	},
-	expertiseGoalStatusTwo: {
-		type: String,
-		required: false
-	},
-	expertiseGoalTwo: {
-		type: String,
-		required: false
-	},
 	collaborationGoalDueDateOne: {
-		type: String, //Number?
+		type: Date,
 		required: true
 	},
 	collaborationGoalStatusOne: {
@@ -88,19 +64,6 @@ var GoalSchema = new Schema({
 		type: String,
 		rquired: true
 	},
-	collaborationGoalDueDateTwo: {
-		type: String, //Number?
-		required: true
-	},
-	collaborationGoalStatusTwo: {
-		type: Number,
-		required: true
-	},
-	collaborationsGoalTwo: {
-		type: String,
-		required: false
-	}
-
 });
 
 mongoose.model('Goal', GoalSchema);
