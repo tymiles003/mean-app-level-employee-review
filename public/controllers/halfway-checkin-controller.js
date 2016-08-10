@@ -10,19 +10,24 @@
 
 			//$scope.halfwayFormInfo.empFirstName = "BillyBob";
 
-			// Save the entered form fields to the DB
+			// Save the entered form fields to the DB -- called from form onSubmit
 			$scope.saveHalfwayForm = function() {
 				console.log('halfwayFormInfo includes...: ', JSON.stringify($scope.halfwayFormInfo));
+
+				// add a field to break the model
+				//$scope.halfwayFormInfo.wrench = 'monkey';
 
 				// test post to the web-server Express side
 				$http.post('/perform-api/halfway-set', $scope.halfwayFormInfo)
 					.then(
-						// success callback
 						function(response){
-							//$location.path('/goals'); 
+							// success callback
+							console.log('SUCCESS');
+							$location.path('/goals');
 						},
-						// failure callback
 						function(response){
+							// failure callback
+							console.log('FAILURE');							
 							$location.path('/login');
 						}
 					);
