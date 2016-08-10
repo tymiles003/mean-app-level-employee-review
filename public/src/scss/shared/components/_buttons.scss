@@ -16,9 +16,9 @@
 	.btn ~ .btn {
 		display: inline-block;
 		margin-left: $element-spacing;
+	}
 
-		+ .btn-last {
-			margin-right: $element-spacing;
-		}
+	.btn:last-child {
+		margin-right: $element-spacing;
 	}
 }

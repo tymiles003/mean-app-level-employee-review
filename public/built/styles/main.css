@@ -80,6 +80,10 @@ input:-moz-placeholder {
   line-height: 44px;
   letter-spacing: 2px;
   text-transform: uppercase; }
+  @media (max-width: 767px) {
+    .subsection-header {
+      font-size: 26px;
+      letter-spacing: 1px; } }
 
 .ratings .control-label {
   text-transform: none;
@@ -187,8 +191,8 @@ a {
   .btn ~ .btn {
     display: inline-block;
     margin-left: 16px; }
-    .btn ~ .btn + .btn-last {
-      margin-right: 16px; } }
+  .btn:last-child {
+    margin-right: 16px; } }
 
 select {
   -webkit-appearance: none;
