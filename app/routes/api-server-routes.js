@@ -4,7 +4,7 @@ var halfway = require('../../app/controllers/halfway-server-controller');
 
 module.exports = function(app) {
 
-	app.route('/perform-api/set-halfway').post(halfway.postData);
-	app.route('/perform-api/get-halfway').get(halfway.getData);
+	app.route('/perform-api/halfway-set').post(halfway.postData);
+	app.route('/perform-api/halfway-get').get(halfway.getData);
 
 };

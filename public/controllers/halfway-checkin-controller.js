@@ -15,7 +15,7 @@
 				console.log('halfwayFormInfo includes...: ', JSON.stringify($scope.halfwayFormInfo));
 
 				// test post to the web-server Express side
-				$http.post('/perform-api/set-halfway', $scope.halfwayFormInfo)
+				$http.post('/perform-api/halfway-set', $scope.halfwayFormInfo)
 					.then(
 						// success callback
 						function(response){
@@ -37,7 +37,7 @@
 				empFirstName : "Billy",
 				empLastName : "Nicholas",
 				manFirstName : "Kevin",
-				manLastName : "SoSo"
+				manLastName : "So"
 				};
 			})();
 
