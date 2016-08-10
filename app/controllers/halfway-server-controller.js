@@ -19,4 +19,10 @@
 		});
 	};
 
+	exports.getData = function(req, res, next) {
+		// query the db and then stuff it into the response object
+		var results = ;
+
+	}
+
 })();
