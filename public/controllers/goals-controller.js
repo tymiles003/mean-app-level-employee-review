@@ -1,19 +1,16 @@
-'use strict'
+(function() {
 
-angular.module(ssApp).controller('GoalsCtrl', ['$scope', '$http', '$location',
-	function($scope, $http, $location) {
+	'use strict'
 
-		$scope.goalsFormInfo = {};
+	angular.module(ssApp).controller('GoalsCtrl', ['$scope', '$http', '$location',
+		function($scope, $http, $location) {
 
-		$scope.submit = function() {
+			$scope.goalsFormInfo = {};
 
-			if ($scope.goalSetting.$invalid) {
-				console.log('Please fill out the required fields');
-				return;
-			} else {
+			$scope.submit = function() {
 				console.log('goalsFormInfo: ', JSON.stringify($scope.goalsFormInfo));
 				$location.path('/dashboard');
-			}
-		};
-	}
-]);
+			};
+		}
+	]);
+})();

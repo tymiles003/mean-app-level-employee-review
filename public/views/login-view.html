@@ -9,27 +9,29 @@
 		</div>
 		<div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-1">
 			<div class="row">
-				<form name="logInForm" data-ng-submit="logIn()" class="register" novalidate autocomplete="off">
+				<form name="logInForm" ng-submit="logInForm.$valid && logIn()" class="register" novalidate autocomplete="off">
 					<fieldset>
 						<div class="col-sm-12 form-group">
-							<label for="email">Email<span class="required">*</span></label>
-							<input type="text" id="email" name="email" class="form-control" data-ng-model="credentials.email" placeholder="Email" required>
-							<div ng-messages="logInForm.email.$error" ng-if="logInForm.email.$touched">
-								 <div ng-message="required" class="validation-error">This field is required</div>
+							<label for="email">Lion Log In<span class="required">*</span></label>
+							<input type="text" id="lion-login" name="lionLogIn" class="form-control" ng-model="credentials.lionLogIn" placeholder="Lion Log In" required>
+							<div ng-if="logInForm.$submitted && logInForm.lionLogIn.$invalid" for="logInForm.lionLogIn.$error">
+								<div when="required" class="validation-error">
+								   This field is required
+								 </div>
 							</div>
 						</div>
 						<div class="col-sm-12 form-group">
 							<label for="password">Password<span class="required">*</span></label>
-							<input type="password" id="password" name="password" class="form-control" data-ng-model="credentials.password" placeholder="Password" required>
-							<div ng-messages="logInForm.password.$error" ng-if="logInForm.password.$touched">
-								 <div ng-message="required" class="validation-error">This field is required</div>
+							<input type="password" id="password" name="password" class="form-control" ng-model="credentials.password" placeholder="Password" required>
+							<div ng-messages="logInForm.password.$error" ng-if="logInForm.$submitted && logInForm.password.$invalid">
+								 <div when="required" class="validation-error">This field is required</div>
 							</div>
 						</div>
 						<div class="text-center">
 							<div class="col-sm-12">
 								<div class="form-group">
 									<button type="submit" class="btn btn-primary">Log In</button>
-									<div data-ng-show="error" class="text-center text-danger alert">
+									<div ng-show="error" class="text-center text-danger alert">
 										<strong>{{error}}</strong>
 									</div>
 								</div>
