@@ -17,15 +17,16 @@
 		halfway.save(function(err, halfway) {
 			if (err) return console.error('theres an error', err);
 		});
+		console.log('data has been SAVED!')
+		res.send('all done on the Express side, time to return the data back to the client!');
 	};
 
 	exports.getData = function(req, res, next) {
 		// query the db and then stuff it into the response object
-		var results = db.halfways.find({empFirstName: 'Scott'}).limit(1);
+		// var results = db.halfways.find({empFirstName: 'Scott'}).limit(1);
 		// query:: db.halfways.find({empFirstName: 'Scott'}).limit(1);
 
-		// know will need to use the req params 
-
+		// know will need to use the req params
 	}
 
 })();

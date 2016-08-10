@@ -27,24 +27,19 @@
 						},
 						function(response){
 							// failure callback
-							console.log('FAILURE');							
+							console.log('FAILURE');
 							$location.path('/login');
 						}
 					);
 			}
 
-			var init = (function(){
-
-				// v 0.5: do an $http.get('/perform-api/get-halfway')
-
-				// v0.1: do hard-coded object
+			var init = function(){
 				$scope.halfwayFormInfo = {
-				empFirstName : "Billy",
-				empLastName : "Nicholas",
-				manFirstName : "Kevin",
-				manLastName : "So"
+					empFirstName : "Billy3",
+					empLastName : "Nicholas3",
+					manFirstName : "Kevin3",
+					manLastName : "So3"
 				};
-			})();
-
+			};
 	}]);
 })();
