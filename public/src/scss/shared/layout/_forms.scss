@@ -75,3 +75,9 @@ input, textarea {
 .form-group:last-child {
 	margin-bottom: 0;
 }
+
+@include breakpoint(md) {
+	.row:last-child > .form-group {
+		margin-bottom: 0;
+	}
+}
