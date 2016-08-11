@@ -22,4 +22,5 @@ var HalfwaySchema = new Schema({	// Instatiate a NEW Halfway Schema -- db expect
 	}
 });
 
+// define a model for your schema
 mongoose.model('Halfway', HalfwaySchema);

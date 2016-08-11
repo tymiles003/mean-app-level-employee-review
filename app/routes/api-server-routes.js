@@ -8,4 +8,5 @@ module.exports = function(app) {
 
 	// Halfway Checkin Test
 	app.route('/perform-api/halfway-set').post(halfway.postData);
+	app.route('/perform-api/halfway-get').get(halfway.getHalfwayData);
 };
