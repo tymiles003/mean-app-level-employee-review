@@ -13,3 +13,7 @@
 
 .due-date + div {
   margin-top: 0; }
+
+@media (min-width: 992px) {
+  .goals:last-child .goal .form-group .row .form-group {
+    margin-bottom: 0; } }
