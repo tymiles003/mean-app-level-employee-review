@@ -1,17 +1,15 @@
-.annual-assessment .goals {
-  margin-bottom: 40px;
-  padding-bottom: 25px;
-  border-bottom: 1px solid #727272; }
-  @media (min-width: 768px) {
-    .annual-assessment .goals {
-      margin-top: 24px;
-      margin-bottom: 24px;
-      padding-bottom: 9px; } }
-
-.annual-assessment .goal {
-  margin-bottom: 24px; }
-  .annual-assessment .goal.goal-last {
+.goals {
+  margin-bottom: 40px; }
+  .goals:last-child {
     margin-bottom: 0; }
 
-.annual-assessment .due-date + div {
+.goal {
+  margin-bottom: 24px; }
+  .goal:last-child {
+    margin-bottom: 0; }
+
+.goal + .goal {
+  margin-top: 40px; }
+
+.due-date + div {
   margin-top: 0; }
