@@ -1,8 +1,7 @@
 (function() {
-
 	'use strict';
 
-	angular.module('sugarsnaps').controller('DashboardCtrl', function(UserInfoService, $scope) {
+	angular.module(ssApp).controller('DashboardCtrl', function(UserInfoService, $scope) {
 		$scope.user = UserInfoService.getFirstName();
 		$scope.name = 'Scott';
 

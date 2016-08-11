@@ -2,13 +2,11 @@
     'use strict';
 
     // Client Routing for SugarSnaps
-    angular.module('sugarsnaps').config(['$routeProvider',
+    angular.module(ssApp).config(['$routeProvider',
         function($routeProvider) {
             $routeProvider
             .when('/', {
                 redirectTo: '/login'
-                //templateUrl: 'views/index.html'
-                //controller: 'IndexController'
             })
             .when('/register', {
                 templateUrl: 'views/register-view.html',
@@ -26,25 +24,25 @@
                 templateUrl: 'views/goals-view.html',
                 controller: 'GoalsCtrl'
             })
-            .when('/peer-feedback', {
-                //templateUrl: 'views/peer-feedback-view.html',
-                //controller: 'PeerFeedbackCtrl'
-            })
             .when('/reviews/halfway', {
                 templateUrl: 'views/halfway-checkin-view.html',
                 controller: 'HalfwayCheckinCtrl'
             })
-            .when('/reviews/self', {
-                //templateUrl: 'views/self-assess-view.html',
-                //controller: 'SelfAssessCtrl'
-            })
-            .when('/reviews/annual', {
-                //templateUrl: 'views/annual-perform-view.html',
-                //controller: 'AnnualPerformCtrl'
-            });
-            // .otherwise({
-            //     redirectTo: '/login'
+            // .when('/peer-feedback', {
+            //     templateUrl: 'views/peer-feedback-view.html',
+            //     controller: 'PeerFeedbackCtrl'
+            // })
+            // .when('/reviews/self', {
+            //     templateUrl: 'views/self-assess-view.html',
+            //     controller: 'SelfAssessCtrl'
+            // })
+            // .when('/reviews/annual', {
+            //     templateUrl: 'views/annual-perform-view.html',
+            //     controller: 'AnnualPerformCtrl'
             // });
+            .otherwise({
+                redirectTo: '/login'
+            });
         }
     ]);
 })();
