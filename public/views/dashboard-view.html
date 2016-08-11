@@ -1,49 +1,56 @@
-<main class="container per-dash-contain">
+<main class="container per-dash-contain flex-dash">
 	<nav class="per-sidebar">
-		<ul>
-			<!-- <li><a href="#">Resources</a></li> -->
-			<li><a href="#/dashboard" class="per-side-active">To-Do</a></li>
-			<!-- <li><a href="#">Direct Report Info</a></li> -->
+		<ul class="per-nav">
+			<!--<li><a href="#"><span class="nav-text">Resources</span><span class="glyphicon glyphicon-education" aria-hidden="true"></span></a></li>-->
+			<li><a href="#/dashboard" class="per-side-active"><span class="nav-text">To-Do</span><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></a></li>
+			<!--<li><a href="#"><span class="nav-text">Team Info</span><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a></li>-->
 		</ul>
 	</nav>
-	<section class="per-dash">
-		<div class="row per-dash-head">
-			<div class="col-xs-6">
-				<h1 class="per-dash-user"><img src="/assets/images/profile-large-2x.png" alt="User profile image"/> {{name}} Prior-Pfeifer</h1>
-			</div>
-			<div class="col-xs-6">
-				<p class="per-dash-date">Today is <span id="date"></span> {{mm}} {{dd}}, {{yyyy}}</p>
-			</div>
+	<section class="per-dash clearfix">
+		<div class="col-sm-12 dash-card alert-messages">
+			<div class="alert alert-success" role="alert">Hooray! You did it!</div>
+			<div class="alert alert-info" role="alert">Hey, you should know this&hellip;</div>
+			<div class="alert alert-warning" role="alert">Uh-oh, you better be careful&hellip;</div>
+			<div class="alert alert-danger" role="alert">HALP! HALP! Your website is on fire!!!</div>
 		</div>
-		<div class="row">
-			<div class="col-xs-12">
-				<div class="per-dash-tracker clearfix"><span class="per-dash-cycle">September: Goal Setting</span></div>
-			</div>
+		<div class="col-sm-12 dash-card user-details">
+			<h1 class="per-dash-user"><img src="/assets/images/profile-large-2x.png" alt="User profile image"/> {{name}} Prior-Pfeifer</h1>
+			<p class="per-dash-date">Today is <span id="date"></span> {{mm}} {{dd}}, {{yyyy}}</p>
 		</div>
-		<div class="row per-dash-content">
-			<div class="col-md-8">
-				<h2>To-Do</h2>
-				<ul>
-					<li><a href="#/goals">Goal Setting</a></li>
+		<div class="col-sm-12 dash-card to-do">
+			<table>
+				<tr class="due-soon">
+					<td class="due-date">Due in<span class="days-left">3 days</span></td>
+					<td class="due-item">Peer Feedback: Praise Burnham</td>
+					<td class="due-tasks">
+						<a class="icon-edit" href="#/goals"></a>
+						<a class="icon-ical"></a>
+					</td>
+				</tr>
+				<tr>
+					<td class="due-date">Due in<span class="days-left">10 days</span></td>
+					<td class="due-item">Set Goals: {{name}} Prior-Pfeifer</td>
+					<td class="due-tasks">
+						<a class="icon-edit" href="#/goals"></a>
+						<a class="icon-ical"></a>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="col-sm-12 dash-card cycle">
+			<h3>Goal Setting Cycle Ends: <span class="attn-text">September 30</span></h3>
+			<div class="cycle-chart-contain">
+				<ul class="cycle-dates">
+					<li class="cycle-0">Aug:<br/>Peer Feedback</li>
+					<li class="cycle-active cycle-1">Sept:<br/>Goal Setting</li>
+					<li class="cycle-2">Dec:<br/>Peer Feedback</li>
+					<li class="cycle-3">Jan:<br/>Check-In</li>
+					<li class="cycle-4">April:<br/>Peer Feedback</li>
+					<li class="cycle-5">May:<br/>Self Assess</li>
+					<li class="cycle-6">June:<br/>Annual Review</li>
 				</ul>
-
-				<p><span class="level-name">Level</span>'s Performance Enablement program is in place as a conduit for Team Member and Manager relationships, where Team Members work to grow their career through meeting and surpassing goals and expectations set each year.</p>
-				<p>These resources are here as a quick referal to <span class="level-name">Level</span>'s standards and expectations for all of our team members. For further details, please refer to the <a href="http://intranet.level-studios.com/program-policies/" target="_blank">Performance Management section</a> of <span class="level-name">Level</span>'s intranet.</p>
-
-				<h3 class="quick-links">Quick Links</h3>
-				<ul>
-					<li><a href="#/goals">Goal Setting</a></li>
-					<!-- <li><a href="#/peer-feedback">Performance Feedback Request</a></li>
-					<li><a href="#/reviews/halfway">Halfway Check-In</a></li>
-					<li><a href="#/reviews/self">Annual Self Assessment</a></li>
-					<li><a href="#/reviews/annual">Annual Performance Review</a></li> -->
-				</ul>
-			</div>
-			<div class="col-md-4 per-dash-info">
-				<p><span class="per-dash-cycle">Goal Setting</span><br />
-				cycle ends:<br />
-				<span class="per-dash-cycle-end">September 30</span></p>
-			</div>
+				<div class="cycle-chart cycle-spin-1"></div>
+			</div>		
 		</div>
 	</section>
 </main>
