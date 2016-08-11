@@ -672,5 +672,5 @@ input, textarea {
   margin-bottom: 0; }
 
 @media (min-width: 992px) {
-  .row:last-child > .form-group {
+  .register .row:last-child > .form-group {
     margin-bottom: 0; } }
