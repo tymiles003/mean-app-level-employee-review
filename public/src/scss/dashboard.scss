@@ -1,37 +1,58 @@
+@import "shared/abstracts/variables";
+@import "shared/abstracts/mixins";
 @import "shared/abstracts/functions";
 @import "shared/base/colors";
-
-$sidebarW: 200px;
+@import "shared/vendors/flexbox";
 
 // content
 .per-dash-contain {
+	padding: 0;
 	position: relative;
 
-	.per-dash-cycle {
-		text-transform: uppercase;
+
+	// LAYOUT //
+	&.flex-dash {
+		@include flexbox;
+		@include flex-direction;
+		flex: 1;
 	}
 
 	.per-sidebar {
-		width: $sidebarW;
-		height: 100%;
 
-		font-size: 12px;
-		font-weight: normal;
-		font-style: normal;
-		line-height: 58px;
-
-		@include breakpoint(xs) {
-			width: $sidebarW - 50;
+		@include breakpoint(sm) {
+			width: 25%;
 		}
 
-		position: absolute;
+		@include breakpoint(md) {
+			width: 16.6667%;
+		}
+
+	}
+
+	.per-dash {
+		padding: 0;
+
+		@include breakpoint(sm) {
+			padding: 0 $section-spacing;
+			width: 75%;
+		}
+
+		@include breakpoint(md) {
+			width: 83.3333%;
+		}
+	}
+
+
+	// STYLE  //
+	.per-sidebar {
 		background: $light-grey;
 
-		ul {
+		.per-nav {
 			-webkit-padding-start: 0;
 			padding-left: 40px;
+
 			@include breakpoint(xs) {
-				padding-left: 20px;
+				padding: 0;
 			}
 
 			li {
@@ -39,16 +60,34 @@ $sidebarW: 200px;
 				cursor: pointer;
 
 				a {
-					color: $dark-grey;
+					padding: 1em 0 1em 40px;
+					border: none;
 					margin-left: -40px;
-					padding-left: 40px;
+					color: $dark-grey;
+					
 					@include breakpoint(xs) {
-						margin-left: -20px;
-						padding-left: 20px;
+						margin-left: 0;
+						padding: 1em 10px;
 					}
 
 					display: block;
 					cursor: pointer;
+
+					.nav-text {
+						display: none;
+						@include breakpoint(sm) {
+							display: inline-block;;
+						}
+					}
+
+					.glyphicon {
+						font-size: 1.5em;
+						vertical-align: middle;
+
+						@include breakpoint(sm) {
+							display: none;
+						}
+					}
 
 					&.per-side-active {
 						background: $lightest-grey;
@@ -60,13 +99,13 @@ $sidebarW: 200px;
 							border-top: 10px solid transparent;
 							border-bottom: 10px solid transparent;
 							border-left: 10px solid transparent;
-							border-right: 10px solid #fff;
+							border-right: 10px solid $white;
 
 							content: "";
 							display: block;
 							position: absolute;
 							right: 0;
-							top: 20px;
+							top: 1em;
 						}
 					}
 
@@ -80,111 +119,177 @@ $sidebarW: 200px;
 	}
 
 	.per-dash {
-		padding-left: $sidebarW + 20px;
-		@include breakpoint(xs) {
-			padding-left: $sidebarW - 30;
-		}
+		background: $white;
 
-		background: #fff;
+		.dash-card {
+			padding: 1em;
+			margin: 0 auto 1em;
+			background: #fff;
+			box-shadow: 0 0 2px rgba($dark-grey, .1), 0 2px 0 rgba($dark-grey, .2);
 
-		.per-dash-head {
-			padding-top: 20px;
-
-			.per-dash-user {
-				margin-top:0;
-
-				display:inline-block;
-				font-size: 30px;
-				font-weight: bold;
-				font-style: normal;
-				line-height: 36px;
-				letter-spacing: 1px;
-				text-transform: uppercase;
-
-				img {
-					width: 36px;
-					height: 36px;
-
-					display: inline-block;
-					vertical-align: top;
-				}
-			}
-
-			.per-dash-date {
-				text-align: right;
-			}
-		}
-
-		.per-dash-content {
-			line-height: 24px;
-
-			h2 {
+			h1, h2, h3, h4, h5, h6 {
 				margin-top: 0;
-			}
-
-			p,
-			ul {
-				margin-bottom: 24px;
-			}
-
-			.quick-links {
-				font-size: 18px;
-				font-weight: normal;
-				font-style: normal;
-				line-height: 26px;
-			}
-		}
-
-		.per-dash-tracker {
-			margin: 10px auto 28px;
-			padding: 10px;
-
-			display: block;
-			font-size: 24px;
-			font-weight: normal;
-			font-style: normal;
-			line-height: 30px;
-			letter-spacing: 2px;
-			background: $red;
-			color: #fff;
-			@include breakpoint(md) {
-				margin-bottom: 24px;
-				width: 720px;
-				height: 50px;
-
-				background: url(/assets/images/sept-medium.png) no-repeat center center;
-				background-size: 720px 50px;
-
-				span{
-					display: none;
-				}
-
-			}
-			@include breakpoint(lg) {
-				width: 920px;
-				height: 50px;
-
-				background: url(/assets/images/sept-large.png) no-repeat center center;
-				background-size: 920px 50px;
-			}
-		}
-
-		.per-dash-info {
-			@include breakpoint(md) {
-				text-align: right;
-			}
-
-			.per-dash-cycle-end {
-				display: block;
-				margin-top: 8px;
-				color: $red;
-				font-size: 24px;
-				font-weight: bold;
-				font-style: normal;
-				line-height: 30px;
-				letter-spacing: 1px;
 				text-transform: uppercase;
 			}
+
+			&.user-details {
+				img {
+					width: 72px;
+					height: 72px;
+					margin-right: .25em;
+					display: inline-block;
+					float: left;
+				}
+			}
+
+			&.to-do {
+				table {
+					width: 100%;
+					td {
+						padding: 1em;
+						vertical-align: top;
+						border: 1px solid $red;
+					}
+				}
+			}
 		}
+
+		.due-date {
+			min-width: 100px;
+
+			.days-left {
+				display: block;
+			}
+		}
+
+		.due-soon {
+			text-transform: uppercase;
+
+			.due-date {
+				background: $red;
+				color: $white;
+			}
+
+			.days-left {
+				color: $white;
+				font-weight: 700;
+			}
+			
+		}
+
+		.due-tasks {
+			width: 90px;
+
+			@include breakpoint(xs) {
+				width: 60px;
+			}
+		}
+
+		.icon-edit {
+			@include resp-img(26px, 30px, 'icon-edit-large');
+		}
+
+		.icon-ical {
+			@include resp-img(26px, 30px, 'icon-ical-large');
+		}
+
+		.icon-edit, .icon-ical {
+			display: inline-block;
+			border: none;
+			text-decoration: none;
+			cursor: pointer;
+			opacity: .8;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+
+		
+		.cycle-chart-contain {
+			width: 400px;
+			height: 400px;
+			margin: 0 auto;
+			position:relative;
+
+			@include breakpoint(xs) {
+				display: none;
+			}
+		}
+
+		.cycle-chart {
+			@include resp-img (400px, 400px, 'cycle-bg-large');
+
+			position: absolute;
+			z-index: 0;
+			top: 0;
+			left: 0;
+
+			// Cycle positioning
+			@mixin cycle-spin ($i) {
+				&.cycle-spin-#{$i}{
+					-ms-transform: rotate(((360/7)*$i)+deg);
+					-o-transform: rotate(((360/7)*$i)+deg);
+					-moz-transform: rotate(((360/7)*$i)+deg);
+					-webkit-transform: rotate(((360/7)*$i)+deg);
+					transform: rotate(((360/7)*$i)+deg);
+				}
+			}
+
+			@for $i from 0 through 6 {
+				@include cycle-spin ($i);
+			}
+
+		}
+
+		.cycle-dates {
+			position: relative;
+			z-index: 1;
+
+			li {
+				position: absolute;
+				list-style: none;
+
+				&.cycle-active {
+					color: $white;
+					font-weight: 700;
+				}
+
+				&.cycle-0 {
+					top: 3.5em;
+    				left: 13em;
+				}
+				&.cycle-1 {
+					top: 10em;
+    				left: 17em;
+				}
+				&.cycle-2 {
+					top: 16em;
+    				left: 15.5em;
+				}
+				&.cycle-3 {
+					top: 20em;
+					left: 10em;
+				}
+				&.cycle-4 {
+					top: 16em;
+					left: 2em;
+				}
+				&.cycle-5 {
+					top: 10em;
+					left: 1em;
+				}
+				&.cycle-6 {
+					top: 3.5em;
+					left: 4em;
+				}
+			}
+		}
+
+	}
+
+	// Maybe move to typography?
+	.attn-text {
+		color: $red;
 	}
 }
