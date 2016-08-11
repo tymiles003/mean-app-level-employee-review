@@ -1,17 +1,21 @@
 (function() {
+
 	'use strict';
 
+	// Module dependencies
 	var mongoose = require('mongoose'),
-		Goals = mongoose.model('Goals');
+		Goal = mongoose.model('Goal');
 
-	export.postData = function(req, res, next) {
+	exports.postGoalsData = function(req, res, next) {
 
-		var goals - new Goals(req.body);
-		console.log('Goals from goal setting page', goals);
+		var goal = new Goal(req.body);
+		console.log('Goal from goal setting page comin at ya', goal);
 
-		goals.save(function(err, halway) {
-			if(err)
-				return console.error('theres an error', err);
+		goal.save(function(err, goals) {
+			if (err) return console.error('theres an error', err);
+			console.log('data has been SAVED! and here is the goals which is the req.body', goal);
+			// send the object back to the client as the response -- next stop: client-side controller
+			res.send(goal);
 		});
 	};
-});
+})();

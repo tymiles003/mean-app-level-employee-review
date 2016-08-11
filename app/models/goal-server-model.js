@@ -2,11 +2,9 @@ var mongoose = require('mongoose'),
 	Schema = mongoose.Schema;
 
 var GoalSchema = new Schema({
-	// todo: write schema object props here
-
 	teamMemberFName: {
-	type: String,
-	required: true
+		type: String,
+		required: true
 	},
 	teamMemberLName: {
 		type: String,
@@ -29,7 +27,7 @@ var GoalSchema = new Schema({
 		required: true
 	},
 	resultGoalDueDateOne: {
-		type: Date,
+		type: String, // TODO: Use type: Date when you can test this
 		required: true
 	},
 	resultGoalStatusOne: {
@@ -40,8 +38,8 @@ var GoalSchema = new Schema({
 		type: String,
 		required: true
 	},
-	expertiseDueDateOne: {
-		type: Date,
+	expertiseGoalDueDateOne: {
+		type: String, // TODO: Use type: Date when you can test this
 		required: true
 	},
 	expertiseGoalStatusOne: {
@@ -53,7 +51,7 @@ var GoalSchema = new Schema({
 		required: true
 	},
 	collaborationGoalDueDateOne: {
-		type: Date,
+		type: String, // TODO: Use type: Date when you can test this
 		required: true
 	},
 	collaborationGoalStatusOne: {
