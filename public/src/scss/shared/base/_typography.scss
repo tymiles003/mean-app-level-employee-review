@@ -92,6 +92,11 @@ input:-moz-placeholder { /* Firefox 18- */
 	line-height: 44px;
 	letter-spacing: 2px;
 	text-transform: uppercase;
+
+	@include breakpoint(xs) {
+		font-size: 26px;
+		letter-spacing: 1px;
+	}
 }
 
 .ratings {
@@ -134,6 +139,7 @@ input:-moz-placeholder { /* Firefox 18- */
 	font-style: normal;
 	color: $white;
 	text-transform: uppercase;
+	text-shadow: none;
 	letter-spacing: 1px;
 
 	&:hover,

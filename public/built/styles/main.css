@@ -80,6 +80,10 @@ input:-moz-placeholder {
   line-height: 44px;
   letter-spacing: 2px;
   text-transform: uppercase; }
+  @media (max-width: 767px) {
+    .subsection-header {
+      font-size: 26px;
+      letter-spacing: 1px; } }
 
 .ratings .control-label {
   text-transform: none;
@@ -114,6 +118,7 @@ input:-moz-placeholder {
   font-style: normal;
   color: #fafafa;
   text-transform: uppercase;
+  text-shadow: none;
   letter-spacing: 1px; }
   .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default:active:hover, .btn-default:active:focus {
     color: #fafafa; }
@@ -187,8 +192,8 @@ a {
   .btn ~ .btn {
     display: inline-block;
     margin-left: 16px; }
-    .btn ~ .btn + .btn-last {
-      margin-right: 16px; } }
+  .btn:last-child {
+    margin-right: 16px; } }
 
 select {
   -webkit-appearance: none;
@@ -665,3 +670,7 @@ input, textarea {
 
 .form-group:last-child {
   margin-bottom: 0; }
+
+@media (min-width: 992px) {
+  .row:last-child > .form-group {
+    margin-bottom: 0; } }
