@@ -25,7 +25,7 @@ module.exports = function() {
     app.use(morgan('dev'));
 
     // Use Express middlewares
-    app.use(bodyParser.urlencoded());
+    //app.use(bodyParser.urlencoded());
     app.use(bodyParser.json()); // support json-encoded bodies
     app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
     app.use(methodOverride());

@@ -24,12 +24,24 @@
 		res.send(halfway);
 	};
 
-	exports.getData = function(req, res, next) {
-		// query the db and then stuff the query results into the response object
-		// var results = db.halfways.find({empFirstName: 'Scott'}).limit(1);
-		// query:: db.halfways.find({empFirstName: 'Scott'}).limit(1);
+	exports.getHalfwayData = function(req, res, next) {
 
 		// know will need to use the req params
+		console.log('Yo! - onload and inside getHalfwayData'); // to server console
+
+		// query the db and then stuff the query results into the response object
+		// looks like you use the model to run the find, here, the Halfway
+		Halfway.find({empFirstName: 'Wayne'}).limit(1).exec(function(error, results) {
+			if (error) {
+				return next(error);
+			}
+			// Respond with valid data
+			res.json(results);
+		});
+		// query:: db.halfways.find({empFirstName: 'Scott'}).limit(1);
+		//console.log('here are the non-null results', results);
+
+
 	}
 
 })();
