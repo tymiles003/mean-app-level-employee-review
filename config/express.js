@@ -25,13 +25,12 @@ module.exports = function() {
     app.use(morgan('dev'));
 
     // Use Express middlewares
-    //app.use(bodyParser.urlencoded());
     app.use(bodyParser.json()); // support json-encoded bodies
-    app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
+    app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies (for forms)
     app.use(methodOverride());
     app.use(cookieParser());
     app.use(session({
-        secret: 'MEAN'
+        secret: 'MEAN' // Que?
     }));
 
     // Set view engine
