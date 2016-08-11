@@ -118,6 +118,7 @@ input:-moz-placeholder {
   font-style: normal;
   color: #fafafa;
   text-transform: uppercase;
+  text-shadow: none;
   letter-spacing: 1px; }
   .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default:active:hover, .btn-default:active:focus {
     color: #fafafa; }

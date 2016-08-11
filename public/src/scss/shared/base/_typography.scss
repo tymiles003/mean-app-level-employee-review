@@ -139,6 +139,7 @@ input:-moz-placeholder { /* Firefox 18- */
 	font-style: normal;
 	color: $white;
 	text-transform: uppercase;
+	text-shadow: none;
 	letter-spacing: 1px;
 
 	&:hover,
