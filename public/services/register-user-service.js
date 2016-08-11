@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('sugarsnaps').factory('UserInfoService', function() {
+angular.module(ssApp).factory('UserInfoService', function() {
 	return {
 		// TODO: fetch data from backend
 		// dummy data

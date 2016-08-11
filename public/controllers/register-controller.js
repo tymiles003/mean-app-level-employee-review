@@ -4,7 +4,7 @@
 
 	angular.module(ssApp).controller('RegisterCtrl', ['$scope', '$http', '$location',
 		function($scope, $http, $location) {
-			$scope.registerFormInfo = {}
+			$scope.registerFormInfo = {};
 
 			$scope.register = function(){
 				$scope.firstName = JSON.stringify($scope.registerFormInfo.firstname);
