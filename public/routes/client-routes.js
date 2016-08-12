@@ -10,7 +10,7 @@
             })
             .when('/register', {
                 templateUrl: 'views/register-view.html',
-                controller: 'RegisterCtrl'
+                controller: 'RegCtrl'
             })
             .when('/login', {
                 templateUrl: 'views/login-view.html',

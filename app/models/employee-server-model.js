@@ -27,7 +27,7 @@ var EmployeeSchema = new Schema({
 		type: String,
 		required: true
 	},
-	confirmSsPassword: {
+	ssPasswordConfirm: {
 		type: String,
 		required: true
 	}
