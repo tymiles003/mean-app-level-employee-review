@@ -18,7 +18,7 @@
 		margin-left: $element-spacing;
 	}
 
-	.btn:last-child {
+	.btn + .btn ~ .btn:last-child {
 		margin-right: $element-spacing;
 	}
 }
