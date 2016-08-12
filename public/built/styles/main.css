@@ -192,7 +192,7 @@ a {
   .btn ~ .btn {
     display: inline-block;
     margin-left: 16px; }
-  .btn:last-child {
+  .btn + .btn ~ .btn:last-child {
     margin-right: 16px; } }
 
 select {
