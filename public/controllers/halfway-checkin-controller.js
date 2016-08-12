@@ -8,7 +8,7 @@
 			// make object for form fields to be props of..
 			$scope.halfwayFormInfo = {};
 
-			// go get the halfway data if it exists
+			// go get the halfway data if it exists (use this for all review forms)
 			$http.get('/perform-api/halfway-get')
 				.then(function(response){
 					console.log('got some response.data0 back', response);
@@ -26,12 +26,14 @@
 			$scope.saveHalfwayForm = function() {
 				console.log('halfwayFormInfo includes...: ', JSON.stringify($scope.halfwayFormInfo));
 				// post to the Express web-server
+				// send form data to the server and .then use a promise to process the response
 				$http.post('/perform-api/halfway-set', $scope.halfwayFormInfo)
 					.then(
 						function(response){
 							console.log("Success!");
 							// success callback ++ load up the local scope with values from the response
-							//$scope.halfwayFormInfo = {
+							//$scope.halfwayFormInfo = { // TODO: Find a DRY-er way to process the response
+								// how about ng-repeat
 							// 	empFirstName : response.config.data.empFirstName,
 							// 	empLastName : response.config.data.empLastName,
 							// 	manFirstName : response.config.data.manFirstName,
@@ -40,7 +42,7 @@
 							$location.path('/dashboard');
 							// need to pass notification data to the dashboard
 						},
-						function(response){
+						function(response){  // is this failure case ever called??
 							// failure callback
 							console.log('FAILURE');
 							$location.path('/login');

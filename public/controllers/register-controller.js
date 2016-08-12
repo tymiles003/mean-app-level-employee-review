@@ -2,14 +2,23 @@
 
 	'use strict';
 
-	angular.module(ssApp).controller('RegisterCtrl', ['$scope', '$http', '$location',
+	angular.module(ssApp).controller('RegCtrl', ['$scope', '$http', '$location',
 		function($scope, $http, $location) {
-			$scope.registerFormInfo = {};
+			$scope.regFormInfo = {};
 
 			$scope.register = function(){
-				console.log('Here is the registerFormInfo: ' + JSON.stringify($scope.registerFormInfo));
-				//$location.path('/dashboard');
-			}
+				console.log('Here is the regFormInfo: ' + JSON.stringify($scope.regFormInfo));
+
+				// send form data to the server and .then use a promise to process the response
+				$http.post('/perform-api/member-set', $scope.regFormInfo) // set server route uri
+					.then(
+						function(response) {
+							// process the response / re-load the $scope
+							console.log('Back from the server and here is the response... ', response);
+							$location.path('/dashboard');
+						}
+					)
+			};
 		}
 	]);
 })();
