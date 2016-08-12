@@ -241,7 +241,8 @@
 						<div class="col-sm-6 form-group">
 							<label for="feedback-year">Feedback Year<span class="required">*</span></label>
 							<select class="form-control" name="feedbackYear" id="feedback-year" ng-model="goalsFormInfo.feedbackYear" required>
-								<option value="" disabled selected>2016/2017</option>
+								<option value="" disabled>Please select status</option>
+								<option value="1" selected>2016/2017</option>
 							</select>
 							<div ng-if="goalSetting.$submitted && goalSetting.feedbackYear.$invalid">
 								 <div when="required" class="validation-error">This field is required</div>
