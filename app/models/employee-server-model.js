@@ -1,5 +1,7 @@
+/*
+ * employee-server-model.js  returns a mongoose model for use in ssApp Registration & Login
+ */
 var mongoose = require('mongoose'),
-	//crypto = require('crypto'),
 	Schema = mongoose.Schema;
 
 var EmployeeSchema = new Schema({
@@ -13,7 +15,7 @@ var EmployeeSchema = new Schema({
 	},
 	email: {
 		type: String,
-		match: [/.+\@.+\..+/, "Please use a valid email address"]
+		required: true
 	},
 	lionLogin: {
 		type: String,
@@ -21,36 +23,14 @@ var EmployeeSchema = new Schema({
 		required: true,
 		trim: true
 	},
-	password: {
+	ssPassword: {
 		type: String,
-		validate: [
-			function(password) {
-				return password && password.length > 6;
-			}, 'Password should be longer'
-		]
+		required: true
+	},
+	confirmSsPassword: {
+		type: String,
+		required: true
 	}
 });
-
-// Hook a pre save method to hash the password
-// UserSchema.pre('save', function(next) {
-// 	if (this.password) {
-// 		this.salt = new Buffer(crypto.randomBytes(16).toString('base64'), 'base64');
-// 		this.password = this.hashPassword(this.password);
-// 	}
-
-// 	next();
-// });
-
-// Create instance method for hashing a password
-// UserSchema.methods.hashPassword = function(password) {
-// 	if(password && this.salt) {
-// 		return crypto.pbkdf2Sync(password, this.salt, 10000, 64).toString('base64');
-// 	}
-// };
-
-// Create instance method for authenticating user
-// UserSchema.methods.authenticate = function(password) {
-// 	return this.password === this.hashPassword(password);
-// };
 
 mongoose.model('Employee', EmployeeSchema);

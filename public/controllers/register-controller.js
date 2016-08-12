@@ -7,9 +7,8 @@
 			$scope.registerFormInfo = {};
 
 			$scope.register = function(){
-				$scope.firstName = JSON.stringify($scope.registerFormInfo.firstname);
 				console.log('Here is the registerFormInfo: ' + JSON.stringify($scope.registerFormInfo));
-				$location.path('/dashboard');
+				//$location.path('/dashboard');
 			}
 		}
 	]);

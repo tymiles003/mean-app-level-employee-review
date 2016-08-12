@@ -5,7 +5,7 @@ var mongoose = require('mongoose');
 
 // Configure Mongoose
 //var db = mongoose.connect('mongodb://localhost/mean-passport');
-var db = mongoose.connect('mongodb://localhost/sugarsnaps20');
+var db = mongoose.connect('mongodb://localhost/sugarsnaps21');
 
 // Configure Express
 var express = require('./config/express');
