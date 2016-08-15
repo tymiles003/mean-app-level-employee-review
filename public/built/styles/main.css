@@ -103,13 +103,17 @@ input:-moz-placeholder {
   border: 1px solid #f59b15; }
 
 .alert {
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 22px;
-  color: #fafafa;
-  padding: 8px;
-  background: #f59b15;
-  border-radius: 0; }
+  border-radius: 0;
+  border: 0;
+  color: #fafafa; }
+  .alert.alert-success {
+    background: #447D67; }
+  .alert.alert-info {
+    background: #4A6770; }
+  .alert.alert-warning {
+    background: #f59b15; }
+  .alert.alert-danger {
+    background: #CC4E00; }
 
 .btn-default {
   font-size: 12px;
