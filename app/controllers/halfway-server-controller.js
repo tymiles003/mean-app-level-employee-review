@@ -32,6 +32,7 @@
 		// query the db and then stuff the query results into the response object
 		// looks like you use the model to run the find, here, the Halfway
 		Halfway.find({empFirstName: 'Wayne'}).limit(1).exec(function(error, results) {
+			console.log('results here!: ', results);
 			if (error) {
 				return next(error);
 			}

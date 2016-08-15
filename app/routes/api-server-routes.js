@@ -14,7 +14,9 @@ module.exports = function(app) {
 	app.route('/perform-api/member-set').post(memberServerCntl.postMemberData);
 
 	// Goals
-	app.route('/perform-api/goals-set').post(goalServerCntl.postGoalData);
+	app.route('/perform-api/goal-set').post(goalServerCntl.postGoalData);
+	app.route('/perform-api/goal-get').get(goalServerCntl.getGoalData);
+
 
 	// Halfway Checkin Test
 	app.route('/perform-api/halfway-set').post(halfway.postData);
