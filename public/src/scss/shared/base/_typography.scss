@@ -123,13 +123,25 @@ input:-moz-placeholder { /* Firefox 18- */
 }
 
 .alert {
-	font-size: 18px;
-	font-weight: bold;
-	line-height: 22px;
-	color: $white;
-	padding: 8px;
-	background: $orange;
 	border-radius: 0;
+	border: 0;
+	color: $white;
+
+	&.alert-success {
+		background: #447D67;
+	}
+
+	&.alert-info {
+		background: #4A6770;
+	}
+
+	&.alert-warning {
+		background: $orange;
+	}
+
+	&.alert-danger {
+		background: #CC4E00;
+	}
 }
 
 .btn-default {
