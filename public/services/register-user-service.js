@@ -9,6 +9,6 @@ angular.module(ssApp).factory('UserInfoService', function() {
 		getFirstName: function() {
 			return this.user;
 		}
-	}
+	};
 });
 

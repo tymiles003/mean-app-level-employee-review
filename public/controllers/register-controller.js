@@ -17,7 +17,7 @@
 							console.log('Back from the server and here is the response... ', response);
 							$location.path('/dashboard');
 						}
-					)
+					);
 			};
 		}
 	]);

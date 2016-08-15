@@ -1,6 +1,6 @@
 (function() {
 
-	'use strict'
+	'use strict';
 
 	angular.module(ssApp).controller('GoalsCtrl', ['$scope', '$http', '$location',
 		function($scope, $http, $location) {
@@ -17,7 +17,7 @@
 							// process the response / re-load the $scope
 							$location.path('/dashboard');
 						}
-					)
+					);
 			};
 		}
 	]);
