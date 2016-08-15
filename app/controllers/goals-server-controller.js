@@ -18,4 +18,22 @@
 			res.send(goal); // this simple line sends the data back to the client
 		});
 	};
+
+	exports.getGoalData = function(req, res, next) {
+
+		// know will need to use the req params
+		console.log('Yo! - onload and inside getGoalData'); // to server console
+
+		// query the db and then stuff the query results into the response object
+		// looks like you use the model to run the find; here, refer to Goal
+		Goal.find({teamMemberFName: 'Scott'}).limit(1).exec(function(error, results) {
+			console.log('GOAL results here!: ', results);
+			if (error) {
+				return next(error);
+			}
+			// Respond with valid data
+			res.json(results);
+		});
+	};
+
 })();

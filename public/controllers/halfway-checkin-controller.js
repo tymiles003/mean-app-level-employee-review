@@ -9,9 +9,10 @@
 			$scope.halfwayFormInfo = {};
 
 			// go get the halfway data if it exists (use this for all review forms)
+			// out of a fxn or within a fxn?
 			$http.get('/perform-api/halfway-get')
 				.then(function(response){
-					console.log('got some response.data0 back', response);
+					console.log('got some response.data back', response);
 					console.log('here is the emp Name I got back:', response.data[0].empFirstName);
 					// load up the scope with the response
 					$scope.halfwayFormInfo = {
