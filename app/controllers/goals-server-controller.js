@@ -26,6 +26,7 @@
 
 		// query the db and then stuff the query results into the response object
 		// looks like you use the model to run the find; here, refer to Goal
+		// TODO: Remove this hard-coded db query anbd go with a dyanmic query based on lion login
 		Goal.find({teamMemberFName: 'Scott'}).limit(1).exec(function(error, results) {
 			console.log('GOAL results here!: ', results);
 			if (error) {
