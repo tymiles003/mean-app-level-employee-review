@@ -11,7 +11,7 @@ var path = {
 	appControllers: './app/controllers/',
 	appModels: './app/models/',
 	appRoutes: './app/routes/',
-}
+};
 
 gulp.task('watch', function() {
 	gulp.watch('public/src/**/*.scss', [sass]);
@@ -30,7 +30,8 @@ gulp.task('lint', function() {
 		path.publicRoutes + '*.js',
 		path.appControllers + '*.js',
 		path.appModels + '*.js',
-		path.appRoutes + '*.js'
+		path.appRoutes + '*.js',
+		'gulpfile.js'
 	])
 	.pipe(jshint())
 	.pipe(jshint.reporter('default'));
