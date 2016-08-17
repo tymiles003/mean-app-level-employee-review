@@ -20,7 +20,7 @@
 						empLastName : response.data[0].empLastName,
 						manFirstName : response.data[0].manFirstName,
 						manLastName : response.data[0].manLastName
-					}
+					};
 				});
 
 			// Save the entered form fields to the DB -- called from form onSubmit
@@ -49,7 +49,7 @@
 							$location.path('/login');
 						}
 					);
-			}
+			};
 
 	}]);
 })();
