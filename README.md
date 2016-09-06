@@ -1,4 +1,4 @@
-## Project Sugarsnaps
+### Project Sugarsnaps
 A project that brings the LEVEL Employee Performance Enablement Program online as a web application. Please note: This readme should be updated as new functionality is available or app structure changes.
 
 ## Tech Stack
