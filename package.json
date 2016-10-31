@@ -12,19 +12,20 @@
     "url": "http://gitlab.level-studios.com/level-internal/sugarsnaps.git"
   },
   "dependencies": {
+    "body-parser": "~1.0.1",
+    "bootstrap-sass": "^3.3.7",
+    "compression": "~1.0.1",
+    "connect-flash": "~0.1.1",
+    "cookie-parser": "~1.0.1",
+    "ejs": "~1.0.0",
     "express": "~4.1.0",
     "express-session": "~1.0.2",
-    "body-parser": "~1.0.1",
-    "cookie-parser": "~1.0.1",
-    "compression": "~1.0.1",
     "method-override": "~1.0.0",
-    "morgan": "~1.0.0",
-    "ejs": "~1.0.0",
     "mongoose": "~3.8.8",
-    "connect-flash": "~0.1.1",
+    "morgan": "~1.0.0",
     "passport": "~0.2.0",
-    "passport-local": "~1.0.0",
-    "passport-facebook": "~1.0.2"
+    "passport-facebook": "~1.0.2",
+    "passport-local": "~1.0.0"
   },
   "devDependencies": {
     "browser-sync": "^2.17.5",

@@ -37,6 +37,7 @@ gulp.task('styles', function() {
 	return gulp.src(sassFiles)
 			.pipe(gulpif(args.sourcemaps, sourcemaps.init()))
 			.pipe(sass({
+				includePaths: ['./node_modules/bootstrap-sass/assets/stylesheets/'],
 				'default-encoding': 'UTF-8',
 				errLogToConsole: true,
 				outputStyle: (args.debug) ? 'expanded' : 'compressed'
@@ -44,10 +45,14 @@ gulp.task('styles', function() {
 			.pipe(autoprefixer({
 				browsers: [
 				'last 2 versions',
-				'Safari >= 5.1.10',
+				'Android 2.3',
+				'Android >= 4',
+				'Chrome >= 20',
+				'Firefox >= 24',
 				'Explorer >= 8',
-				'iOS >= 6.1',
-				'Android >= 4.1.1'
+				'iOS >= 6',
+				'Opera >= 12',
+				'Safari >= 6'
 			]}))
 			.pipe(rename({suffix: '.built'}))
 			.pipe(gulpif(args.sourcemaps, sourcemaps.write('../../../tmp/sourcemaps')))

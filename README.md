@@ -20,6 +20,9 @@ From the app root, run `npm install`
 
 Start the Mongo deamon with `mongod &`
 
+
+
+
 For general development, start the app with `npm run dev`
 
 If you want to see the files unminified, start the app with `npm run debug`
