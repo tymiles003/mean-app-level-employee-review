@@ -1,41 +1,85 @@
+'use strict';
+
+var args = require('yargs').argv;
+var autoprefixer = require('gulp-autoprefixer');
+var browserify = require('browserify');
+var browsersync = require('browser-sync').create();
+var clean = require('gulp-clean');
+var glob = require('glob');
 var gulp = require('gulp');
-
-var sass = require('gulp-sass');
-var watch = require('gulp-watch');
+var gulpif = require('gulp-if');
 var jshint = require('gulp-jshint');
+var rename = require('gulp-rename');
+var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
+var stylish = require('jshint-stylish');
+var uglify = require('gulp-uglify');
+var watch = require('gulp-watch');
+var util = require('gulp-util');
 
-var path = {
-	publicControllers: './public/controllers/',
-	publicServices: './public/services/',
-	publicRoutes: './public/routes/',
-	appControllers: './app/controllers/',
-	appModels: './app/models/',
-	appRoutes: './app/routes/',
-};
+var jsFiles = glob.sync('./+(app|public)/**/*.js');
+var sassFiles = glob.sync('./public/src/scss/**/*.scss');
 
-gulp.task('watch', function() {
-	gulp.watch('public/src/**/*.scss', [sass]);
+gulp.task('clean', function() {
+	return gulp.src('./public/built/')
+		.pipe(clean({force: true}));
 });
 
-gulp.task('styles', function() {
-	return gulp.src('public/src/scss/*.scss')
-	.pipe(sass())
-	.pipe(gulp.dest('public/built/styles/'));
-});
 
 gulp.task('lint', function() {
-	return gulp.src([
-		path.publicControllers + '*.js',
-		path.publicServices + '*.js',
-		path.publicRoutes + '*.js',
-		path.appControllers + '*.js',
-		path.appModels + '*.js',
-		path.appRoutes + '*.js',
-		'gulpfile.js'
-	])
-	.pipe(jshint())
-	.pipe(jshint.reporter('default'));
+
+	return gulp.src(jsFiles)
+			.pipe(jshint())
+			.pipe(jshint.reporter(stylish));
+});
+
+
+gulp.task('styles', function() {
+
+	return gulp.src(sassFiles)
+				.pipe(gulpif(args.sourcemaps, sourcemaps.init()))
+				.pipe(sass({
+					'default-encoding': 'UTF-8',
+					errLogToConsole: true,
+					outputStyle: (args.debug) ? 'expanded' : 'compressed'
+				}).on('error', sass.logError))
+				.pipe(autoprefixer({
+					browsers: [
+					'last 2 versions',
+					'Safari >= 5.1.10',
+					'Explorer >= 8',
+					'iOS >= 6.1',
+					'Android >= 4.1.1'
+				]}))
+				.pipe(rename({suffix: '.built'}))
+				.pipe(gulpif(args.sourcemaps, sourcemaps.write('./tmp/sourcemaps')))
+				.pipe(gulp.dest('./public/built/styles/'));
+});
+
+
+gulp.task('sass-watch', ['styles'], function(done) {
+    browsersync.reload();
+    done();
+});
+
+
+gulp.task('js-watch', ['lint'], function(done) {
+    browsersync.reload();
+    done();
+});
+
+
+gulp.task('serve', function() {
+	browsersync.init({
+		proxy: 'http://localhost:3000/'
+	});
+
+	if (args.watch) {
+		gulp.watch(sassFiles, ['sass-watch']);
+		gulp.watch(jsFiles, ['js-watch']);
+	}
 });
 
 // Default Task
-gulp.task('default', ['styles']);
+gulp.task('dev', ['clean', 'lint', 'styles', 'serve']);
+gulp.task('default', ['dev']);

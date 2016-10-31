@@ -20,11 +20,14 @@ From the app root, run `npm install`
 
 Start the Mongo deamon with `mongod &`
 
-Start the gulp script via `gulp` to compile sass into css
+For general development, start the app with `npm run dev`
 
-In a new Terminal window, start the app with `npm run start`
+If you want to see the files unminified, start the app with `npm run debug`
 
-Hit [http://localhost:3000](http://localhost:3000) in your favorite browser
+Presto!  Your app will open up right away.
+
+### Please note
+This app is hooked up with BrowserSync and Nodemon - your changes will automagically be watched and refreshed both on the server and in the browser.  No more needing to restart Node or Cmd + R when you make changes to files that were already being watched.  Happy coding!  :)
 
 
 ## Contributing
