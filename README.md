@@ -1,7 +1,8 @@
-# Project Sugarsnaps
+# Sugarsnaps
 
 ## Overview
 A project that brings the LEVEL Employee Performance Enablement Program online as a web application.
+
 Sugarsnaps is a MEAN Stack web application based on the Mean JS seed project
 [mean-simple-auth](https://github.com/meanjs/mean-simple-auth). There is a local Mongo DB
 (sugarsnaps21), an Express / Node web server with server-side routing for CRUD operations,
@@ -14,10 +15,15 @@ There are many ways to install node (direct download, via homebrew), but if your
 
 ## Installation
 Clone the repo by running `git clone git@gitlab.level-studios.com:level-internal/sugarsnaps.git`
+
 From the app root, run `npm install`
+
 Start the Mongo deamon with `mongod &`
+
 Start the gulp script via `gulp` to compile sass into css
+
 In a new Terminal window, start the app with `run npm start`
+
 Hit [http://localhost:3000](http://localhost:3000) in your favorite browser
 
 
