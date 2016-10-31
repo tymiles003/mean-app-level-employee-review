@@ -22,7 +22,7 @@ Start the Mongo deamon with `mongod &`
 
 Start the gulp script via `gulp` to compile sass into css
 
-In a new Terminal window, start the app with `run npm start`
+In a new Terminal window, start the app with `npm run start`
 
 Hit [http://localhost:3000](http://localhost:3000) in your favorite browser
 
