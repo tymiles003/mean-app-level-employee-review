@@ -22,7 +22,7 @@ var sassFiles = glob.sync('./public/src/scss/**/*.scss');
 
 gulp.task('clean', function() {
 	return gulp.src('./public/built/')
-		.pipe(clean({force: true}));
+			.pipe(clean({force: true}));
 });
 
 
@@ -35,29 +35,24 @@ gulp.task('lint', function() {
 
 gulp.task('styles', function() {
 	return gulp.src(sassFiles)
-				.pipe(gulpif(args.sourcemaps, sourcemaps.init()))
-				.pipe(sass({
-					'default-encoding': 'UTF-8',
-					errLogToConsole: true,
-					outputStyle: (args.debug) ? 'expanded' : 'compressed'
-				}).on('error', sass.logError))
-				.pipe(autoprefixer({
-					browsers: [
-					'last 2 versions',
-					'Safari >= 5.1.10',
-					'Explorer >= 8',
-					'iOS >= 6.1',
-					'Android >= 4.1.1'
-				]}))
-				.pipe(rename({suffix: '.built'}))
-				.pipe(gulpif(args.sourcemaps, sourcemaps.write('../../../tmp/sourcemaps')))
-				.pipe(gulp.dest('./public/built/styles/'));
-});
-
-
-gulp.task('sass-watch', ['styles'], function(done) {
-    browsersync.reload();
-    done();
+			.pipe(gulpif(args.sourcemaps, sourcemaps.init()))
+			.pipe(sass({
+				'default-encoding': 'UTF-8',
+				errLogToConsole: true,
+				outputStyle: (args.debug) ? 'expanded' : 'compressed'
+			}).on('error', sass.logError))
+			.pipe(autoprefixer({
+				browsers: [
+				'last 2 versions',
+				'Safari >= 5.1.10',
+				'Explorer >= 8',
+				'iOS >= 6.1',
+				'Android >= 4.1.1'
+			]}))
+			.pipe(rename({suffix: '.built'}))
+			.pipe(gulpif(args.sourcemaps, sourcemaps.write('../../../tmp/sourcemaps')))
+			.pipe(gulp.dest('./public/built/styles/'))
+			.pipe(gulpif(args.watch, browsersync.stream()));
 });
 
 
@@ -73,7 +68,7 @@ gulp.task('serve', function() {
 	});
 
 	if (args.watch) {
-		gulp.watch(sassFiles, ['sass-watch']);
+		gulp.watch(sassFiles, ['styles']);
 		gulp.watch(jsFiles, ['js-watch']);
 	}
 });
