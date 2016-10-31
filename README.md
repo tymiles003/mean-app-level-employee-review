@@ -29,6 +29,16 @@ Presto!  Your app will open up right away.
 ### Please note
 This app is hooked up with BrowserSync and Nodemon - your changes will automagically be watched and refreshed both on the server and in the browser.  No more needing to restart Node or Cmd + R when you make changes to files that were already being watched.  Happy coding!  :)
 
+### To Kill Your Node Server
+Sometimes, you need to restart Node, when this happens, run `ps aux | grep node` and look for the line that ends with *node server.js*.  Here's an example:
+
+| username |   *43125*   | 0.0 | 0.3 | 3101428 | 47440 | s002 | S | 9:54PM | 0:00.45 | *node server.js* |
+|----------|-------------|-----|-----|---------|-------|------|---|--------|---------|------------------|
+|          |    this #   |     |     |         |       |      |   |        |         |   this process   |
+
+
+Once you have that number above, enter `kill -9 *43125*`  (but replace the number with your process number)
+
 
 ## Contributing
 View the [Contributing Guide](https://wiki.level-studios.com/display/PROJ/Contributing+Guide) in Confluence.
