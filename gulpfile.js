@@ -27,7 +27,6 @@ gulp.task('clean', function() {
 
 
 gulp.task('lint', function() {
-
 	return gulp.src(jsFiles)
 			.pipe(jshint())
 			.pipe(jshint.reporter(stylish));
@@ -35,7 +34,6 @@ gulp.task('lint', function() {
 
 
 gulp.task('styles', function() {
-
 	return gulp.src(sassFiles)
 				.pipe(gulpif(args.sourcemaps, sourcemaps.init()))
 				.pipe(sass({
@@ -52,7 +50,7 @@ gulp.task('styles', function() {
 					'Android >= 4.1.1'
 				]}))
 				.pipe(rename({suffix: '.built'}))
-				.pipe(gulpif(args.sourcemaps, sourcemaps.write('./tmp/sourcemaps')))
+				.pipe(gulpif(args.sourcemaps, sourcemaps.write('../../../tmp/sourcemaps')))
 				.pipe(gulp.dest('./public/built/styles/'));
 });
 
