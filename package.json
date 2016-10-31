@@ -12,6 +12,9 @@
     "url": "http://gitlab.level-studios.com/level-internal/sugarsnaps.git"
   },
   "dependencies": {
+    "angular": "^1.5.7",
+    "angular-messages": "^1.5.7",
+    "angular-route": "^1.2.32",
     "body-parser": "~1.0.1",
     "bootstrap-sass": "^3.3.7",
     "compression": "~1.0.1",

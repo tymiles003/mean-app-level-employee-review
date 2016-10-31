@@ -61,6 +61,15 @@ gulp.task('styles', function() {
 });
 
 
+gulp.task('js', function() {
+	return gulp.src(jsFiles)
+			.pipe(gulpif(args.sourcemaps, sourcemaps.init({loadMaps: true})))
+			.pipe(rename({suffix: '.built'}))
+			.pipe(gulpif(args.sourcemaps, sourcemaps.write('../../tmp/sourcemaps')))
+			.pipe(gulp.dest('./built/scripts/'));
+});
+
+
 gulp.task('js-watch', ['lint'], function(done) {
     browsersync.reload();
     done();
