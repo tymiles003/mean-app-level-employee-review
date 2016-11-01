@@ -30,14 +30,12 @@ gulp.task('clean', function cleanTask() {
 			.pipe(clean({force: true}));
 });
 
-
 gulp.task('lint-scripts', function lintScriptsTask() {
 	return gulp.src(scriptFiles)
 			.pipe(jshint())
 			.pipe(jshint.reporter(stylish));
-			// .pipe(jshint.reporter('fail'));
+			.pipe(jshint.reporter('fail'));
 });
-
 
 gulp.task('styles', function stylesTask() {
 	return gulp.src(sassFiles)
@@ -66,7 +64,6 @@ gulp.task('styles', function stylesTask() {
 			.pipe(gulpif(args.watch, browsersync.stream()));
 });
 
-
 gulp.task('assets', function assetsTask(done) {
     fs.copy('./src/assets', './dist/assets');
     done();
@@ -76,7 +73,6 @@ gulp.task('views', function viewsTask(done) {
     fs.copy('./src/views', './dist/views');
     done();
 });
-
 
 gulp.task('scripts', function jsTask() {
 	return browserify('./src/scripts/main.js', {
@@ -91,12 +87,10 @@ gulp.task('scripts', function jsTask() {
 			.pipe(gulp.dest('./dist/scripts/'))
 });
 
-
 gulp.task('script-watch', ['lint-scripts', 'scripts'], function jsWatchTask(done) {
     browsersync.reload();
     done();
 });
-
 
 gulp.task('serve', function serveTask() {
 	browsersync.init({
@@ -110,7 +104,6 @@ gulp.task('serve', function serveTask() {
 	}
 });
 
-// Default Task
 gulp.task('dev', function devTask(callback) {
 	runSequence(
 		'clean',
