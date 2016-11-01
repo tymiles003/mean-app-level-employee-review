@@ -4,7 +4,7 @@
   "description": "A LEVEL performance enablement program site",
   "scripts": {
     "dev": "nodemon server.js & gulp dev --watch --sourcemaps",
-    "debug": "nodemon server.js & gulp dev --watch --debug --sourcemaps",
+    "dev-debug": "nodemon server.js & gulp dev --watch --debug --sourcemaps",
     "start": "nodemon server.js"
   },
   "repository": {
