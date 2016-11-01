@@ -14,7 +14,7 @@
                     controller: 'RegCtrl'
                 })
                 .when('/login', {
-                    templateUrl: 'views/login-view.html',
+                    templateUrl: '/views/login-view.html',
                     controller: 'LogInCtrl'
                 })
                 .when('/dashboard', {

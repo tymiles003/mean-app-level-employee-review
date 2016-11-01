@@ -18,13 +18,13 @@ var UserInfoService = require('./services/register-user-service');
 	// Define the main angular application module name
 	var ssApp = 'sugarsnaps';
 
-	routes(ssApp);
-
 	// console.log('hi');
 	// console.log(RegCtrl);
 
 	// Define the main angular application module
 	var mainAppModule = angular.module(ssApp, ['ngRoute', 'ngMessages']);
+
+	routes(ssApp);
 
 	mainAppModule.controller('RegCtrl', ['$scope', '$http', '$location', RegCtrl]);
 

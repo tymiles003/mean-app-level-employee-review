@@ -72,6 +72,11 @@ gulp.task('assets', function assetsTask(done) {
     done();
 });
 
+gulp.task('views', function viewsTask(done) {
+    fs.copy('./src/views', './dist/views');
+    done();
+});
+
 
 gulp.task('scripts', function jsTask() {
 	return browserify('./src/scripts/main.js', {
@@ -111,6 +116,7 @@ gulp.task('dev', function devTask(callback) {
 	runSequence(
 		'clean',
 		'assets',
+		'views',
 		'lint-scripts',
 		'scripts',
   		'styles',
