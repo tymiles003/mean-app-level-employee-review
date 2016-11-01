@@ -100,8 +100,7 @@ gulp.task('script-watch', ['lint-scripts', 'scripts'], function jsWatchTask(done
 
 gulp.task('serve', function serveTask() {
 	browsersync.init({
-		proxy: 'http://localhost:3000/',
-		open: false
+		proxy: 'http://localhost:3000/'
 	});
 
 	if (args.watch) {
