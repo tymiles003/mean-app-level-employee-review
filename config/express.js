@@ -49,8 +49,8 @@ module.exports = function() {
     require('../app/routes/users-server-routes')(app);
     require('../app/routes/api-server-routes')(app);
 
-    // Setting the app router and static folder
-    app.use(express.static(path.resolve('./public')));
+    // Setting the app router and to the built front-end folder
+    app.use(express.static(path.resolve('./dist')));
 
     return app;
 };

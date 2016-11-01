@@ -1,7 +1,7 @@
-(function() {
+(function(document, window, angular) {
 	'use strict';
 
-	angular.module(ssApp).controller('DashboardCtrl', function(UserInfoService, $scope) {
+	var DashboardCtrl = function(UserInfoService, $scope) {
 		$scope.user = UserInfoService.getFirstName();
 		$scope.name = 'Scott';
 
@@ -12,5 +12,8 @@
 		$scope.dd = today.getDate();
 		$scope.mm = monthArray[today.getMonth()];
 		$scope.yyyy = today.getFullYear();
-	});
-})();
+	}
+
+	module.exports = DashboardCtrl;
+
+})(document, window, angular);
