@@ -18,19 +18,17 @@ Clone the repo by running `git clone git@gitlab.level-studios.com:level-internal
 
 From the app root, run `npm install`
 
-Start the Mongo deamon with `mongod &`
+Start the Mongo deamon with `mongod`
+
+Open a new Terminal Window and navigate to the same folder.
+For general development, start the application via `npm run dev-debug`.  This will start the Node.js server and start the gulp dev script, automatically watching your files.
+
+Presto!  The app will open automatically in your default browser because of BrowserSync.  (See note below)
+
+For more customized development, you may want to split the tasks listed in the scrips section of package.json.  Reach out to Corrine if you have questions about how to do this.
 
 
-
-
-For general development, start the app with `npm run dev`
-
-If you want to see the files unminified, start the app with `npm run debug`
-
-Presto!  Your app will open up right away.
-
-### Please note
-This app is hooked up with BrowserSync and Nodemon - your changes will automagically be watched and refreshed both on the server and in the browser.  No more needing to restart Node or Cmd + R when you make changes to files that were already being watched.  Happy coding!  :)
+*This app is hooked up with BrowserSync and Nodemon - your changes will automagically be watched and refreshed both on the server and in the browser.  No more needing to restart Node or Cmd + R when you make changes to files that were already being watched.  Happy coding!  :)
 
 ### To Kill Your Node Server
 Sometimes, you need to restart Node, when this happens, run `ps aux | grep node` and look for the line that ends with *node server.js*.  Here's an example:
