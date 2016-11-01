@@ -34,7 +34,7 @@ gulp.task('lint-scripts', function lintScriptsTask() {
 	return gulp.src(scriptFiles)
 			.pipe(jshint())
 			.pipe(jshint.reporter(stylish));
-			.pipe(jshint.reporter('fail'));
+			// .pipe(jshint.reporter('fail'));
 });
 
 gulp.task('styles', function stylesTask() {
