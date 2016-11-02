@@ -12,7 +12,7 @@
 		$scope.dd = today.getDate();
 		$scope.mm = monthArray[today.getMonth()];
 		$scope.yyyy = today.getFullYear();
-	}
+	};
 
 	module.exports = DashboardCtrl;
 

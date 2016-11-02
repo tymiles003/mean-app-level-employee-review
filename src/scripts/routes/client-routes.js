@@ -46,7 +46,7 @@
                 });
             }
         ]);
-    }
+    };
 
     module.exports = routes;
 })(document, window, angular);

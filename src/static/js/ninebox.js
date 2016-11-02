@@ -5,7 +5,7 @@ var els = document.querySelectorAll(".rating-label");
 
 els.forEach(function(item){
 	item.addEventListener("click", doSomething, false);
-})
+});
 
 function doSomething(e) {
 

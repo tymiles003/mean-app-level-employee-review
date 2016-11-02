@@ -16,7 +16,7 @@
 			// 	)
 			// }
 		};
-	}
+	};
 
 	module.exports = LogInCtrl;
 })(document, window, angular);

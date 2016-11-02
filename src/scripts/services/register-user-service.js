@@ -11,7 +11,7 @@
 				return this.user;
 			}
 		};
-	}
+	};
 
 	module.exports = UserInfoService;
 
