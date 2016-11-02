@@ -5,10 +5,10 @@ var ngMessages = require('angular-messages');
 var routes = require('./routes/client-routes');
 
 var RegCtrl = require('./controllers/register-controller');
-var LoginController = require('./controllers/login-controller');
-var DashboardController = require('./controllers/dashboard-controller');
-var GoalsController = require('./controllers/goals-controller');
-var HalfwayCheckinController = require('./controllers/halfway-checkin-controller');
+var LogInCtrl = require('./controllers/login-controller');
+var DashboardCtrl = require('./controllers/dashboard-controller');
+var GoalsCtrl = require('./controllers/goals-controller');
+var HalfwayCheckinCtrl = require('./controllers/halfway-checkin-controller');
 var UserInfoService = require('./services/register-user-service');
 
 
@@ -27,6 +27,10 @@ var UserInfoService = require('./services/register-user-service');
 	routes(ssApp);
 
 	mainAppModule.controller('RegCtrl', ['$scope', '$http', '$location', RegCtrl]);
+	mainAppModule.controller('LogInCtrl', ['$scope', '$http', '$location', LogInCtrl]);
+	mainAppModule.controller('DashboardCtrl', [UserInfoService, '$scope', DashboardCtrl]);
+	mainAppModule.controller('GoalsCtrl', ['$scope', '$http', '$location', GoalsCtrl]);
+	mainAppModule.controller('HalfwayCheckinCtrl', ['$scope', '$http', '$location', HalfwayCheckinCtrl]);
 
 	//Configure application hashbang routing
 	mainAppModule.config(['$locationProvider',
