@@ -1,4 +1,4 @@
-(function(){
+(function(require, exports) {
 
 	'use strict';
 
