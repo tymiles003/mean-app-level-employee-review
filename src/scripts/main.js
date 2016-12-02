@@ -1,6 +1,9 @@
 var angular = require('angular');
 var ngRoute = require('angular-route');
 var ngMessages = require('angular-messages');
+var ngAnimate = require('angular-animate');
+var ngTouch = require('angular-touch');
+var uiBootstrap = require('angular-ui-bootstrap');
 
 var routes = require('./routes/client-routes');
 
@@ -18,11 +21,8 @@ var UserInfoService = require('./services/register-user-service');
 	// Define the main angular application module name
 	var ssApp = 'sugarsnaps';
 
-	// console.log('hi');
-	// console.log(RegCtrl);
-
 	// Define the main angular application module
-	var mainAppModule = angular.module(ssApp, ['ngRoute', 'ngMessages']);
+	var mainAppModule = angular.module(ssApp, ['ngRoute', 'ngMessages', 'ngAnimate', 'ngTouch', 'ui.bootstrap']);
 
 	routes(ssApp);
 
