@@ -1,14 +1,11 @@
 (function(document, window, angular) {
 	'use strict';
 
-	var DashboardCtrl = function(UserInfoService, $scope) {
-		$scope.user = UserInfoService.getFirstName();
-		$scope.name = 'Scott';
-
-		// TODO: make it into a service
-		var monthArray = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+	var DashboardCtrl = function($scope) {
+		$scope.name = 'Scott Prior-Pfeifer III';
 
 		var today = new Date();
+		var monthArray = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 		$scope.dd = today.getDate();
 		$scope.mm = monthArray[today.getMonth()];
 		$scope.yyyy = today.getFullYear();

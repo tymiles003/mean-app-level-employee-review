@@ -28,7 +28,8 @@ var UserInfoService = require('./services/register-user-service');
 
 	mainAppModule.controller('RegCtrl', ['$scope', '$http', '$location', RegCtrl]);
 	mainAppModule.controller('LogInCtrl', ['$scope', '$http', '$location', LogInCtrl]);
-	mainAppModule.controller('DashboardCtrl', [UserInfoService, '$scope', DashboardCtrl]);
+
+    mainAppModule.controller('DashboardCtrl', ['$scope', DashboardCtrl]);
 	mainAppModule.controller('GoalsCtrl', ['$scope', '$http', '$location', GoalsCtrl]);
 	mainAppModule.controller('HalfwayCheckinCtrl', ['$scope', '$http', '$location', HalfwayCheckinCtrl]);
 
