@@ -106,6 +106,8 @@ input:-moz-placeholder { /* Firefox 18- */
 	}
 }
 
+/* Angular form error styles (TODO: possibly move these classes to _forms.scss) */
+
 .validation-error {
 	width: 100%;
 
@@ -119,8 +121,10 @@ input:-moz-placeholder { /* Firefox 18- */
 }
 
 .ng-invalid.ng-touched {
-	border: 1px solid $orange;
+	border: 2px solid $orange;
 }
+
+
 
 .alert {
 	border-radius: 0;
