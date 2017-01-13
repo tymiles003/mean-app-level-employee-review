@@ -6,8 +6,8 @@
 			<!--<li><a href="#"><span class="nav-text">Team Info</span><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a></li>-->
 		</ul>
 	</nav>
-	<section class="per-dash clearfix">
 
+	<section class="per-dash clearfix">
 		<div class="col-sm-12 dash-card alert-messages">
 			<div uib-alert ng-repeat="alert in alerts" ng-class="'alert alert-' + (alert.type || 'warning')" close="closeAlert($index)">
 				<i ng-class="'glyphicon glyphicon-' + (alert.icon || 'exclamation-sign')"></i> {{alert.msg}} </div>
@@ -37,6 +37,7 @@
 				</tr>
 			</table>
 		</div>
+
 		<div class="col-sm-12 dash-card cycle">
 			<h3>Goal Setting Cycle Ends: <span class="attn-text">September 30</span></h3>
 			<div class="cycle-chart-contain">
@@ -52,5 +53,7 @@
 				<div class="cycle-chart cycle-spin-1"></div>
 			</div>
 		</div>
+
 	</section>
+
 </main>

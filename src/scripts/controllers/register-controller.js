@@ -22,4 +22,5 @@
 	};
 
 	module.exports = RegCtrl;
+
 })(document, window, angular);

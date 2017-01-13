@@ -4,6 +4,7 @@
 
 	var GoalsCtrl = function($scope, $http, $location) {
 
+		// needed ?
 		$scope.goalsFormInfo = {};
 
 		$http.get('/perform-api/goal-get')

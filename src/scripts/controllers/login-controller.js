@@ -7,14 +7,6 @@
 		$scope.logIn = function() {
 			// console.log('Here is the credentials: ' + JSON.stringify($scope.credentials));
 			$location.path('/dashboard');
-			// $http.post('#', $scope.credentials)
-			// 	.then(
-			// 		// success callback
-			// 		function(response) {
-			// 			$location.path('/dashboard');
-			// 		}
-			// 	)
-			// }
 		};
 	};
 
