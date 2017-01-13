@@ -1,45 +1,70 @@
-<div class="container">
+<main class="container">
+
 	<header class="hero-header">
-		<h1><img class="center-block img-responsive" src="/assets/images/header-halfway-check-large.png" alt="LEVEL Halfway Checkin"></h1>
+		<h1 class="header-halfway">LEVEL Performance Reviews: Halfway Checkin</h1>
 	</header>
 
-	<form name="halfwayForm" ng-submit="saveHalfwayForm()" novalidate autocomplete="off">
-		<div class="row form-group">
-			<div class="col-xs-6">
-				<label>Team Member Name
-					<input type="text" name="emp-first-name" class="form-control" placeholder="Team Member First Name" required ng-model="halfwayFormInfo.empFirstName">
-				</label>
+	<form name="halfwayForm" novalidate autocomplete="off" ng-submit="saveHalfwayForm()">
+
+		<section class="section flex-section row">
+			<div class="section-header col-md-3">
+				<h2>Halfway Checkin</h2>
 			</div>
-			<div class="col-xs-6">
-				<label>&nbsp;
-					<input type="text" name="emp-last-name" class="form-control" placeholder="Team Member Last Name" required ng-model="halfwayFormInfo.empLastName">
-				</label>
-			</div>
-		</div>
 
-		<div class="row form-group">
-			<div class="col-xs-6">
-				<label>Manager Name
-					<input type="text" name="man-first-name" class="form-control" placeholder="Manager First Name" required ng-model="halfwayFormInfo.manFirstName">
-				</label>
-			</div>
-			<div class="col-xs-6">
-				<label>&nbsp;
-					<input type="text" name="man-last-name" class="form-control" placeholder="Manager Last Name" required ng-model="halfwayFormInfo.manLastName">
-				</label>
-			</div>
-		</div>
+			<div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-1">
+
+				<div class="row form-group">
+					<label for="empFirstName">Team Member Name<span class="required">*</span></label>
+
+					<div class="row">
+						<div class="col-xs-12 col-sm-6">
+							<input type="text" name="empFirstName" id="empFirstName" placeholder="Your First Name" class="form-control" ng-model="halfwayFormInfo.empFirstName" required>
+							<div ng-messages="halfwayForm.empFirstName.$error" ng-if="halfwayForm.empFirstName.$invalid && halfwayForm.$submitted">
+								<div ng-message="required" class="validation-error">This field is required</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 form-group">
+							<input type="text" name="empLastName" id="empLastName" placeholder="Your Last Name" class="form-control" ng-model="halfwayFormInfo.empLastName" required>
+							<div ng-messages="halfwayForm.empLastName.$error" ng-if="halfwayForm.empLastName.$invalid && halfwayForm.$submitted">
+								<div ng-message="required" class="validation-error">This field is required</div>
+							</div>
+						</div>
+					</div>
+				</div>
 
 
+				<div class="row form-group">
+					<label for="manFirstName">Team Member Manager<span class="required">*</span></label>
 
-
-
-			<button class="btn btn-default center-block" type="submit">submit</button>
-
-			<div class="row">
-				<pre> halfwayFormInfo: {{halfwayFormInfo | json }}
+					<div class="row">
+						<div class="col-xs-12 col-sm-6">
+							<input type="text" name="manFirstName" id="manFirstName" placeholder="Your Manager's First Name" class="form-control" ng-model="halfwayFormInfo.manFirstName" required>
+							<div ng-messages="halfwayForm.manFirstName.$error" ng-if="halfwayForm.manFirstName.$invalid && halfwayForm.$submitted">
+								<div ng-message="required" class="validation-error">This field is required</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6">
+							<input type="text" name="manLastName" id="manLastName" placeholder="Your Manager's Last Name" class="form-control" ng-model="halfwayFormInfo.manLastName" required>
+							<div ng-messages="halfwayForm.manLastName.$error" ng-if="halfwayForm.manLastName.$invalid && halfwayForm.$submitted">
+								<div ng-message="required" class="validation-error">This field is required</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 
 		</section>
+
+		<section class="section buttons row">
+			<div class="col-sm-12">
+				<div class="form-group">
+					<button type="submit" class="btn btn-default">Save Review</button>
+				</div>
+				<div>
+					<pre> halfwayFormInfo: {{halfwayFormInfo | json }} </pre>
+				</div>
+			</div>
+		</section>
+
 	</form>
-</div>
+</main>

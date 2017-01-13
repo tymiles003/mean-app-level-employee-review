@@ -1,13 +1,47 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+<main class="container">
 
-</body>
-</html>
+    <header class="hero-header">
+        <h1 class="header-peer">LEVEL Performance Feedback Request</h1>
+    </header>
+
+    <form name="peerForm" novalidate autocomplete="off" class="register?" ng-submit="fxn-from-ctrl()">
+
+        <section class="section flex-section row">
+            <div class="section-header col-md-3">
+                <h2>Peer Feedback</h2>
+            </div>
+
+            <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-1">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 form-group">
+                        <label for="lionLogin">Lion Login<span class="required">*</span></label>
+                        <input type="text" name="lionLogin" id="lionLogin" placeholder="Lion Login" class="form-control" required ng-model="credentials.lionLogin">
+                        <div ng-messages="loginForm.lionLogin.$error" ng-if="loginForm.lionLogin.$invalid && loginForm.$submitted">
+                            <div ng-message="required" class="validation-error">This field is required</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 form-group">
+                        <label for="password">Password<span class="required">*</span></label>
+                        <input type="password" name="password" id="password" placeholder="Password" class="form-control" required ng-model="credentials.password">
+                        <div ng-messages="loginForm.password.$error" ng-if="loginForm.password.$invalid && loginForm.$submitted">
+                            <div ng-message="required" class="validation-error">This field is required</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section buttons row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <button type="submit" class="btn btn-default">Log In</button>
+                </div>
+                <div>
+                    <pre>feedback = {{ }}</pre>
+                </div>
+            </div>
+        </section>
+
+    </form>
+
+</main>

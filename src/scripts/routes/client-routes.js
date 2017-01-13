@@ -29,11 +29,10 @@
                     templateUrl: 'views/halfway-checkin-view.html',
                     controller: 'HalfwayCheckinCtrl'
                 })
-                // .when('/peer-feedback', {
-                //     templateUrl: 'views/peer-feedback-view.html',
-                //     controller: 'PeerFeedbackCtrl'
-                // })
-
+                .when('/peer-feedback', {
+                     templateUrl: 'views/peer-feedback-view.html',
+                    // controller: 'PeerFeedbackCtrl'
+                 })
                 // .when('/reviews/self', {
                 //     templateUrl: 'views/self-assess-view.html',
                 //     controller: 'SelfAssessCtrl'
