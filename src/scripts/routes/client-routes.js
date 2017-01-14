@@ -31,7 +31,7 @@
                 })
                 .when('/peer-feedback', {
                      templateUrl: 'views/peer-feedback-view.html',
-                    // controller: 'PeerFeedbackCtrl'
+                     controller: 'PeerFeedbackCtrl'
                  })
                 // .when('/reviews/self', {
                 //     templateUrl: 'views/self-assess-view.html',
