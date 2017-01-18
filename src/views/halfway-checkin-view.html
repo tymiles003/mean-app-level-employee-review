@@ -4,7 +4,7 @@
 		<h1 class="header-halfway">LEVEL Performance Reviews: Halfway Checkin</h1>
 	</header>
 
-	<form name="halfwayForm" novalidate autocomplete="off" ng-submit="saveHalfwayForm()">
+	<form name="halfwayForm" novalidate autocomplete="off" ng-submit="halfwayForm.$valid && saveHalfwayForm()">
 
 		<section class="section flex-section row">
 			<div class="section-header col-md-3">

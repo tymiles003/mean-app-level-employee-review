@@ -6,11 +6,13 @@
 
         $scope.peerFormInfo = {};
 
-        // test scope property
+        // test scope property for the view
         $scope.codename = 'Quicksilver';
 
         $scope.submitFeedback = function() {
-            $location.path('/dashboard');
+            console.log('pending form submission...');
+
+            //$location.path('/dashboard');
         };
     };
 
