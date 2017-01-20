@@ -27,7 +27,7 @@ var sassFiles = glob.sync('./src/scss/**/*.scss');
 var scriptFiles = glob.sync('./+(app|src)/**/!(example-)*.js');
 var htmlFiles = glob.sync('./src/views/*.html');
 
-gulp.task('shell', shell.task([
+gulp.task('mongod', shell.task([
 	'mongod'
 ]));
 
@@ -115,7 +115,7 @@ gulp.task('dev', function devTask(callback) {
 		'scripts',
   		'styles',
   		'watch',
-  		'shell',
+  		'mongod',
   		callback);
 });
 
