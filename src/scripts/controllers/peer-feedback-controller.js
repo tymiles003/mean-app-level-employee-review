@@ -12,7 +12,7 @@
         $scope.submitFeedback = function() {
             console.log('pending form submission...');
 
-            //$location.path('/dashboard');
+            $location.path('/dashboard');
         };
     };
 

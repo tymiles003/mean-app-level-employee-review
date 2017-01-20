@@ -1,4 +1,4 @@
-<main class="container">
+<main class="container feedback">
 
     <header class="hero-header">
         <h1 class="header-peer">LEVEL Performance Feedback Request</h1>
@@ -16,23 +16,64 @@
 
                 <!-- xtra div row for name over multiple fields -->
                 <div class="row form-group">
-                    <label for="memberFirstName">Team Member Name<span class="required">*</span></label>
+                    <label for="peerFirstName">Peer Reviewer Name<span class="required">*</span></label>
 
                     <div class="row">
                         <div class="col-xs-12 col-sm-6 form-group">
-                            <input type="text" name="lionLogin" id="lionLogin" placeholder="Lion Login" class="form-control" required ng-model="credentials.lionLogin">
-                            <div ng-messages="loginForm.lionLogin.$error" ng-if="loginForm.lionLogin.$invalid && loginForm.$submitted">
-                             <div ng-message="required" class="validation-error">This field is required</div>
+                            <input type="text" name="peerFirstName" id="peerFirstName" placeholder="First Name" class="form-control" ng-model="peerFormInfo.peerFirstName" required>
+                            <div ng-messages="peerForm.peerFirstName.$error" ng-if="peerForm.peerFirstName.$invalid && peerForm.$submitted">
+                                <div ng-message="required" class="validation-error">This field is required</div>
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-6 form-group">
-                            <input type="password" name="password" id="password" placeholder="Password" class="form-control" required ng-model="credentials.password">
-                            <div ng-messages="loginForm.password.$error" ng-if="loginForm.password.$invalid && loginForm.$submitted">
+                            <input type="text" name="peerLastName" id="peerLastName" placeholder="Last Name" class="form-control" ng-model="peerFormInfo.peerLastName" required>
+                            <div ng-messages="peerForm.peerLastName.$error" ng-if="peerForm.peerLastName.$invalid && peerForm.$submitted">
                                 <div ng-message="required" class="validation-error">This field is required</div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- xtra div row for name over multiple fields -->
+                <div class="row form-group">
+                    <label for="memberFirstName">Team Member Name<span class="required">*</span></label>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 form-group">
+                            <input type="text" name="memberFirstName" id="memberFirstName" placeholder="First Name" class="form-control" ng-model="peerFormInfo.memberFirstName" required>
+                            <div ng-messages="peerForm.memberFirstName.$error" ng-if="peerForm.memberFirstName.$invalid && peerForm.$submitted">
+                                <div ng-message="required" class="validation-error">This field is required</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 form-group">
+                            <input type="text" name="memberLastName" id="memberLastName" placeholder="Last Name" class="form-control" ng-model="peerFormInfo.memberLastName" required>
+                            <div ng-messages="peerForm.memberLastName.$error" ng-if="peerForm.memberLastName.$invalid && peerForm.$submitted">
+                                <div ng-message="required" class="validation-error">This field is required</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div class="col-xs-12 col-sm-6" style="padding-left:0;">
+                        <label for="feedback-month">Feedback Month<span class="required">*</span></label>
+                        <select class="form-control" name="feedback-month" id="feedback-month" required>
+                            <option value="-1">Please select a month</option>
+                            <option value="Apr">April</option>
+                            <option value="Aug">August</option>
+                            <option value="Dec">December</option>
+                        </select>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <label for="feedback-year">Feedback Year<span class="required">*</span></label>
+                        <select class="form-control" name="feedback-year" id="feedback-year" required>
+                            <option value="-1">Please select a year</option>
+                            <option value="2016-2017">2016/2017</option>
+                            <option value="2017-2018">2017/2018</option>
+                        </select>
+                    </div>
+                </div>
+
             </div>
         </section>
 
