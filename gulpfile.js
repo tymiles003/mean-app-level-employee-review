@@ -1,29 +1,35 @@
 'use strict';
 
-var args = require('yargs').argv;
-var autoprefixer = require('gulp-autoprefixer');
-var browserify = require('browserify');
-var browsersync = require('browser-sync').create();
-var buffer = require('vinyl-buffer');
-var clean = require('gulp-clean');
-var concat = require('gulp-concat');
-var fs = require('fs-extra');
-var glob = require('glob');
-var gulp = require('gulp');
-var gulpif = require('gulp-if');
-var jshint = require('gulp-jshint');
-var rename = require('gulp-rename');
-var runSequence = require('run-sequence').use(gulp);
-var sass = require('gulp-sass');
-var source = require('vinyl-source-stream');
-var sourcemaps = require('gulp-sourcemaps');
-var stylish = require('jshint-stylish');
-var uglify = require('gulp-uglify');
-var watch = require('gulp-watch');
-var util = require('gulp-util');
+var args = require('yargs').argv,
+	autoprefixer = require('gulp-autoprefixer'),
+	browserify = require('browserify'),
+	browsersync = require('browser-sync').create(),
+	buffer = require('vinyl-buffer'),
+	clean = require('gulp-clean'),
+	concat = require('gulp-concat'),
+	fs = require('fs-extra'),
+	glob = require('glob'),
+	gulp = require('gulp'),
+	gulpif = require('gulp-if'),
+	jshint = require('gulp-jshint'),
+	rename = require('gulp-rename'),
+	runSequence = require('run-sequence').use(gulp),
+	sass = require('gulp-sass'),
+	source = require('vinyl-source-stream'),
+	sourcemaps = require('gulp-sourcemaps'),
+	stylish = require('jshint-stylish'),
+	uglify = require('gulp-uglify'),
+	watch = require('gulp-watch'),
+	util = require('gulp-util'),
+	shell = require('gulp-shell');
 
 var sassFiles = glob.sync('./src/scss/**/*.scss');
 var scriptFiles = glob.sync('./+(app|src)/**/!(example-)*.js');
+var htmlFiles = glob.sync('./src/views/*.html');
+
+gulp.task('shell', shell.task([
+	'mongod'
+]));
 
 gulp.task('clean', function cleanTask() {
 	return gulp.src(['./dist/', './tmp/'])
@@ -92,16 +98,12 @@ gulp.task('script-watch', ['lint-scripts', 'scripts'], function jsWatchTask(done
     done();
 });
 
-gulp.task('serve', function serveTask() {
-	browsersync.init({
-		proxy: (args.p) ? 'http://localhost:' + args.p + '/' : 'http://localhost:3000/'
-	});
 
-	if (args.watch) {
-		gulp.watch(sassFiles, ['styles']);
-		gulp.watch(scriptFiles, ['script-watch']);
-		gulp.watch('./src/assets', ['assets']);
-	}
+gulp.task('watch', function serveTask() {
+	gulp.watch(sassFiles, ['styles']);
+	gulp.watch(scriptFiles, ['script-watch']);
+	gulp.watch(htmlFiles, ['views']);
+	gulp.watch('./src/assets', ['assets']);
 });
 
 gulp.task('dev', function devTask(callback) {
@@ -112,7 +114,8 @@ gulp.task('dev', function devTask(callback) {
 		'lint-scripts',
 		'scripts',
   		'styles',
-  		'serve',
+  		'watch',
+  		'shell',
   		callback);
 });
 
