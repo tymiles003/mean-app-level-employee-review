@@ -1,5 +1,25 @@
+@import "shared/abstracts/variables";
+
 .feedback {
+
 	.hero-header h1 {
 		border-bottom: 1px solid #e3e3e3;
 	}
+
+	.first-col-select {
+		padding-left: 0;
+	}
+
+	.form-horizontal .control-label {
+		font-weight: normal;
+	}
+
+	.ratings {
+		margin-bottom: $section-spacing;
+	}
+
+	.ratings label {
+		text-transform: none;
+	}
+
 }

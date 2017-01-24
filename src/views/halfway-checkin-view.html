@@ -1,95 +1,70 @@
-<div class="container">
+<main class="container">
+
 	<header class="hero-header">
-		<h1><img class="center-block img-responsive" src="/assets/images/header-halfway-check-large.png" alt="LEVEL Halfway Checkin"></h1>
+		<h1 class="header-halfway">LEVEL Performance Reviews: Halfway Checkin</h1>
 	</header>
-	<!--<section>
-		<p>Now that we are halfway through the performance year, LEVEL managers can use the recently received feedback, regular career meetings, and performance observations to complete a Nine-Box rating. When selecting a rating, consider recent performance and the individual's growth and development in the three standards: Results, Expertise, and Collaboration. Be sure to include comments that support your Nine-Box selection to ensure a constructive conversation.</p>
-	</section>-->
 
-	<form name="halfwayForm" ng-submit="saveHalfwayForm()" novalidate autocomplete="off">
-		<div class="row form-group">
-			<div class="col-xs-6">
-				<label>Team Member Name
-					<input type="text" name="emp-first-name" class="form-control" placeholder="Team Member First Name" required ng-model="halfwayFormInfo.empFirstName">
-				</label>
+	<form name="halfwayForm" novalidate autocomplete="off" ng-submit="halfwayForm.$valid && saveHalfwayForm()">
+
+		<section class="section flex-section row">
+			<div class="section-header col-md-3">
+				<h2>Halfway Checkin</h2>
 			</div>
-			<div class="col-xs-6">
-				<label>&nbsp;
-					<input type="text" name="emp-last-name" class="form-control" placeholder="Team Member Last Name" required ng-model="halfwayFormInfo.empLastName">
-				</label>
-			</div>
-		</div>
-		<!--<div class="row form-group">
-			<div class="col-xs-6">
-				<label>Team Member Job Title
-					<input type="text" name="job-title" class="form-control" placeholder="Team Member Job Title">
-				</label>
-			</div>
-			<div class="col-xs-6">
-				<label>Performance Year
-					<select class="form-control" name="feedback-year" required>
-						<option value="1">2016/2017</option>
-					</select>
-				</label>
-			</div>
-		</div>-->
-		<div class="row form-group">
-			<div class="col-xs-6">
-				<label>Manager Name
-					<input type="text" name="man-first-name" class="form-control" placeholder="Manager First Name" required ng-model="halfwayFormInfo.manFirstName">
-				</label>
-			</div>
-			<div class="col-xs-6">
-				<label>&nbsp;
-					<input type="text" name="man-last-name" class="form-control" placeholder="Manager Last Name" required ng-model="halfwayFormInfo.manLastName">
-				</label>
-			</div>
-		</div>
-		<!--<section>
-			<label>Nine-Box Rating <i>[UI Pending]</i></label>
+
+			<div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-1">
+
 				<div class="row form-group">
-					<div class="col-xs-1 col-xs-offset-1 nine-box-temp">
-						<input type="radio" name="nine-box" value="1"> 1
-					</div>
-					<div class="col-xs-1 nine-box-temp">
-						<input type="radio" name="nine-box" value="2"> 2
-					</div>
-					<div class="col-xs-1 nine-box-temp">
-						<input type="radio" name="nine-box" value="3"> 3
-					</div>
-					<div class="col-xs-1 nine-box-temp">
-						<input type="radio" name="nine-box" value="4"> 4
-					</div>
-					<div class="col-xs-1 nine-box-temp">
-						<input type="radio" name="nine-box" value="5"> 5
-					</div>
-					<div class="col-xs-1 nine-box-temp">
-						<input type="radio" name="nine-box" value="6"> 6
-					</div>
-					<div class="col-xs-1 nine-box-temp">
-						<input type="radio" name="nine-box" value="7"> 7
-					</div>
-					<div class="col-xs-1 nine-box-temp">
-						<input type="radio" name="nine-box" value="8"> 8
-					</div>
-					<div class="col-xs-1 nine-box-temp">
-						<input type="radio" name="nine-box" value="9"> 9
-					</div>
-				</div>
-			</section>-->
-			<!--<div class="row form-group">
-				<div class="col-xs-12">
-					<label>Supporting Comments
-						<textarea name="comments" class="form-control" rows="6" required></textarea>
-					</label>
-				</div>
-			</div>-->
-			<button class="btn btn-default center-block" type="submit">submit</button>
+					<label for="empFirstName">Team Member Name<span class="required">*</span></label>
 
-			<div class="row">
-				<pre> halfwayFormInfo: {{halfwayFormInfo | json }}
+					<div class="row">
+						<div class="col-xs-12 col-sm-6">
+							<input type="text" name="empFirstName" id="empFirstName" placeholder="Your First Name" class="form-control" ng-model="halfwayFormInfo.empFirstName" required>
+							<div ng-messages="halfwayForm.empFirstName.$error" ng-if="halfwayForm.empFirstName.$invalid && halfwayForm.$submitted">
+								<div ng-message="required" class="validation-error">This field is required</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 form-group">
+							<input type="text" name="empLastName" id="empLastName" placeholder="Your Last Name" class="form-control" ng-model="halfwayFormInfo.empLastName" required>
+							<div ng-messages="halfwayForm.empLastName.$error" ng-if="halfwayForm.empLastName.$invalid && halfwayForm.$submitted">
+								<div ng-message="required" class="validation-error">This field is required</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="row form-group">
+					<label for="manFirstName">Team Member Manager<span class="required">*</span></label>
+
+					<div class="row">
+						<div class="col-xs-12 col-sm-6">
+							<input type="text" name="manFirstName" id="manFirstName" placeholder="Your Manager's First Name" class="form-control" ng-model="halfwayFormInfo.manFirstName" required>
+							<div ng-messages="halfwayForm.manFirstName.$error" ng-if="halfwayForm.manFirstName.$invalid && halfwayForm.$submitted">
+								<div ng-message="required" class="validation-error">This field is required</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6">
+							<input type="text" name="manLastName" id="manLastName" placeholder="Your Manager's Last Name" class="form-control" ng-model="halfwayFormInfo.manLastName" required>
+							<div ng-messages="halfwayForm.manLastName.$error" ng-if="halfwayForm.manLastName.$invalid && halfwayForm.$submitted">
+								<div ng-message="required" class="validation-error">This field is required</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 
 		</section>
+
+		<section class="section buttons row">
+			<div class="col-sm-12">
+				<div class="form-group">
+					<button type="submit" class="btn btn-default">Save Review</button>
+				</div>
+				<div>
+					<pre> halfwayFormInfo: {{halfwayFormInfo | json }} </pre>
+				</div>
+			</div>
+		</section>
+
 	</form>
-</div>
+</main>

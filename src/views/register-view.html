@@ -1,73 +1,64 @@
 <main class="container">
+
 	<header class="hero-header">
 	    <h1 class="header-register">Register for the LEVEL Performance Enablement program</h1>
 	</header>
 
 	<form name="regForm" novalidate autocomplete="off" class="register" ng-submit="regForm.$valid && register()">
-		<fieldset>
-			<section class="row section flex-section">
-				<div class="col-md-3 section-header">
-					<h2>Registration Details</h2>
-				</div>
-				<div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-1">
-					<div class="row register">
-						<div class="row form-group">
-							<div class="col-xs-12 col-sm-6 form-group">
-								<label for="first-name">First Name<span class="required">*</span></label>
-								<input type="text" name="firstName" id="first-name" required placeholder="First Name" class="form-control" ng-model="regFormInfo.firstName">
 
+		<section class="row section flex-section">
+			<div class="col-md-3 section-header">
+				<h2>Registration Details</h2>
+			</div>
+			<div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-1">
+				<div class="row register">
+					<div class="row form-group">
+
+						<div class="col-xs-12 col-sm-6 form-group">
+							<label for="firstName">First Name<span class="required">*</span></label>
+								<input type="text" name="firstName" id="firstName" placeholder="First Name" class="form-control" required ng-model="regFormInfo.firstName">
 								<div ng-messages="regForm.firstName.$error" ng-if="regForm.$submitted && regForm.firstName.$invalid">
 									 <div ng-message="required" class="validation-error">This field is required</div>
 								</div>
-
 							</div>
 							<div class="col-xs-12 col-sm-6 form-group">
-								<label for="last-name">Last Name<span class="required">*</span></label>
-								<input type="text" name="lastName" id="last-name" required placeholder="Last Name" class="form-control" ng-model="regFormInfo.lastName">
-
+								<label for="lastName">Last Name<span class="required">*</span></label>
+								<input type="text" name="lastName" id="lastName" placeholder="Last Name" class="form-control" required ng-model="regFormInfo.lastName">
 								<div ng-messages="regForm.lastName.$error" ng-if="regForm.$submitted && regForm.lastName.$invalid">
 									<div ng-message="required" class="validation-error">This field is required</div>
 								</div>
-
 							</div>
 						</div>
+
 						<div class="row form-group">
 							<div class="col-xs-12 col-sm-6 form-group">
 								<label for="email">Email<span class="required">*</span></label>
-								<input type="email" name="email" id="email" required placeholder="email@address.com" class="form-control" ng-model="regFormInfo.email">
-
+								<input type="email" name="email" id="email" placeholder="email@address.com" class="form-control" required ng-model="regFormInfo.email">
 								<div ng-messages="regForm.email.$error" ng-if="regForm.$submitted && regForm.email.$invalid">
 									<div ng-message="required" class="validation-error">This field is required</div>
 									<div ng-message="email" class="validation-error">Please enter a valid email address</div>
 								</div>
-
 							</div>
 							<div class="col-xs-12 col-sm-6 form-group">
-								<label for="lion-login">Lion Login<span class="required">*</span></label>
-								<input type="text" name="lionLogin" id="lion-login" required placeholder="Lion Login" class="form-control" ng-model="regFormInfo.lionLogin">
-
+								<label for="lionLogin">Lion Login<span class="required">*</span></label>
+								<input type="text" name="lionLogin" id="lionLogin" placeholder="Lion Login" class="form-control" required ng-model="regFormInfo.lionLogin">
 								<div ng-messages="regForm.lionLogin.$error" ng-if="regForm.$submitted && regForm.lionLogin.$invalid">
 									<div ng-message="required" class="validation-error">This field is required</div>
 								</div>
-
 							</div>
 						</div>
 						<div class="row form-group">
 							<div class="col-xs-12 col-sm-6 form-group">
-								<label for="ss-password">Create Password<span class="required">*</span></label>
-								<input type="password" name="ssPassword" id="ss-password" required placeholder="Create Password" class="form-control" ng-model="regFormInfo.ssPassword">
-
+								<label for="ssPassword">Create Password<span class="required">*</span></label>
+								<input type="password" name="ssPassword" id="ssPassword" placeholder="Create Password" class="form-control" required ng-model="regFormInfo.ssPassword">
 								<div ng-messages="regForm.ssPassword.$error" ng-if="regForm.$submitted && regForm.ssPassword.$invalid">
 									<div ng-message="required" class="validation-error">This field is required</div>
 								</div>
-
-
 							</div>
 							<div class="col-xs-12 col-sm-6 form-group">
-								<label for="ss-password-confirm">Confirm Password<span class="required">*</span></label>
+								<label for="ssPasswordConfirm">Confirm Password<span class="required">*</span></label>
 
-								<input type="password" name="ssPasswordConfirm" id="ss-password-confirm" required placeholder="Confirm Password" class="form-control" ng-model="regFormInfo.ssPasswordConfirm" ng-pattern="{{regFormInfo.ssPassword}}">
-
+								<input type="password" name="ssPasswordConfirm" id="ssPasswordConfirm" placeholder="Confirm Password" class="form-control" required ng-model="regFormInfo.ssPasswordConfirm" ng-pattern="{{regFormInfo.ssPassword}}">
 								<div ng-messages="regForm.ssPasswordConfirm.$error" ng-if="regForm.$submitted && regForm.ssPasswordConfirm.$invalid">
 									<div ng-message="required" class="validation-error">This field is required</div>
 									<div ng-message="pattern" class="validation-error">Password fields must match</div>
@@ -77,22 +68,20 @@
 						</div>
 					</div>
 				</div>
-			</section>
+		</section>
 
-			<section class="section buttons row">
-				<div class="col-sm-12">
-					<div class="form-group">
-						<button type="submit" class="btn btn-default">Register</button>
-					</div>
-					<div class="form-group">
-						<a href="/#/login" class="show-signup">Or, login to your account.</a>
-					</div>
-					<div>
-						<pre> regFormInfo: {{ regFormInfo | json }} </pre>
-					</div>
-
+		<section class="section buttons row">
+			<div class="col-sm-12">
+				<div class="form-group">
+					<button type="submit" class="btn btn-default">Register</button>
 				</div>
-			</section>
-		</fieldset>
+				<div class="form-group">
+					<a href="/#/login" class="show-signup">Or login to your account.</a>
+				</div>
+				<div>
+					<pre> regFormInfo: {{ regFormInfo | json }} </pre>
+				</div>
+			</div>
+		</section>
 	</form>
 </main>

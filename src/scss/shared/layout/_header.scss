@@ -6,37 +6,30 @@
 
 	.header-login {
 		@include resp-img (342px, 56px, 'header-login-large');
-
 	}
 
 	.header-performance {
 		@include resp-img (342px, 56px, 'header-annual-performance-large');
-
 	}
 
 	.header-self-assess {
 		@include resp-img (342px, 56px, 'header-annual-self-assess-large');
-
 	}
 
 	.header-goals {
 		@include resp-img (342px, 56px, 'header-goals-large');
-
 	}
 
 	.header-halfway {
 		@include resp-img (342px, 56px, 'header-halfway-check-large');
-
 	}
 
 	.header-peer {
 		@include resp-img (342px, 56px, 'header-peer-feedback-large');
-
 	}
 
 	.header-register {
 		@include resp-img (404px, 56px, 'header-register-large');
-
 	}
 }
 
@@ -59,7 +52,6 @@
 
 	@include breakpoint(md) {
 		margin-bottom: 0;
-
 		flex: 1;
 	}
 }
