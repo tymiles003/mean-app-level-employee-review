@@ -4,6 +4,7 @@ var ngMessages = require('angular-messages');
 var ngAnimate = require('angular-animate');
 var ngTouch = require('angular-touch');
 var uiBootstrap = require('angular-ui-bootstrap');
+var uiRouter = require('angular-ui-router');
 
 var routes = require('./routes/client-routes');
 
@@ -15,6 +16,7 @@ var GoalsCtrl = require('./controllers/goals-controller');
 var HalfwayCheckinCtrl = require('./controllers/halfway-checkin-controller');
 var PeerFeedbackCtrl = require('./controllers/peer-feedback-controller');
 
+// var routes = require('./routes/client-routes.js');
 
 // include Ang Service files into the build
 var UserInfoService = require('./services/register-user-service');
@@ -23,7 +25,7 @@ var UserInfoService = require('./services/register-user-service');
 var ssApp = 'sugarsnaps';
 
 // Define the main angular application module
-var mainAppModule = angular.module(ssApp, ['ngRoute', 'ngMessages', 'ngAnimate', 'ngTouch', 'ui.bootstrap'])
+var mainAppModule = angular.module(ssApp, ['ngRoute', 'ngMessages', 'ngAnimate', 'ngTouch', 'ui.bootstrap', 'ui.router'])
 
 	// Register Controllers for your App
 	.controller('RegCtrl', ['$scope', '$http', '$location', RegCtrl])
@@ -34,6 +36,7 @@ var mainAppModule = angular.module(ssApp, ['ngRoute', 'ngMessages', 'ngAnimate',
 	.controller('PeerFeedbackCtrl', ['$scope', '$http', '$location', PeerFeedbackCtrl]);
 
 	// Call the routes -- is this the best practice?
+	console.log(routes);
 	routes(ssApp);
 
 	// Init the AngularJS application
@@ -41,3 +44,4 @@ var mainAppModule = angular.module(ssApp, ['ngRoute', 'ngMessages', 'ngAnimate',
 		angular.bootstrap(document, [ssApp]);
 		console.log('ssApp is bootstrapped');
 	});
+
