@@ -1,9 +1,8 @@
 (function(document, window, angular) {
 	'use strict';
 
-	var DashboardCtrl = function($scope) {
-
-		$scope.name = 'Scott Prior-Pfeifer III';
+	var DashboardCtrl = function($scope, $stateParams) {
+		$scope.name = 'Megan Prior-Pfeifer III';
 
 		var today = new Date();
 		var monthArray = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];

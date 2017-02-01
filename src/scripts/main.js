@@ -36,7 +36,6 @@ var mainAppModule = angular.module(ssApp, ['ngRoute', 'ngMessages', 'ngAnimate',
 	.controller('PeerFeedbackCtrl', ['$scope', '$http', '$location', PeerFeedbackCtrl]);
 
 	// Call the routes -- is this the best practice?
-	console.log(routes);
 	routes(ssApp);
 
 	// Init the AngularJS application
