@@ -84,13 +84,10 @@
                         <h3 class="subsection-subheader">Results</h3>
                         <label for="resultsImprovement" class="col-xs-12 col-sm-6">This individual proactively finds opportunities for improvement</label>
                         <div class="col-xs-12 col-sm-6">
+
                             <select name="resultsImprovement" id="resultsImprovement" class="form-control" ng-model="peerFormInfo.resultsImprovement" required>
                                 <option value="">Please select a rating</option>
-                                <option value="Not at All">Not at All</option>
-                                <option value="Sometimes">Sometimes</option>
-                                <option value="Neutral">Neutral</option>
-                                <option value="Often">Often</option>
-                                <option value="Always">Always</option>
+                                <option ng-repeat="rating in ratings" value="{{rating}}">{{rating}}</option>
                             </select>
                             <div ng-messages="peerForm.resultsImprovement.$error" ng-show="peerForm.resultsImprovement.$invalid && peerForm.$submitted">
                                 <div ng-message="required" class="validation-error">This field is required</div>
@@ -103,11 +100,7 @@
                         <div class="col-xs-12 col-sm-6">
                             <select name="resultsExcellence" id="resultsExcellence" class="form-control" ng-model="peerFormInfo.resultsExcellence" required>
                                 <option value="">Please select a rating</option>
-                                <option value="Not at All">Not at All</option>
-                                <option value="Sometimes">Sometimes</option>
-                                <option value="Neutral">Neutral</option>
-                                <option value="Often">Often</option>
-                                <option value="Always">Always</option>
+                                <option ng-repeat="rating in ratings" value="{{rating}}">{{rating}}</option>
                             </select>
                             <div ng-messages="peerForm.resultsExcellence.$error" ng-show="peerForm.resultsExcellence.$invalid && peerForm.$submitted">
                                 <div ng-message="required" class="validation-error">This field is required</div>
@@ -120,11 +113,7 @@
                         <div class="col-xs-12 col-sm-6">
                             <select name="resultsDetail" id="resultsDetail" class="form-control" ng-model="peerFormInfo.resultsDetail" required>
                                 <option value="">Please select a rating</option>
-                                <option value="Not at All">Not at All</option>
-                                <option value="Sometimes">Sometimes</option>
-                                <option value="Neutral">Neutral</option>
-                                <option value="Often">Often</option>
-                                <option value="Always">Always</option>
+                                <option ng-repeat="rating in ratings" value="{{rating}}">{{rating}}</option>
                             </select>
                             <div ng-messages="peerForm.resultsDetail.$error" ng-show="peerForm.resultsDetail.$invalid && peerForm.$submitted">
                                 <div ng-message="required" class="validation-error">This field is required</div>
@@ -137,11 +126,7 @@
                         <div class="col-xs-12 col-sm-6">
                             <select name="resultsDeadlines" id="resultsDeadlines" class="form-control" ng-model="peerFormInfo.resultsDeadlines" required>
                                 <option value="">Please select a rating</option>
-                                <option value="Not at All">Not at All</option>
-                                <option value="Sometimes">Sometimes</option>
-                                <option value="Neutral">Neutral</option>
-                                <option value="Often">Often</option>
-                                <option value="Always">Always</option>
+                                <option ng-repeat="rating in ratings" value="{{rating}}">{{rating}}</option>
                             </select>
                             <div ng-messages="peerForm.resultsDeadlines.$error" ng-show="peerForm.resultsDeadlines.$invalid && peerForm.$submitted">
                                 <div ng-message="required" class="validation-error">This field is required</div>
@@ -155,11 +140,7 @@
                         <div class="col-xs-12 col-sm-6">
                             <select name="expertiseRole" id="expertiseRole" class="form-control" ng-model="peerFormInfo.expertiseRole" required>
                                 <option value="">Please select a rating</option>
-                                <option value="Not at All">Not at All</option>
-                                <option value="Sometimes">Sometimes</option>
-                                <option value="Neutral">Neutral</option>
-                                <option value="Often">Often</option>
-                                <option value="Always">Always</option>
+                                <option ng-repeat="rating in ratings" value="{{rating}}">{{rating}}</option>
                             </select>
                             <div ng-messages="peerForm.expertiseRole.$error" ng-show="peerForm.expertiseRole.$invalid && peerForm.$submitted">
                                 <div ng-message="required" class="validation-error">This field is required</div>
@@ -172,11 +153,7 @@
                         <div class="col-xs-12 col-sm-6">
                             <select name="expertiseImprove" id="expertiseImprove" class="form-control" ng-model="peerFormInfo.expertiseImprove" required>
                                 <option value="">Please select a rating</option>
-                                <option value="Not at All">Not at All</option>
-                                <option value="Sometimes">Sometimes</option>
-                                <option value="Neutral">Neutral</option>
-                                <option value="Often">Often</option>
-                                <option value="Always">Always</option>
+                                <option ng-repeat="rating in ratings" value="{{rating}}">{{rating}}</option>
                             </select>
                             <div ng-messages="peerForm.expertiseImprove.$error" ng-show="peerForm.expertiseImprove.$invalid && peerForm.$submitted">
                                 <div ng-message="required" class="validation-error">This field is required</div>
@@ -189,11 +166,7 @@
                         <div class="col-xs-12 col-sm-6">
                             <select name="expertiseSkills" id="expertiseSkills" class="form-control" ng-model="peerFormInfo.expertiseSkills" required>
                                 <option value="">Please select a rating</option>
-                                <option value="Not at All">Not at All</option>
-                                <option value="Sometimes">Sometimes</option>
-                                <option value="Neutral">Neutral</option>
-                                <option value="Often">Often</option>
-                                <option value="Always">Always</option>
+                                <option ng-repeat="rating in ratings" value="{{rating}}">{{rating}}</option>
                             </select>
                             <div ng-messages="peerForm.expertiseSkills.$error" ng-show="peerForm.expertiseSkills.$invalid && peerForm.$submitted">
                                 <div ng-message="required" class="validation-error">This field is required</div>
@@ -206,11 +179,7 @@
                         <div class="col-xs-12 col-sm-6">
                             <select name="expertiseAutonomous" id="expertiseAutonomous" class="form-control" ng-model="peerFormInfo.expertiseAutonomous" required>
                                 <option value="">Please select a rating</option>
-                                <option value="Not at All">Not at All</option>
-                                <option value="Sometimes">Sometimes</option>
-                                <option value="Neutral">Neutral</option>
-                                <option value="Often">Often</option>
-                                <option value="Always">Always</option>
+                                <option ng-repeat="rating in ratings" value="{{rating}}">{{rating}}</option>
                             </select>
                             <div ng-messages="peerForm.expertiseAutonomous.$error" ng-show="peerForm.expertiseAutonomous.$invalid && peerForm.$submitted">
                                 <div ng-message="required" class="validation-error">This field is required</div>
@@ -224,11 +193,7 @@
                         <div class="col-xs-12 col-sm-6">
                             <select name="collabShare" id="collabShare" class="form-control" ng-model="peerFormInfo.collabShare" required>
                                 <option value="">Please select a rating</option>
-                                <option value="Not at All">Not at All</option>
-                                <option value="Sometimes">Sometimes</option>
-                                <option value="Neutral">Neutral</option>
-                                <option value="Often">Often</option>
-                                <option value="Always">Always</option>
+                                <option ng-repeat="rating in ratings" value="{{rating}}">{{rating}}</option>
                             </select>
                             <div ng-messages="peerForm.collabShare.$error" ng-show="peerForm.collabShare.$invalid && peerForm.$submitted">
                                 <div ng-message="required" class="validation-error">This field is required</div>
@@ -241,11 +206,7 @@
                         <div class="col-xs-12 col-sm-6">
                             <select name="collabCommunicate" id="collabCommunicate" class="form-control" ng-model="peerFormInfo.collabCommunicate" required>
                                 <option value="">Please select a rating</option>
-                                <option value="Not at All">Not at All</option>
-                                <option value="Sometimes">Sometimes</option>
-                                <option value="Neutral">Neutral</option>
-                                <option value="Often">Often</option>
-                                <option value="Always">Always</option>
+                                <option ng-repeat="rating in ratings" value="{{rating}}">{{rating}}</option>
                             </select>
                             <div ng-messages="peerForm.collabCommunicate.$error" ng-show="peerForm.collabCommunicate.$invalid && peerForm.$submitted">
                                 <div ng-message="required" class="validation-error">This field is required</div>
@@ -258,11 +219,7 @@
                         <div class="col-xs-12 col-sm-6">
                             <select name="collabEmbodies" id="collabEmbodies" class="form-control" ng-model="peerFormInfo.collabEmbodies" required>
                                 <option value="">Please select a rating</option>
-                                <option value="Not at All">Not at All</option>
-                                <option value="Sometimes">Sometimes</option>
-                                <option value="Neutral">Neutral</option>
-                                <option value="Often">Often</option>
-                                <option value="Always">Always</option>
+                                <option ng-repeat="rating in ratings" value="{{rating}}">{{rating}}</option>
                             </select>
                             <div ng-messages="peerForm.collabEmbodies.$error" ng-show="peerForm.collabEmbodies.$invalid && peerForm.$submitted">
                                 <div ng-message="required" class="validation-error">This field is required</div>
