@@ -27,7 +27,7 @@
                     controller: 'GoalsCtrl'
                 })
                     .state('halfway', {
-                    url: '/reviews/halway',
+                    url: '/reviews/halfway',
                     templateUrl: 'views/halfway-checkin-view.html',
                     controller: 'HalfwayCheckinCtrl'
                 })
