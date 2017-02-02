@@ -47,7 +47,9 @@ gulp.task('styles', function stylesTask() {
 	return gulp.src(sassFiles)
 			.pipe(gulpif(args.sourcemaps, sourcemaps.init()))
 			.pipe(sass({
-				includePaths: ['./node_modules/bootstrap-sass/assets/stylesheets/'],
+				includePaths: [
+				'./node_modules/bootstrap-sass/assets/stylesheets/',
+				],
 				'default-encoding': 'UTF-8',
 				errLogToConsole: true,
 				outputStyle: (args.debug) ? 'expanded' : 'compressed'
@@ -87,7 +89,7 @@ gulp.task('scripts', function jsTask() {
 			}).bundle()
 			.pipe(source('main.built.js'))
 			.pipe(buffer())
-			.pipe(gulpif(!args.debug, uglify()))
+			// .pipe(gulpif(!args.debug, uglify()))
 			.pipe(gulpif(args.sourcemaps, sourcemaps.init({loadMaps: true})))
 			.pipe(gulpif(args.sourcemaps, sourcemaps.write('../../tmp/sourcemaps')))
 			.pipe(gulp.dest('./dist/scripts/'))
