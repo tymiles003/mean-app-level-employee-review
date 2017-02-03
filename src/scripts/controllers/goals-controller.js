@@ -4,8 +4,14 @@
 
 	var GoalsCtrl = function($scope, $http, $location) {
 
-		// needed ?
 		$scope.goalsFormInfo = {};
+
+		$scope.goalStatus = [
+			'Not Started',
+			'Behind Schedule',
+			'On Track',
+			'Completed'
+		];
 
 		$http.get('/perform-api/goal-get')
 			.then(function(response){

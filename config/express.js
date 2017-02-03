@@ -1,3 +1,7 @@
+/*
+ * file: express.js
+ * purpose: the main server config file
+ */
 var express = require('express'),
     morgan = require('morgan'),
     bodyParser = require('body-parser'),
@@ -16,7 +20,7 @@ module.exports = function() {
     require('../app/models/user-server-model');
     require('../app/models/employee-server-model');
     require('../app/models/goal-server-model');
-    //require('../app/models/peer-feedback-server-model');
+    require('../app/models/peer-feedback-server-model');
     //require('../app/models/review-server-model');
     require('../app/models/halfway-server-model');
 
@@ -40,7 +44,7 @@ module.exports = function() {
     // Connect flash for flash messages
     app.use(flash());
 
-    // Init Passport
+    // Init Passport (for auth)
     app.use(passport.initialize());
     app.use(passport.session());
 
