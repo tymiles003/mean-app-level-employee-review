@@ -1,3 +1,6 @@
+/*
+ * file: peer-feedback-controller.js
+ */
 (function(document, window, angular) {
 
     'use strict';
@@ -6,9 +9,9 @@
 
         $scope.peerFormInfo = {};
 
-        // test scope property for the view
+        // scope properties
+        // TODO: use controller as syntax instead of $scope
         $scope.codename = 'Skunkworks Quicksilver';
-
         $scope.ratings = [
             'Not at All',
             'Sometimes',
@@ -19,16 +22,15 @@
 
         // TODO: move db post stuff from here into a data service
         $scope.submitFeedback = function() {
-            console.log('pending form submission...');
+            console.log('pending form submission via $http.post...');
 
-            // send form data to the server and .then use a promise to process the response
-            // // $http.post('', $scope.peerFormInfo) // needs a back-end route to tie to
-            //     .then(
-            //         function(response) {
-            //             // process the response / re-load the $scope
-            //             $location.path('/dashboard');
-            //         }
-            //     );
+            $http.post('/perform-api/feedback-set', $scope.peerFormInfo) // needs a back-end route to tie to
+                .then(
+                    function(response) {
+                        // process the response / re-load the $scope
+                        $location.path('/dashboard');
+                    }
+                );
 
 
 

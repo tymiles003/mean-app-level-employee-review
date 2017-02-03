@@ -1,26 +1,30 @@
-/* peer-feedback-server-controller.js */
+/*
+ * file: peer-feedback-server-controller.js
+ */
 (function(require, exports) {
 
     'use strict';
 
-    // TODO: update this file as peer-feedback-server-controller.js
+    // require mongoose and the associated model
+    var mongoose = require('mongoose');
+    var PeerFeedback = mongoose.model('PeerFeedback');
 
-    // // Module dependencies
-    // var mongoose = require('mongoose'),
-    //     Employee = mongoose.model('Employee');
-    //
-    // // Use your mongoose model to interact with the data in a mongo db document store
-    // exports.postMemberData = function(req, res, next) {
-    //
-    //     var member = new Employee(req.body);
-    //     console.log('Employee/Member from Register page comin at ya', member);
-    //
-    //     member.save(function(err, member) {
-    //         if (err) return console.error('theres an error', err);
-    //         console.log('data has been SAVED! and here is the member which is the req.body', member);
-    //         // send the object back to the client as the response -- next stop: client-side controller
-    //         res.send(member); // this simple line sends the data back to the client (here, the member object)
-    //     });
-    // };
+    // post feedback data to the db using the PeerFeedback model
+    exports.postFeedbackData = function(req, res, next) {
+
+        var feedback = new PeerFeedback(req.body); // create a new instance of your model based on the request data
+        console.log('new feedback object instance from feedback view page comin at ya', feedback);
+
+        // save this object to the mongo db
+        feedback.save(function(err, feedback) {
+            if (err) {
+                return console.error('theres an error', err);
+            }
+
+            console.log('feedback data has been SAVED! and here is the feedback which is the req.body', feedback);
+            // send the feedback object back to the client as the response -- next stop: client-side peer feedback controller
+            res.send(feedback); // sends the data back to the client as the response (res)
+        });
+    };
 
 })(require, exports);
