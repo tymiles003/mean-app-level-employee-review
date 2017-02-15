@@ -6,6 +6,7 @@ var ngTouch = require('angular-touch');
 var uiBootstrap = require('angular-ui-bootstrap');
 var uiRouter = require('angular-ui-router');
 var d3 = require('d3');
+window.d3 = d3; // expose d3 as a global object for now to allow for d3 API access anywhere in the app
 
 
 var routes = require('./routes/client-routes');
