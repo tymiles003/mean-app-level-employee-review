@@ -5,6 +5,8 @@ var ngAnimate = require('angular-animate');
 var ngTouch = require('angular-touch');
 var uiBootstrap = require('angular-ui-bootstrap');
 var uiRouter = require('angular-ui-router');
+var d3 = require('d3');
+
 
 var routes = require('./routes/client-routes');
 
@@ -16,7 +18,6 @@ var GoalsCtrl = require('./controllers/goals-controller');
 var HalfwayCheckinCtrl = require('./controllers/halfway-checkin-controller');
 var PeerFeedbackCtrl = require('./controllers/peer-feedback-controller');
 
-// var routes = require('./routes/client-routes.js');
 
 // include Ang Service files into the build
 var UserInfoService = require('./services/register-user-service');
