@@ -1,0 +1,51 @@
+[
+  {
+    "slice":"halfway",
+    "sliceMonth": 0,
+    "sliceMonthLabel": "Jan:",
+    "sliceLabel":"Check-in",
+    "sliceWidth": 51
+  },
+  {
+    "slice":"feedback1",
+    "sliceMonth": 3,
+    "sliceMonthLabel": "Apr:",
+    "sliceLabel":"Feedback",
+    "sliceWidth": 51
+  },
+  {
+    "slice":"assess",
+    "sliceMonth": 4,
+    "sliceMonthLabel": "May",
+    "sliceLabel":"Self Assess",
+    "sliceWidth": 51
+  },
+  {
+    "slice":"review",
+    "sliceMonth": 5,
+    "sliceMonthLabel": "June:",
+    "sliceLabel":"Annual Review",
+    "sliceWidth": 51
+  },
+  {
+    "slice":"feedback2",
+    "sliceMonth": 7,
+    "sliceMonthLabel": "Aug:",
+    "sliceLabel":"Feedback",
+    "sliceWidth": 51
+  },
+  {
+    "slice":"goals",
+    "sliceMonth": 8,
+    "sliceMonthLabel": "Sept:",
+    "sliceLabel":"Goal Setting",
+    "sliceWidth": 51
+  },
+  {
+    "slice":"feedback3",
+    "sliceMonth": 11,
+    "sliceMonthLabel": "Dec:",
+    "sliceLabel":"Feedback",
+    "sliceWidth": 51
+  }
+]
