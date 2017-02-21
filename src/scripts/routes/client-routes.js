@@ -6,32 +6,37 @@
             function($stateProvider, $urlRouterProvider) {
                 $urlRouterProvider.otherwise('/login');
                 $stateProvider
-                    .state('register', {
+                .state('register', {
                     url: '/register',
                     templateUrl: 'views/register-view.html',
                     controller: 'RegCtrl'
                 })
-                    .state('login', {
+                .state('login', {
                     url: '/login',
                     templateUrl: '/views/login-view.html',
                     controller: 'LogInCtrl'
                 })
-                    .state('dashboard', {
+                .state('dashboard', {
                     url: '/dashboard',
                     templateUrl: 'views/dashboard-view.html',
                     controller: 'DashboardCtrl'
                 })
-                    .state('goals', {
+                .state('goals', {
                     url: '/goals',
                     templateUrl: 'views/goals-view.html',
                     controller: 'GoalsCtrl'
                 })
-                    .state('halfway', {
+                .state('halfway', {
                     url: '/reviews/halfway',
                     templateUrl: 'views/halfway-checkin-view.html',
                     controller: 'HalfwayCheckinCtrl'
                 })
-                    .state('peer-feedback', {
+                .state('self-assessment', {
+                    url: '/self-assessment',
+                    templateUrl: 'views/self-assessment.html',
+                    controller: 'selfAssessmentCtrl'
+                })
+                .state('peer-feedback', {
                     url: '/peer-feedback',
                     templateUrl: 'views/peer-feedback-view.html',
                     controller: 'PeerFeedbackCtrl'
