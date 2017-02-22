@@ -1,3 +1,8 @@
+/*
+ * main.js -- entry point for the quicksilver / sugarsnaps Angular app
+ */
+
+// include module files and 3p libs into the build
 var angular = require('angular');
 var ngRoute = require('angular-route');
 var ngMessages = require('angular-messages');
@@ -8,7 +13,7 @@ var uiRouter = require('angular-ui-router');
 var d3 = require('d3');
 window.d3 = d3; // expose d3 as a global object for now to allow for d3 API access anywhere in the app
 
-
+// include Ang Routes .js file into the build
 var routes = require('./routes/client-routes');
 
 // include Ang Controller js files into the build
@@ -19,9 +24,10 @@ var GoalsCtrl = require('./controllers/goals-controller');
 var HalfwayCheckinCtrl = require('./controllers/halfway-checkin-controller');
 var PeerFeedbackCtrl = require('./controllers/peer-feedback-controller');
 
+// include Ang Service js files into the build
 
-// include Ang Service files into the build
-var UserInfoService = require('./services/register-user-service');
+// include Ang Directive js files into the build
+var calendarWheelDirective = require('./directives/calendar-wheel-directive');
 
 // Define the main angular application module name
 var ssApp = 'sugarsnaps';
@@ -35,9 +41,14 @@ var mainAppModule = angular.module(ssApp, ['ngRoute', 'ngMessages', 'ngAnimate',
 	.controller('DashboardCtrl', ['$scope', DashboardCtrl])
 	.controller('GoalsCtrl', ['$scope', '$http', '$location', GoalsCtrl])
 	.controller('HalfwayCheckinCtrl', ['$scope', '$http', '$location', HalfwayCheckinCtrl])
-	.controller('PeerFeedbackCtrl', ['$scope', '$http', '$location', PeerFeedbackCtrl]);
+	.controller('PeerFeedbackCtrl', ['$scope', '$http', '$location', PeerFeedbackCtrl])
 
-	// Call the routes -- is this the best practice?
+	// Register Services for your App
+
+	// Register Directives for your App
+	.directive('lvlCalendarWheel', calendarWheelDirective);
+
+	// Call the routes (as config())
 	routes(ssApp);
 
 	// Init the AngularJS application
@@ -45,4 +56,3 @@ var mainAppModule = angular.module(ssApp, ['ngRoute', 'ngMessages', 'ngAnimate',
 		angular.bootstrap(document, [ssApp]);
 		console.log('ssApp is bootstrapped');
 	});
-

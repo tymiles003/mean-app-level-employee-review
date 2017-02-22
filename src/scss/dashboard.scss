@@ -9,6 +9,10 @@
 	padding: 0;
 	position: relative;
 
+	// Maybe move to typography?
+	.attn-text {
+		color: $red;
+	}
 
 	// LAYOUT //
 	&.flex-dash {
@@ -64,7 +68,7 @@
 					border: none;
 					margin-left: -40px;
 					color: $dark-grey;
-					
+
 					@include breakpoint(xs) {
 						margin-left: 0;
 						padding: 1em 10px;
@@ -174,7 +178,7 @@
 				color: $white;
 				font-weight: 700;
 			}
-			
+
 		}
 
 		.due-tasks {
@@ -205,91 +209,23 @@
 			}
 		}
 
-		
-		.cycle-chart-contain {
-			width: 400px;
-			height: 400px;
-			margin: 0 auto;
-			position:relative;
-
-			@include breakpoint(xs) {
-				display: none;
-			}
+		// CALENDAR WHEEL (svg-specific styles)
+		.slice {
+			fill: $white;
+			stroke: $red;
+			stroke-width: 2;
 		}
-
-		.cycle-chart {
-			@include resp-img (400px, 400px, 'cycle-bg-large');
-
-			position: absolute;
-			z-index: 0;
-			top: 0;
-			left: 0;
-
-			// Cycle positioning
-			@mixin cycle-spin ($i) {
-				&.cycle-spin-#{$i}{
-					-ms-transform: rotate(((360/7)*$i)+deg);
-					-o-transform: rotate(((360/7)*$i)+deg);
-					-moz-transform: rotate(((360/7)*$i)+deg);
-					-webkit-transform: rotate(((360/7)*$i)+deg);
-					transform: rotate(((360/7)*$i)+deg);
-				}
-			}
-
-			@for $i from 0 through 6 {
-				@include cycle-spin ($i);
-			}
-
+		.slice-active {
+			fill: $red;
+			stroke: $red;
+			stroke-width: 2;
 		}
-
-		.cycle-dates {
-			position: relative;
-			z-index: 1;
-
-			li {
-				position: absolute;
-				list-style: none;
-
-				&.cycle-active {
-					color: $white;
-					font-weight: 700;
-				}
-
-				&.cycle-0 {
-					top: 3.5em;
-    				left: 13em;
-				}
-				&.cycle-1 {
-					top: 10em;
-    				left: 17em;
-				}
-				&.cycle-2 {
-					top: 16em;
-    				left: 15.5em;
-				}
-				&.cycle-3 {
-					top: 20em;
-					left: 10em;
-				}
-				&.cycle-4 {
-					top: 16em;
-					left: 2em;
-				}
-				&.cycle-5 {
-					top: 10em;
-					left: 1em;
-				}
-				&.cycle-6 {
-					top: 3.5em;
-					left: 4em;
-				}
-			}
+		.slice-text {
+			fill: $dark-grey;
 		}
-
+		.slice-text-active {
+			fill: $white;
+		}
 	}
 
-	// Maybe move to typography?
-	.attn-text {
-		color: $red;
-	}
 }
