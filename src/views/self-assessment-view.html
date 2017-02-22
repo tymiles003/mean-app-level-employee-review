@@ -5,5 +5,116 @@
 	</header>
 
 	<form name="selfAssessmentForm" novalidate autocomplete="off" ng-submit="selfAssessmentForm.$valid && saveselfAssessmentForm()">
+		<section class="section flex-section row">
+			<div class="section-header col-md-3">
+				<h2>TEAM MEMBER DETAILS</h2>
+			</div>
+
+			<div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-1">
+				<div class="row">
+					<label for="empFirstName">Team Member Name<span class="required">*</span></label>
+
+					<div class="row">
+						<div class="col-xs-12 col-sm-6 form-group">
+							<input type="text" name="empFirstName" id="empFirstName" placeholder="Your First Name" class="form-control" ng-model="selfAssessmentFormInfo.empFirstName" required>
+							<div ng-messages="selfAssessmentForm.empFirstName.$error" ng-if="selfAssessmentForm.empFirstName.$invalid && selfAssessmentForm.$submitted">
+								<div ng-message="required" class="validation-error">This field is required</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 form-group">
+							<input type="text" name="empLastName" id="empLastName" placeholder="Your Last Name" class="form-control" ng-model="selfAssessmentFormInfo.empLastName" required>
+							<div ng-messages="selfAssessmentForm.empLastName.$error" ng-if="selfAssessmentForm.empLastName.$invalid && selfAssessmentForm.$submitted">
+								<div ng-message="required" class="validation-error">This field is required</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row form-group">
+					<label for="manFirstName">Team Member Manager<span class="required">*</span></label>
+
+					<div class="row">
+						<div class="col-xs-12 col-sm-6">
+							<input type="text" name="manFirstName" id="manFirstName" placeholder="Your Manager's First Name" class="form-control" ng-model="selfAssessmentFormInfo.manFirstName" required>
+							<div ng-messages="selfAssessmentForm.manFirstName.$error" ng-if="selfAssessmentForm.manFirstName.$invalid && selfAssessmentForm.$submitted">
+								<div ng-message="required" class="validation-error">This field is required</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6">
+							<input type="text" name="manLastName" id="manLastName" placeholder="Your Manager's Last Name" class="form-control" ng-model="selfAssessmentFormInfo.manLastName" required>
+							<div ng-messages="selfAssessmentForm.manLastName.$error" ng-if="selfAssessmentForm.manLastName.$invalid && selfAssessmentForm.$submitted">
+								<div ng-message="required" class="validation-error">This field is required</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+		<section class="section flex-section row">
+			<div class="section-header col-md-3">
+				<h2>SELF ASSESSMENt</h2>
+			</div>
+
+			<div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-1">
+				<div class="row">
+					<label for="assessment">Please list details outlining your annual goal status, as well as your accomplishments and growth opportunities for this past performance year within the 3 standards below: results, expertise and collaboration.</label>
+				</div>
+
+				<div class="row goal-status">
+					<div>
+						<h3 class="subsection-header">Goal Status</h3>
+					</div>
+					<div class="form-group">
+						<label for="results-goal-01">Goal Description<span class="required">*</span></label>
+						<textarea class="form-control" name="results-goal-01" rows="10" required></textarea>
+					</div>
+				</div>
+
+				<div class="row goal-status">
+					<div>
+						<h3 class="subsection-header">Results</h3>
+					</div>
+					<div class="form-group">
+						<label for="results-goal-01">Goal Description<span class="required">*</span></label>
+						<textarea class="form-control" name="results-goal-01" rows="10" required></textarea>
+					</div>
+				</div>
+
+				<div class="row goal-status">
+					<div>
+						<h3 class="subsection-header">Expertise</h3>
+					</div>
+					<div class="form-group">
+						<label for="results-goal-01">Goal Description<span class="required">*</span></label>
+						<textarea class="form-control" name="results-goal-01" rows="10" required></textarea>
+					</div>
+				</div>
+
+				<div class="row goal-status">
+					<div>
+						<h3 class="subsection-header">Collaboration</h3>
+					</div>
+					<div class="form-group">
+						<label for="results-goal-01">Goal Description<span class="required">*</span></label>
+						<textarea class="form-control" name="results-goal-01" rows="10" required></textarea>
+					</div>
+				</div>
+			</div>
+
+
+		</section>
+
+		<section class="section buttons row">
+			<div class="col-sm-12">
+				<div class="form-group">
+					<button type="submit" class="btn btn-default">Save Review</button>
+				</div>
+				<div>
+					<pre> selfAssessmentFormInfo: {{selfAssessmentFormInfo | json }} </pre>
+				</div>
+			</div>
+		</section>
 	</form>
 </main>

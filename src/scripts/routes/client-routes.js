@@ -33,7 +33,7 @@
                 })
                 .state('self-assessment', {
                     url: '/self-assessment',
-                    templateUrl: 'views/self-assessment.html',
+                    templateUrl: 'views/self-assessment-view.html',
                     controller: 'selfAssessmentCtrl'
                 })
                 .state('peer-feedback', {
