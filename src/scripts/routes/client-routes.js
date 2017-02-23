@@ -34,7 +34,7 @@
                 .state('self-assessment', {
                     url: '/self-assessment',
                     templateUrl: 'views/self-assessment-view.html',
-                    controller: 'selfAssessmentCtrl'
+                    // controller: 'selfAssessmentCtrl'
                 })
                 .state('peer-feedback', {
                     url: '/peer-feedback',
