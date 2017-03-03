@@ -32,7 +32,7 @@
                     controller: 'HalfwayCheckinCtrl'
                 })
                 .state('self-assessment', {
-                    url: '/self-assessment',
+                    url: 'review/self-assessment',
                     templateUrl: 'views/self-assessment-view.html',
                     // controller: 'selfAssessmentCtrl'
                 })
