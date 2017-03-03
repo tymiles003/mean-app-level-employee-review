@@ -31,9 +31,9 @@
                     templateUrl: 'views/halfway-checkin-view.html',
                     controller: 'HalfwayCheckinCtrl'
                 })
-                .state('self-assessment', {
-                    url: 'review/self-assessment',
-                    templateUrl: 'views/self-assessment-view.html',
+                .state('self-assess', {
+                    url: '/reviews/self-assess',
+                    templateUrl: 'views/self-assess-view.html',
                     // controller: 'selfAssessmentCtrl'
                 })
                 .state('peer-feedback', {
