@@ -28,7 +28,7 @@ var scriptFiles = glob.sync('./+(app|src)/**/!(example-)*.js');
 var htmlFiles = glob.sync('./src/views/*.html');
 
 gulp.task('mongod', shell.task([
-	'mongod'
+	// 'mongod'
 ]));
 
 gulp.task('clean', function cleanTask() {
@@ -74,6 +74,7 @@ gulp.task('styles', function stylesTask() {
 
 gulp.task('assets', function assetsTask(done) {
     fs.copy('./src/assets', './dist/assets');
+    fs.copy('./node_modules/bootstrap-sass/assets/fonts/bootstrap', './dist/assets/fonts/bootstrap')
     done();
 });
 
