@@ -28,7 +28,7 @@ var scriptFiles = glob.sync('./+(app|src)/**/!(example-)*.js');
 var htmlFiles = glob.sync('./src/views/*.html');
 
 gulp.task('mongod', shell.task([
-	// 'mongod'
+	'mongod'
 ]));
 
 gulp.task('clean', function cleanTask() {
