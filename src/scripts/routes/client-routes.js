@@ -21,6 +21,11 @@
                     templateUrl: 'views/dashboard-view.html',
                     controller: 'DashboardCtrl'
                 })
+                    .state('resources', {
+                    url: '/dashboard/resources',
+                    templateUrl: 'views/dashboard-resources-view.html',
+                    // controller: 'DashboardCtrl'
+                })
                     .state('goals', {
                     url: '/goals',
                     templateUrl: 'views/goals-view.html',
