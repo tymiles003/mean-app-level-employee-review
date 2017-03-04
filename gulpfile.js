@@ -74,6 +74,7 @@ gulp.task('styles', function stylesTask() {
 
 gulp.task('assets', function assetsTask(done) {
     fs.copy('./src/assets', './dist/assets');
+    fs.copy('./node_modules/bootstrap-sass/assets/fonts/bootstrap', './dist/assets/fonts/bootstrap')
     done();
 });
 
