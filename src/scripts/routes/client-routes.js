@@ -36,6 +36,11 @@
                     templateUrl: 'views/self-assess-view.html',
                     // controller: 'selfAssessmentCtrl'
                 })
+                .state('manager-review', {
+                    url: '/reviews/manager-review',
+                    templateUrl: 'views/manager-review-view.html',
+                    // controller: 'selfAssessmentCtrl'
+                })
                 .state('peer-feedback', {
                     url: '/peer-feedback',
                     templateUrl: 'views/peer-feedback-view.html',
