@@ -91,4 +91,26 @@
 		</div>
 	</label>
 </div>
-<script src="/static/js/ninebox.js""></script>
+
+<script>
+	var rating = document.querySelectorAll(".rating-label");
+
+	function checkedBox(e) {
+
+		for (var i = 0; i < rating.length; i++ ) {
+			console.log(rating[i].classList);
+
+			if (rating[i].classList.contains("checked")) {
+				rating[i].classList.remove("checked");
+			}
+		}
+
+		e.currentTarget.classList.add("checked");
+
+	}
+
+
+	rating.forEach(function(item){
+		item.addEventListener("click", checkedBox, false);
+	});
+</script>
