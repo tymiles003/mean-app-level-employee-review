@@ -210,6 +210,17 @@
 		}
 
 		// CALENDAR WHEEL (svg-specific styles)
+		.lvl-calendar-wheel {
+			width: 400px;
+			height: 400px;
+			margin: 0 auto;
+			display: none;
+
+			@include breakpoint(sm) {
+				display: block;
+			}
+		}
+
 		.slice {
 			fill: $white;
 			stroke: $red;
