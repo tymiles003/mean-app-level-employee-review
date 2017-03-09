@@ -1,12 +1,5 @@
 <main class="container per-dash-contain flex-dash">
-	<nav class="per-sidebar">
-		<ul class="per-nav">
-			<li><a href="#!/dashboard/resources"><span class="nav-text">Resources</span><span class="glyphicon glyphicon-education" aria-hidden="true"></span></a></li>
-			<li><a href="#!/dashboard" class="per-side-active"><span class="nav-text">To-Do</span><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></a></li>
-			<!--<li><a href="#"><span class="nav-text">Team Info</span><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a></li>-->
-		</ul>
-	</nav>
-
+	<nav class="per-sidebar" ng-include="'/views/shared/dashboard-nav.html'"></nav>
 	<section class="per-dash clearfix">
 		<div class="col-sm-12 dash-card alert-messages">
 			<div uib-alert ng-repeat="alert in alerts" ng-class="'alert alert-' + (alert.type || 'warning')" close="closeAlert($index)">

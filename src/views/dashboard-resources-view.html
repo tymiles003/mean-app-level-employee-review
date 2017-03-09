@@ -1,43 +1,42 @@
 <main class="container per-dash-contain flex-dash">
-	<nav class="per-sidebar">
-		<ul class="per-nav">
-			<li><a href="#!/dashboard/resources" class="per-side-active"><span class="nav-text">Resources</span><span class="glyphicon glyphicon-education" aria-hidden="true"></span></a></li>
-			<li><a href="#!/dashboard"><span class="nav-text">To-Do</span><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></a></li>
-<!-- 			<li><a href="#"><span class="nav-text">Team Info</span><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a></li> -->
-		</ul>
-	</nav>
+	<nav class="per-sidebar" ng-include="'/views/shared/dashboard-nav.html'"></nav>
 	<section class="per-dash clearfix">
 		<div class="col-sm-12 dash-card forms">
 			<div class="row form-row">
+				<div class="col-xs-12">
+					<p>LEVEL’s Performance Enablement Program is in place as a conduit for Team Member and Manager relationships, where Team Members work to grow their career through meeting and surpassing goals and expectations set each year.</p>
+					<p>These resources are here as a quick reference to LEVEL’s standards and expectations for all of our team members. For further details, please refer to the Performance Management section of LEVEL’s intranet, or this brief on the
+						<a href="http://intranet.level-studios.com/wp-content/uploads/2016/10/LEVEL_Performance_Enablement_Program_10_24_16.pdf" tareget="_blank">Performance Enablement Program</a></p>
+				</div>
+			</div>
+
+			<div class="row form-row">
 				<div class="col-lg-4">
-					<a class="btn btn-default" href="#!/goals" target="_blank">Goal Setting Form</a>
+					<a ui-sref="goals" class="btn btn-default" target="_blank">Goal Setting Form</a>
 				</div>
 				<div class="col-lg-8">
 					<p>Each Team Member will be asked to complete a goal-setting form in September. However, setting, tracking, and updating goals should be a year-round process.</p>
 				</div>
 			</div>
+
 			<div class="row form-row">
 				<div class="col-lg-4">
-					<a class="btn btn-default" href="#!/reviews/halfway" target="_blank">Halfway Check-In Form</a>
+					<a ui-sref="peer-feedback" class="btn btn-default" target="_blank">Peer Feedback Form</a>
+				</div>
+				<div class="col-lg-8">
+					<p>Providing supporting comments at the bottom of the form is crucial to creating a deeper level picture of the team member’s performance.</p>
+				</div>
+			</div>
+
+			<div class="row form-row">
+				<div class="col-lg-4">
+					<a ui-sref="halfway" class="btn btn-default" href="#!/reviews/halfway" target="_blank">Halfway Check-In Form</a>
 				</div>
 				<div class="col-lg-8">
 					<p>The check-in form is sent to all Managers for their completion for each of their Team Members.</p>
 				</div>
 			</div>
-			<div class="row form-row">
-				<div class="col-lg-4">
-					<a class="btn btn-default" href="#!/peer-feedback" target="_blank">Peer Feedback Form</a>
-				</div>
-				<div class="col-lg-8">
-					<p>Providing supporting comments at the bottom of the form is crucial to creating a deeper level picture of the team member’s performance. </p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-xs-12">
-					<p>LEVEL’s Performance Enablement program is in place as a conduit for Team Member and Manager relationships, where Team Members work to grow their career through meeting and surpassing goals and expectations set each year.</p>
-					<p>These resources are here as a quick referal to LEVEL’s standards and expectations for all of our team members. For further details, please refer to the Performance Management section of LEVEL’s intranet. </p>
-				</div>
-			</div>
+
 		</div>
 	</section>
 </main>
