@@ -226,6 +226,19 @@
 		.slice-text-active {
 			fill: $white;
 		}
+
+		.form-row {
+			border-bottom: 2px solid $lightest-grey;
+			margin: 0 0 10px;
+
+			.btn {
+				margin-bottom: 10px;
+			}
+
+			[class^="col-"], [class*=" col-"] {
+				padding: 0;
+			}
+		}
 	}
 
 }
