@@ -2,7 +2,7 @@
 
 	'use strict';
 
-	var HalfwayCheckinCtrl = function($scope, $http, $location, NineBoxService){
+	var HalfwayCheckinCtrl = function($scope, $http, $location){
 
 		// make object for form fields to be props of..
 		$scope.halfwayFormInfo = {};
