@@ -23,8 +23,7 @@
                     })
                     .state('dash-resources', {
                         url: '/dashboard/resources',
-                        templateUrl: 'views/dashboard-resources-view.html',
-                        // controller: 'DashboardCtrl'
+                        templateUrl: 'views/dashboard-resources-view.html'
                     })
                     .state('goals', {
                         url: '/goals',
@@ -43,8 +42,13 @@
                     })
                     .state('self-assess', {
                         url: '/reviews/self-assess',
-                        templateUrl: 'views/self-assess-view.html',
-                        // controller: 'selfAssessmentCtrl'
+                        templateUrl: 'views/self-assess-view.html'
+                        // controller: 'SelfAssessCtrl'
+                    })
+                    .state('manager-review', {
+                        url: '/reviews/manager-review',
+                        templateUrl: 'views/manager-review-view.html'
+                        // controller: 'ManagerReviewCtrl'
                     });
             }
         ]);
