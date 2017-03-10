@@ -9,8 +9,15 @@
 
 		// Save the entered form fields to the DB -- called from form onSubmit
 		$scope.saveHalfwayForm = function () {
-			$location.path('/dashboard');
+			console.log('pending halfway check in submission via $http.post...');
 
+			$http.post('/perform-api/halfway-set', $scope.halfwayFormInfo)
+				.then(
+					function(response) {
+						console.log('$scope.halfwayFormInfo: ', $scope.halfwayFormInfo)
+						$location.path('/dashboard');
+					}
+				)
 		};
 
 		// go get the halfway data if it exists (use this for all review forms)
