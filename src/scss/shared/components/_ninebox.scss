@@ -4,10 +4,9 @@
 	@include flexbox;
 	@include flex-direction(row);
 	@include flex-wrap(wrap);
-	
-	margin-top: 30px;
+
 	position: relative;
-	
+
 	.vertical-subheaders, .horizontal-subheaders {
 		display: none;
 	}
@@ -111,12 +110,12 @@
 	@for $i from 1 through 6 {
 		@include box-font-colors ($i, $white);
 	}
-	
+
 	// Change text to black on light boxes for hover
 	@for $i from 7 through 9 {
 		@include box-font-colors ($i, $dark-grey);
 	}
-	
+
 	// Re-ordering with flexbox
 	@for $i from 1 through 9 {
 		.box-#{$i} {
@@ -125,8 +124,6 @@
 	}
 
 	@include breakpoint(md) {
-		
-		height: 876px;
 
 		.rating {
 			height: 288px;

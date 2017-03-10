@@ -1,0 +1,168 @@
+<main class="container">
+
+	<header class="hero-header">
+		<h1 class="header-performance">LEVEL Performance Reviews: Annual Performance Assessment</h1>
+	</header>
+
+	<form name="managerReviewForm" novalidate autocomplete="off" ng-submit="managerReviewForm.$valid && saveManagerReviewForm()">
+		<section class="section flex-section row">
+			<div class="section-header col-md-3">
+				<h2>Team Member Details</h2>
+			</div>
+
+			<div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-1">
+				<div class="row form-group">
+					<label for="empFirstName">Team Member Name<span class="required">*</span></label>
+
+
+						<div class="row form-group">
+							<div class="col-xs-12 col-sm-6 form-group">
+								<input type="text" name="empFirstName" id="empFirstName" placeholder="Team Member First Name" class="form-control" ng-model="managerReviewFormInfo.empFirstName" required>
+								<div ng-messages="managerReviewForm.empFirstName.$error" ng-if="managerReviewForm.empFirstName.$invalid && managerReviewForm.$submitted">
+									<div ng-message="required" class="validation-error">This field is required</div>
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-6">
+								<input type="text" name="empLastName" id="empLastName" placeholder="Team Member Last Name" class="form-control" ng-model="managerReviewFormInfo.empLastName" required>
+								<div ng-messages="managerReviewForm.empLastName.$error" ng-if="managerReviewForm.empLastName.$invalid && managerReviewForm.$submitted">
+									<div ng-message="required" class="validation-error">This field is required</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				<div class="row form-group">
+					<label for="manFirstName">Manager Name<span class="required">*</span></label>
+
+
+					<div class="row form-group">
+						<div class="col-xs-12 col-sm-6 form-group">
+							<input type="text" name="manFirstName" id="manFirstName" placeholder="Manager First Name" class="form-control" ng-model="managerReviewFormInfo.manFirstName" required>
+							<div ng-messages="managerReviewForm.manFirstName.$error" ng-if="managerReviewForm.manFirstName.$invalid && managerReviewForm.$submitted">
+								<div ng-message="required" class="validation-error">This field is required</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6">
+							<input type="text" name="manLastName" id="manLastName" placeholder="Manager Last Name" class="form-control" ng-model="managerReviewFormInfo.manLastName" required>
+							<div ng-messages="managerReviewForm.manLastName.$error" ng-if="managerReviewForm.manLastName.$invalid && managerReviewForm.$submitted">
+								<div ng-message="required" class="validation-error">This field is required</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="row">
+					<label for="performYear">Performance Year<span class="required">*</span></label>
+
+					<div class="row">
+						<div class="col-xs-12 col-sm-6 form-group">
+							<select name="performYear" id="performYear" class="form-control" ng-model="managerReviewFormInfo.performYear" required>
+							    <option value="">Please select a year</option>
+							    <option value="2017-2018">2017-2018</option>
+							    <option value="2018-2019">2018-2019</option>
+							</select>
+							<div ng-messages="managerReviewForm.performYear.$error" ng-show="managerReviewForm.performYear.$invalid && managerReviewForm.$submitted">
+							    <div ng-message="required" class="validation-error">This field is required</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</section>
+
+		<section class="section flex-section row">
+			<div class="section-header col-md-3">
+				<h2>Annual Performance Assessment</h2>
+			</div>
+
+			<div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-1">
+				<p>Please list performance details outlining the accomplishments and growth opportunities for your Team Member this performance year based on the 3 standards below: results, expertise, and collaboration.</p>
+
+				<div class="row goals">
+					<div>
+						<h3 class="subsection-header">Goal Status</h3>
+					</div>
+					<div class="form-group">
+						<label for="goalStatusDesc">Goal Description<span class="required">*</span></label>
+						<textarea class="form-control" name="goalStatusDesc" id="goalStatusDesc" ng-model="managerReviewFormInfo.goalStatusDesc" rows="10" required></textarea>
+						<div ng-messages="managerReviewForm.goalStatusDesc.$error" ng-if="managerReviewForm.goalStatusDesc.$invalid && managerReviewForm.$submitted">
+							<div ng-message="required" class="validation-error">This field is required</div>
+						</div>
+					</div>
+				</div>
+				<div class="row goals">
+					<div>
+						<h3 class="subsection-header">Results</h3>
+					</div>
+					<div class="form-group">
+						<label for="resultsGoalDesc">Goal Description<span class="required">*</span></label>
+						<textarea class="form-control" name="resultsGoalDesc" id="resultsGoalDesc" ng-model="managerReviewFormInfo.resultsGoalDesc" rows="10" required></textarea>
+						<div ng-messages="managerReviewForm.resultsGoalDesc.$error" ng-if="managerReviewForm.resultsGoalDesc.$invalid && managerReviewForm.$submitted">
+							<div ng-message="required" class="validation-error">This field is required</div>
+						</div>
+					</div>
+				</div>
+				<div class="row goals">
+					<div>
+						<h3 class="subsection-header">Expertise</h3>
+					</div>
+					<div class="form-group">
+						<label for="expertGoalDesc">Goal Description<span class="required">*</span></label>
+						<textarea class="form-control" name="expertGoalDesc" id="expertGoalDesc"  ng-model="managerReviewFormInfo.expertGoalDesc" rows="10" required></textarea>
+						<div ng-messages="managerReviewForm.expertGoalDesc.$error" ng-if="managerReviewForm.expertGoalDesc.$invalid && managerReviewForm.$submitted">
+							<div ng-message="required" class="validation-error">This field is required</div>
+						</div>
+					</div>
+				</div>
+				<div class="row goals">
+					<div>
+						<h3 class="subsection-header">Collaboration</h3>
+					</div>
+					<div class="form-group">
+						<label for="collabGoalDesc">Goal Description<span class="required">*</span></label>
+						<textarea class="form-control" name="collabGoalDesc" id="collabGoalDesc" ng-model="managerReviewFormInfo.collabGoalDesc" rows="10" required></textarea>
+						<div ng-messages="managerReviewForm.collabGoalDesc.$error" ng-if="managerReviewForm.collabGoalDesc.$invalid && managerReviewForm.$submitted">
+							<div ng-message="required" class="validation-error">This field is required</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section flex-section row">
+			<div class="section-header col-md-3">
+				<h2>Nine-Box Rating</h2>
+			</div>
+			<div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-1">
+				<div ng-include="'/views/shared/nine-box-diagram.html'"></div>
+			</div>
+		</section>
+
+		<section class="section flex-section row">
+			<div class="section-header col-md-3">
+				<h2>Supporting Comments</h2>
+			</div>
+			<div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-1">
+				<div class="row form-group">
+					<label for="supportingComments">suppoprting comments<span class="required">*</span></label>
+					<textarea name="supportingComments" id="supportingComments" class="form-control" rows="10" ng-model="managerReviewFormInfo.supportingComments" required></textarea>
+					<div ng-messages="managerReviewForm.supportingComments.$error" ng-show="managerReviewForm.supportingComments.$invalid && managerReviewForm.$submitted">
+						<div ng-message="required" class="validation-error">This field is required</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="section buttons row">
+			<div class="col-sm-12">
+				<div class="form-group">
+					<button type="submit" class="btn btn-default">Submit Annual Review</button>
+				</div>
+				<div>
+					<pre> managerReviewFormInfo: {{managerReviewFormInfo | json }} </pre>
+				</div>
+			</div>
+		</section>
+</main>

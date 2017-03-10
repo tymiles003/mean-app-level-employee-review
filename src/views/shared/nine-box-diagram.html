@@ -1,8 +1,112 @@
-<section class="section flex-section row">
-	<div class="section-header col-md-3">
-		<h2>9 box diagram</h2>
+<div class="row rating-9-box">
+	<div class="horizontal-subheaders">
+		<div class="col-md-4 ratings-subheader">Limited performance</div>
+		<div class="col-md-4 ratings-subheader">Target performance</div>
+		<div class="col-md-4 ratings-subheader">High performance</div>
 	</div>
-	<div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-1">
-		<p>9-box include here</p>
+	<div class="vertical-subheaders">
+		<div class="col-md-4 ratings-subheader">Limited potential</div>
+		<div class="col-md-4 ratings-subheader">Target potential</div>
+		<div class="col-md-4 ratings-subheader">High potential</div>
 	</div>
-</section>
+	<label class="rating rating-label col-xs-12 col-md-offset-0 col-md-4 box-4" for="rate-4">
+		<span class="label-title">Limited Performance/High Potential</span> <span class="label-desc">Capable of role expansion. Identify challenges and begin mentoring and coaching more closely.</span>
+		<div class="rating-wrapper">
+			<div class="rating-radio">
+				<input type="radio" name="radio" id="rate-4">
+				<div class="rating-indicator"><div></div></div>
+			</div>
+		</div>
+	</label>
+	<label class="rating rating-label col-xs-12 col-md-offset-0 col-md-4 box-2" for="rate-2">
+		<span class="label-title">Target Performance/High Potential</span> <span class="label-desc">Solid performance with potential for more responsibility.</span>
+		<div class="rating-wrapper">
+			<div class="rating-radio">
+				<input type="radio" name="radio" id="rate-2">
+				<div class="rating-indicator"><div></div></div>
+			</div>
+		</div>
+	</label>
+	<label class="rating rating-label col-xs-12 col-md-offset-0 col-md-4 box-1" for="rate-1">
+		<span class="label-title">High Performance/High Potential</span> <span class="label-desc">Consistent, self motivated high-performer and problem solver. Prepare for the next level.</span>
+		<div class="rating-wrapper">
+			<div class="rating-radio">
+				<input type="radio" name="radio" id="rate-1">
+				<div class="rating-indicator"><div></div></div>
+			</div>
+		</div>
+	</label>
+	<label class="rating rating-label col-xs-12 col-md-offset-0 col-md-4 box-7" for="rate-7">
+		<span class="label-title">Limited Performance/Target Potential</span> <span class="label-desc">Set a coaching plan to progress within current role. Focus on strech goals.</span>
+		<div class="rating-wrapper">
+			<div class="rating-radio">
+				<input type="radio" name="radio" id="rate-7">
+				<div class="rating-indicator"><div></div></div>
+			</div>
+		</div>
+	</label>
+	<label class="rating rating-label col-xs-12 col-md-offset-0 col-md-4 box-5" for="rate-5">
+		<span class="label-title">Target Performance/Target Potential</span> <span class="label-desc">Consider for additional role responsibility. Coaching and mentorship to drive motivation.</span>
+		<div class="rating-wrapper">
+			<div class="rating-radio">
+				<input type="radio" name="radio" id="rate-5">
+				<div class="rating-indicator"><div></div></div>
+			</div>
+		</div>
+	</label>
+	<label class="rating rating-label col-xs-12 col-md-offset-0 col-md-4 box-3" for="rate-3">
+		<span class="label-title">High Performance/Target Potential</span> <span class="label-desc">Current role may have growth opportunities. Focus on strategic thinking and leadership opportunities.</span>
+		<div class="rating-wrapper">
+			<div class="rating-radio">
+				<input type="radio" name="radio" id="rate-3">
+				<div class="rating-indicator"><div></div></div>
+			</div>
+		</div>
+	</label>
+	<label class="rating rating-label col-xs-12 col-md-offset-0 col-md-4 box-9" for="rate-9">
+		<span class="label-title">Limited Performance/Limited Potential</span> <span class="label-desc">Low performance with little to no motivators. Consider disciplinary action.</span>
+		<div class="rating-wrapper">
+			<div class="rating-radio">
+				<input type="radio" name="radio" id="rate-9">
+				<div class="rating-indicator"><div></div></div>
+			</div>
+		</div>
+	</label>
+	<label class="rating rating-label col-xs-12 col-md-offset-0 col-md-4 box-8" for="rate-8">
+		<span class="label-title">Target Performance/Limited Potential</span> <span class="label-desc">Effective performer who may have reached career potential. Focus on innovation.</span>
+		<div class="rating-wrapper">
+			<div class="rating-radio">
+				<input type="radio" name="radio" id="rate-8">
+				<div class="rating-indicator"><div></div></div>
+			</div>
+		</div>
+	</label>
+	<label class="rating rating-label col-xs-12 col-md-offset-0 col-md-4 box-6" for="rate-6">
+		<span class="label-title">High Performance/Limited Potential</span> <span class="label-desc">Experienced high-performer and valuable Team Member. Develop communication skills for success in the current role.</span>
+		<div class="rating-wrapper">
+			<div class="rating-radio">
+				<input type="radio" name="radio" id="rate-6">
+				<div class="rating-indicator"><div></div></div>
+			</div>
+		</div>
+	</label>
+</div>
+
+<!-- TODO: Move this script into a controller or into the custom directive -->
+<script>
+	var rating = document.querySelectorAll(".rating-label");
+
+	function checkedBox(e) {
+		for (var i = 0; i < rating.length; i++ ) {
+			console.log(rating[i].classList);
+			if (rating[i].classList.contains("checked")) {
+				rating[i].classList.remove("checked");
+			}
+		}
+		e.currentTarget.classList.add("checked");
+	}
+
+	rating.forEach(function(item){
+		item.addEventListener("click", checkedBox);
+	});
+</script>
