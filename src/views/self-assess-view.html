@@ -1,13 +1,13 @@
 <main class="container">
 
 	<header class="hero-header">
-		<h1 class="header-self-assess">LEVEL Performance Reviews: Self Assessment</h1>
+		<h1 class="header-self-assess">LEVEL Performance Reviews: Annual Self Assessment</h1>
 	</header>
 
 	<form name="selfAssessForm" novalidate autocomplete="off" ng-submit="selfAssessForm.$valid && saveSelfAssessForm()">
 		<section class="section flex-section row">
 			<div class="section-header col-md-3">
-				<h2>TEAM MEMBER DETAILS</h2>
+				<h2>Team Member Details</h2>
 			</div>
 
 			<div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-1">
@@ -16,13 +16,13 @@
 
 					<div class="row form-group">
 						<div class="col-xs-12 col-sm-6 form-group">
-							<input type="text" name="empFirstName" id="empFirstName" placeholder="Your First Name" class="form-control" ng-model="selfAssessFormInfo.empFirstName" required>
+							<input type="text" name="empFirstName" id="empFirstName" placeholder="Team Member First Name" class="form-control" ng-model="selfAssessFormInfo.empFirstName" required>
 							<div ng-messages="selfAssessForm.empFirstName.$error" ng-if="selfAssessForm.empFirstName.$invalid && selfAssessForm.$submitted">
 								<div ng-message="required" class="validation-error">This field is required</div>
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-6">
-							<input type="text" name="empLastName" id="empLastName" placeholder="Your Last Name" class="form-control" ng-model="selfAssessFormInfo.empLastName" required>
+							<input type="text" name="empLastName" id="empLastName" placeholder="Team Member Last Name" class="form-control" ng-model="selfAssessFormInfo.empLastName" required>
 							<div ng-messages="selfAssessForm.empLastName.$error" ng-if="selfAssessForm.empLastName.$invalid && selfAssessForm.$submitted">
 								<div ng-message="required" class="validation-error">This field is required</div>
 							</div>
@@ -31,17 +31,17 @@
 				</div>
 
 				<div class="row">
-					<label for="manFirstName">Team Member Manager<span class="required">*</span></label>
+					<label for="manFirstName">Manager Name<span class="required">*</span></label>
 
 					<div class="row">
 						<div class="col-xs-12 col-sm-6 form-group">
-							<input type="text" name="manFirstName" id="manFirstName" placeholder="Your Manager's First Name" class="form-control" ng-model="selfAssessFormInfo.manFirstName" required>
+							<input type="text" name="manFirstName" id="manFirstName" placeholder="Manager First Name" class="form-control" ng-model="selfAssessFormInfo.manFirstName" required>
 							<div ng-messages="selfAssessForm.manFirstName.$error" ng-if="selfAssessForm.manFirstName.$invalid && selfAssessForm.$submitted">
 								<div ng-message="required" class="validation-error">This field is required</div>
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-6">
-							<input type="text" name="manLastName" id="manLastName" placeholder="Your Manager's Last Name" class="form-control" ng-model="selfAssessFormInfo.manLastName" required>
+							<input type="text" name="manLastName" id="manLastName" placeholder="Manager Last Name" class="form-control" ng-model="selfAssessFormInfo.manLastName" required>
 							<div ng-messages="selfAssessForm.manLastName.$error" ng-if="selfAssessForm.manLastName.$invalid && selfAssessForm.$submitted">
 								<div ng-message="required" class="validation-error">This field is required</div>
 							</div>
@@ -50,16 +50,16 @@
 				</div>
 
 				<div class="row">
-					<label for="seflAssessYear">Self Assessment Year<span class="required">*</span></label>
+					<label for="performYear">Performance Year<span class="required">*</span></label>
 
 					<div class="row">
 						<div class="col-xs-12 col-sm-6 form-group">
-							<select name="feedbackYear" id="feedbackYear" class="form-control" ng-model="selfAssessFormInfo.feedbackYear" required>
+							<select name="performYear" id="performYear" class="form-control" ng-model="selfAssessFormInfo.performYear" required>
 							    <option value="">Please select a year</option>
 							    <option value="2017-2018">2017-2018</option>
 							    <option value="2018-2019">2018-2019</option>
 							</select>
-							<div ng-messages="selfAssessForm.feedbackYear.$error" ng-show="selfAssessForm.feedbackYear.$invalid && selfAssessForm.$submitted">
+							<div ng-messages="selfAssessForm.performYear.$error" ng-show="selfAssessForm.performYear.$invalid && selfAssessForm.$submitted">
 							    <div ng-message="required" class="validation-error">This field is required</div>
 							</div>
 						</div>
@@ -71,7 +71,7 @@
 
 		<section class="section flex-section row">
 			<div class="section-header col-md-3">
-				<h2>SELF ASSESSMENT</h2>
+				<h2>Annual Self Assessment</h2>
 			</div>
 
 			<div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-1">
@@ -84,7 +84,7 @@
 						<h3 class="subsection-header">Goal Status</h3>
 					</div>
 					<div class="form-group">
-						<label for="goal-status">Goal Description<span class="required">*</span></label>
+						<label for="goalStatusDesc">Goal Description<span class="required">*</span></label>
 						<textarea class="form-control" name="goalStatusDesc" id="goalStatusDesc" ng-model="selfAssessFormInfo.goalStatusDesc" rows="10" required></textarea>
 						<div ng-messages="selfAssessForm.goalStatusDesc.$error" ng-if="selfAssessForm.goalStatusDesc.$invalid && selfAssessForm.$submitted">
 							<div ng-message="required" class="validation-error">This field is required</div>
@@ -110,9 +110,9 @@
 						<h3 class="subsection-header">Expertise</h3>
 					</div>
 					<div class="form-group">
-						<label for="expertiseGoalDesc">Goal Description<span class="required">*</span></label>
-						<textarea class="form-control" name="expertiseGoalDesc" id="expertiseGoalDesc"  ng-model="selfAssessFormInfo.expertiseGoalDesc" rows="10" required></textarea>
-						<div ng-messages="selfAssessForm.expertiseGoalDesc.$error" ng-if="selfAssessForm.expertiseGoalDesc.$invalid && selfAssessForm.$submitted">
+						<label for="expertGoalDesc">Goal Description<span class="required">*</span></label>
+						<textarea class="form-control" name="expertGoalDesc" id="expertGoalDesc"  ng-model="selfAssessFormInfo.expertGoalDesc" rows="10" required></textarea>
+						<div ng-messages="selfAssessForm.expertGoalDesc.$error" ng-if="selfAssessForm.expertGoalDesc.$invalid && selfAssessForm.$submitted">
 							<div ng-message="required" class="validation-error">This field is required</div>
 						</div>
 					</div>
