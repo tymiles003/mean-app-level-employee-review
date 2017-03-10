@@ -14,6 +14,7 @@
 			$http.post('/perform-api/halfway-set', $scope.halfwayFormInfo)
 				.then(
 					function(response) {
+						console.log('$scope.halfwayFormInfo: ', $scope.halfwayFormInfo)
 						$location.path('/dashboard');
 					}
 				)
