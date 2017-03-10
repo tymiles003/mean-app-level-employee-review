@@ -16,7 +16,7 @@
             var currentMonth = 0; // temp hard-coding month for the UI
 
             // 1- define params for the svg
-            var width = 800,
+            var width = 400,
                 height = 400,
                 radius = Math.min(width, height) / 2;
 

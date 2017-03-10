@@ -150,16 +150,24 @@
 				table {
 					width: 100%;
 					td {
-						padding: 1em;
+						padding: .5em;
 						vertical-align: top;
 						border: 1px solid $red;
+
+						@include breakpoint(sm) {
+							padding: 1em;
+						}
 					}
 				}
 			}
 		}
 
 		.due-date {
-			min-width: 100px;
+			min-width: 80px;
+
+			@include breakpoint(sm) {
+				min-width: 100px;
+			}
 
 			.days-left {
 				display: block;
@@ -210,6 +218,17 @@
 		}
 
 		// CALENDAR WHEEL (svg-specific styles)
+		.lvl-calendar-wheel {
+			width: 400px;
+			height: 400px;
+			margin: 0 auto;
+			display: none;
+
+			@include breakpoint(sm) {
+				display: block;
+			}
+		}
+
 		.slice {
 			fill: $white;
 			stroke: $red;
