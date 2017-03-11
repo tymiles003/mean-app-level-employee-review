@@ -23,6 +23,9 @@ var DashboardCtrl = require('./controllers/dashboard-controller');
 var GoalsCtrl = require('./controllers/goals-controller');
 var HalfwayCheckinCtrl = require('./controllers/halfway-checkin-controller');
 var PeerFeedbackCtrl = require('./controllers/peer-feedback-controller');
+var ManagerReviewCtrl = require('./controllers/manager-review-controller');
+
+
 
 // include Ang Service js files into the build
 
@@ -42,6 +45,7 @@ var mainAppModule = angular.module(ssApp, ['ngRoute', 'ngMessages', 'ngAnimate',
 	.controller('GoalsCtrl', ['$scope', '$http', '$location', GoalsCtrl])
 	.controller('HalfwayCheckinCtrl', ['$scope', '$http', '$location', HalfwayCheckinCtrl])
 	.controller('PeerFeedbackCtrl', ['$scope', '$http', '$location', PeerFeedbackCtrl])
+	.controller('ManagerReviewCtrl', ['$scope', '$http', '$location', ManagerReviewCtrl])
 
 	// Register Services for your App
 
