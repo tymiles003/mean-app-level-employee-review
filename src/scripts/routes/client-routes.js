@@ -35,7 +35,7 @@
                         templateUrl: 'views/peer-feedback-view.html',
                         controller: 'PeerFeedbackCtrl'
                     })
-                    .state('halfway', {
+                    .state('halfway-checkin', {
                         url: '/reviews/halfway',
                         templateUrl: 'views/halfway-checkin-view.html',
                         controller: 'HalfwayCheckinCtrl'
@@ -45,7 +45,7 @@
                         templateUrl: 'views/self-assess-view.html'
                         // controller: 'SelfAssessCtrl'
                     })
-                    .state('manager-review', {
+                    .state('annual-review', {
                         url: '/reviews/manager-review',
                         templateUrl: 'views/manager-review-view.html',
                         controller: 'ManagerReviewCtrl'
