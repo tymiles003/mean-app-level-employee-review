@@ -47,8 +47,8 @@
                     })
                     .state('manager-review', {
                         url: '/reviews/manager-review',
-                        templateUrl: 'views/manager-review-view.html'
-                        // controller: 'ManagerReviewCtrl'
+                        templateUrl: 'views/manager-review-view.html',
+                        controller: 'ManagerReviewCtrl'
                     });
             }
         ]);
