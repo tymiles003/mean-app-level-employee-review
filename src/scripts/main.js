@@ -10,7 +10,7 @@ var ngAnimate = require('angular-animate');
 var ngTouch = require('angular-touch');
 var uiBootstrap = require('angular-ui-bootstrap');
 var uiRouter = require('angular-ui-router');
-var localStorage = require('angular-local-storage');
+var ngLocalStorage = require('angular-local-storage');
 var d3 = require('d3');
 window.d3 = d3; // expose d3 as a global object for now to allow for d3 API access anywhere in the app
 
@@ -27,7 +27,6 @@ var PeerFeedbackCtrl = require('./controllers/peer-feedback-controller');
 var ManagerReviewCtrl = require('./controllers/manager-review-controller');
 
 
-	console.log('localStorage: ', localStorage);
 
 // include Ang Service js files into the build
 
@@ -38,7 +37,7 @@ var calendarWheelDirective = require('./directives/calendar-wheel-directive');
 var ssApp = 'sugarsnaps';
 
 // Define the main angular application module
-var mainAppModule = angular.module(ssApp, ['ngRoute', 'ngMessages', 'ngAnimate', 'ngTouch', 'ui.bootstrap', 'ui.router', 'LocalStorageModule' ])
+var mainAppModule = angular.module(ssApp, ['ngRoute', 'ngMessages', 'ngAnimate', 'ngTouch', 'ui.bootstrap', 'ui.router', 'LocalStorageModule'])
 	// Register Controllers for your App
 	.controller('RegCtrl', ['$scope', '$http', '$location', RegCtrl])
 	.controller('LogInCtrl', ['$scope', '$http', '$location', LogInCtrl])
@@ -60,4 +59,5 @@ var mainAppModule = angular.module(ssApp, ['ngRoute', 'ngMessages', 'ngAnimate',
 	angular.element(document).ready(function() {
 		angular.bootstrap(document, [ssApp]);
 		console.log('ssApp is bootstrapped');
+		console.log('ngLocalStorage: ', ngLocalStorage);
 	});
