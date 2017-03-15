@@ -19,7 +19,7 @@ var routes = require('./routes/client-routes');
 
 // include Ang Controller js files into the build
 var RegCtrl = require('./controllers/register-controller');
-var LogInCtrl = require('./controllers/login-controller');
+var LoginCtrl = require('./controllers/login-controller');
 var DashboardCtrl = require('./controllers/dashboard-controller');
 var GoalsCtrl = require('./controllers/goals-controller');
 var HalfwayCheckinCtrl = require('./controllers/halfway-checkin-controller');
@@ -40,7 +40,7 @@ var ssApp = 'sugarsnaps';
 var mainAppModule = angular.module(ssApp, ['ngRoute', 'ngMessages', 'ngAnimate', 'ngTouch', 'ui.bootstrap', 'ui.router', 'LocalStorageModule'])
 	// Register Controllers for your App
 	.controller('RegCtrl', ['$scope', '$http', '$location', RegCtrl])
-	.controller('LogInCtrl', ['$scope', '$http', '$location', LogInCtrl])
+	.controller('LoginCtrl', ['$scope', '$http', '$location', LoginCtrl])
 	.controller('DashboardCtrl', ['$scope', DashboardCtrl])
 	.controller('GoalsCtrl', ['$scope', '$http', '$location', GoalsCtrl])
 	.controller('HalfwayCheckinCtrl', ['$scope', '$http', '$location', HalfwayCheckinCtrl])

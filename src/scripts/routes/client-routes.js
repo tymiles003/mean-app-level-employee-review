@@ -9,7 +9,7 @@
                     .state('login', {
                         url: '/login',
                         templateUrl: '/views/login-view.html',
-                        controller: 'LogInCtrl'
+                        controller: 'LoginCtrl'
                     })
                     .state('register', {
                         url: '/register',
