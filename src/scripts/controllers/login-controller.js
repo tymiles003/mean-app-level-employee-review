@@ -1,14 +1,15 @@
 (function(document, window, angular) {
 	'use strict';
 
-	var LogInCtrl = function($scope, $http, $location) {
+	var LoginCtrl = function($scope, $http, $location) {
 		$scope.credentials = {};
 
-		$scope.logIn = function() {
+		$scope.loginUser = function() {
 			// console.log('Here is the credentials: ' + JSON.stringify($scope.credentials));
 			$location.path('/dashboard');
 		};
 	};
 
-	module.exports = LogInCtrl;
+	module.exports = LoginCtrl;
+
 })(document, window, angular);
