@@ -50,7 +50,12 @@ var mainAppModule = angular.module(ssApp, ['ngRoute', 'ngMessages', 'ngAnimate',
 	// Register Services for your App
 
 	// Register Directives for your App
-	.directive('lvlCalendarWheel', calendarWheelDirective);
+	.directive('lvlCalendarWheel', calendarWheelDirective)
+
+	.config(['localStorageServiceProvider', function(localStorageServiceProvider) {
+		localStorageServiceProvider.setPrefix('quicksilver');
+		console.log(localStorageServiceProvider);
+	}]);
 
 	// Call the routes (as config())
 	routes(ssApp);
@@ -59,5 +64,4 @@ var mainAppModule = angular.module(ssApp, ['ngRoute', 'ngMessages', 'ngAnimate',
 	angular.element(document).ready(function() {
 		angular.bootstrap(document, [ssApp]);
 		console.log('ssApp is bootstrapped');
-		console.log('ngLocalStorage: ', ngLocalStorage);
 	});
