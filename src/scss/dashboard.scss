@@ -79,6 +79,7 @@
 
 					.nav-text {
 						display: none;
+
 						@include breakpoint(sm) {
 							display: inline-block;;
 						}
@@ -145,56 +146,58 @@
 					float: left;
 				}
 			}
+		}
 
-			&.to-do {
-				table {
-					width: 100%;
-					td {
-						padding: .5em;
-						vertical-align: top;
-						border: 1px solid $red;
+		// To Do + Comppleted cards
+		.to-do-block, .completed-block {
+			padding: 8px;
+			margin: 0 0 8px;
 
-						@include breakpoint(sm) {
-							padding: 1em;
-						}
-					}
-				}
+			@include breakpoint(sm) {
+				padding: 16px;
+				margin: 0 0 8px;
 			}
 		}
 
-		.due-date {
-			min-width: 80px;
+		.due-date, .completed-date {
+			margin: 0;
+			font-size: .75em;
+		}
 
-			@include breakpoint(sm) {
-				min-width: 100px;
-			}
+		.due-tasks, .completed-tasks {
+			margin: 0;
+		}
 
-			.days-left {
-				display: block;
-			}
+		// To Do cards
+		.to-do-block {
+			@include border($red);
 		}
 
 		.due-soon {
 			text-transform: uppercase;
 
-			.due-date {
+			.due-item {
+				margin: -8px -8px 8px;
+				padding: 8px;
 				background: $red;
 				color: $white;
+
+				@include breakpoint(sm) {
+					padding: 16px;
+					margin: -16px -16px 16px;
+				}
 			}
 
 			.days-left {
-				color: $white;
 				font-weight: 700;
+				color: $red;
 			}
 
 		}
 
-		.due-tasks {
-			width: 90px;
-
-			@include breakpoint(xs) {
-				width: 60px;
-			}
+		// Completed cards
+		.completed-block {
+			@include border($lightest-grey);
 		}
 
 		.icon-edit {
