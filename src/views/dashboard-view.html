@@ -1,7 +1,8 @@
 <main class="container per-dash-contain flex-dash">
 	<nav class="per-sidebar" ng-include="'/views/shared/dashboard-nav.html'"></nav>
 	<section class="per-dash clearfix">
-		<!--<div class="col-sm-12 dash-card alert-messages">-->
+		<!-- ALERTS
+		  <div class="col-sm-12 dash-card alert-messages">-->
 			<!--<div uib-alert ng-repeat="alert in alerts" ng-class="'alert alert-' + (alert.type || 'warning')" close="closeAlert($index)">-->
 				<!--<i ng-class="'glyphicon glyphicon-' + (alert.icon || 'exclamation-sign')"></i> {{alert.msg}} </div>-->
 		<!--</div>-->
@@ -13,56 +14,35 @@
 		<div class="col-sm-12 dash-card to-do">
 			<h3>To do:</h3>
 			<div class="due-soon to-do-block">
-				<p class="due-item">Peer feedback: Praise Burnham</p>
+				<p class="due-item">Set Goals: Megan Prior-Pfeifer</p>
 				<p class="due-tasks">
-					<a class="icon-edit" href="#!/goals"></a>
+					<a class="icon-edit" ui-sref="goals"></a>
 					<a class="icon-ical"></a>
 				</p>
 				<p class="due-date"><span class="days-left">3 days</span> until submission deadline.</p>
 			</div>
-			<div class="to-do-block">
-				<p class="due-item">Set Goals: Megan Prior-Pfeifer</p>
-				<p class="due-tasks">
-					<a class="icon-edit" href="#!/goals"></a>
-					<a class="icon-ical"></a>
-				</p>
-				<p class="due-date"><span class="days-left">9 days</span> until submission deadline.</p>
-			</div>
-<!-- 			<table>
-				<tr class="due-soon">
-					<td class="due-date">Due in<span class="days-left">3 days</span></td>
-					</tr>
-					<td class="due-item">Peer Feedback: Praise Burnham</td>
-					<td class="due-tasks">
-						<a class="icon-edit" href="#!/goals"></a>
-						<a class="icon-ical"></a>
-					</td>
-				</tr>
-				<tr>
-					<td class="due-date">Due in<span class="days-left">10 days</span></td>
-					<td class="due-item">Set Goals: {{name}} Prior-Pfeifer</td>
-					<td class="due-tasks">
-						<a class="icon-edit" href="#!/goals"></a>
-						<a class="icon-ical"></a>
-					</td>
-				</tr>
-			</table> -->
 		</div>
 		<div class="col-sm-12 dash-card completed">
-			<h3>Completed:</h3>
+			<h3>Recently Completed:</h3>
+
 			<div class="completed-block">
-				<p class="completed-item">Peer feedback: Praise Burnham</p>
-				<p class="completed-tasks">
-					<a class="icon-edit" href="#!/goals"></a>
-					<a class="icon-ical"></a>
-				</p>
-				<p class="completed-date">Date submitted: 09/01/2017</p>
+				<p class="completed-item">Peer Feedback: Praise Burnham</p>
+				<p class="completed-date">Submission period ended. <a ui-sref="peer-feedback" target="_blank">View Submission.</a></p>
+				<p class="completed-date">Date submitted: 08/25/2017</p>
 			</div>
+
 			<div class="completed-block">
-				<p class="completed-item">Set Goals: Megan Prior-Pfeifer</p>
-				<p class="completed-date">Submission period ended. <a href="#!/goals" target="_blank">View Submission.</a></p>
-				<p class="completed-date">Date submitted: 09/01/2017</p>
+				<p class="completed-item">Peer Feedback: Nerio Mones</p>
+				<p class="completed-date">Submission period ended. <a ui-sref="peer-feedback" target="_blank">View Submission.</a></p>
+				<p class="completed-date">Date submitted: 08/20/2017</p>
 			</div>
+
+			<div class="completed-block">
+				<p class="completed-item">Peer Feedback: Scott Kao</p>
+				<p class="completed-date">Submission period ended. <a ui-sref="peer-feedback" target="_blank">View Submission.</a></p>
+				<p class="completed-date">Date submitted: 08/15/2017</p>
+			</div>
+
 			<div class="row card-sort">
 				<div class="filter col-xs-6">
 					<input type="search" placeholder="Filter by name" class="sort-input search" />

@@ -2,13 +2,14 @@
 	'use strict';
 
 	var DashboardCtrl = function($scope, $stateParams) {
-		$scope.name = 'Megan Prior-Pfeifer III';
+		$scope.name = 'Megan Prior-Pfeifer';
 
 		var today = new Date();
 		var monthArray = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-		$scope.dd = today.getDate();
-		$scope.mm = monthArray[today.getMonth()];
-		$scope.yyyy = today.getFullYear();
+		// hard-coding date for goals demo
+		$scope.dd = 27 // today.getDate();
+		$scope.mm = 'September' // monthArray[today.getMonth()];
+		$scope.yyyy = 2016 // today.getFullYear();
 
 
 		// Alerts for Dashboard

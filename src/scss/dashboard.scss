@@ -206,6 +206,7 @@
 
 		.icon-ical {
 			@include resp-img(26px, 30px, 'icon-ical-large');
+			pointer-events: none; /* temp unitl implemewnted */
 		}
 
 		.icon-edit, .icon-ical {
