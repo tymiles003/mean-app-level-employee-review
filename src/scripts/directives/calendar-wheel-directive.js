@@ -13,7 +13,7 @@
             // 0- get the current Month
             var now = new Date;
             var currentMonth = now.getMonth();
-            var currentMonth = 0; // temp hard-coding month for the UI
+            var currentMonth = 8; // temp hard-coding month for the UI
 
             // 1- define params for the svg
             var width = 400,

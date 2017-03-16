@@ -79,6 +79,7 @@
 
 					.nav-text {
 						display: none;
+
 						@include breakpoint(sm) {
 							display: inline-block;;
 						}
@@ -145,56 +146,58 @@
 					float: left;
 				}
 			}
+		}
 
-			&.to-do {
-				table {
-					width: 100%;
-					td {
-						padding: .5em;
-						vertical-align: top;
-						border: 1px solid $red;
+		// To Do + Comppleted cards
+		.to-do-block, .completed-block {
+			padding: 8px;
+			margin: 0 0 8px;
 
-						@include breakpoint(sm) {
-							padding: 1em;
-						}
-					}
-				}
+			@include breakpoint(sm) {
+				padding: 16px;
+				margin: 0 0 8px;
 			}
 		}
 
-		.due-date {
-			min-width: 80px;
+		.due-date, .completed-date {
+			margin: 0;
+			font-size: .75em;
+		}
 
-			@include breakpoint(sm) {
-				min-width: 100px;
-			}
+		.due-tasks, .completed-tasks {
+			margin: 0;
+		}
 
-			.days-left {
-				display: block;
-			}
+		// To Do cards
+		.to-do-block {
+			@include border($red);
 		}
 
 		.due-soon {
 			text-transform: uppercase;
 
-			.due-date {
+			.due-item {
+				margin: -8px -8px 8px;
+				padding: 8px;
 				background: $red;
 				color: $white;
+
+				@include breakpoint(sm) {
+					padding: 16px;
+					margin: -16px -16px 16px;
+				}
 			}
 
 			.days-left {
-				color: $white;
 				font-weight: 700;
+				color: $red;
 			}
 
 		}
 
-		.due-tasks {
-			width: 90px;
-
-			@include breakpoint(xs) {
-				width: 60px;
-			}
+		// Completed cards
+		.completed-block {
+			@include border($lightest-grey);
 		}
 
 		.icon-edit {
@@ -203,6 +206,7 @@
 
 		.icon-ical {
 			@include resp-img(26px, 30px, 'icon-ical-large');
+			pointer-events: none; /* temp unitl implemewnted */
 		}
 
 		.icon-edit, .icon-ical {
@@ -214,6 +218,47 @@
 
 			&:hover {
 				opacity: 1;
+			}
+
+			@include breakpoint(xs) {
+				padding: 20px;
+				background-size: 26px 30px;
+				background-position: center;
+			}
+		}
+
+		// Paginator for cards
+		.card-sort {
+			font-size: .75em;
+
+			.paginator {
+				text-align: right;
+			}
+
+			.sort-input {
+				@include border($lightest-grey);
+				max-width: 100%;
+
+				&.page-number {
+					width: 28px;
+					padding-left: 2px;
+					vertical-align: middle;
+				}
+			}
+
+			.prev-arrow {
+				margin-right: 10px;
+				@include resp-img(8px, 12px, prev-arrow);
+			}
+
+			.next-arrow {
+				margin-left: 10px;
+				@include resp-img(8px, 12px, next-arrow);
+			}
+
+			.prev-arrow, .next-arrow {
+				display: inline-block;
+				vertical-align: middle;
 			}
 		}
 
