@@ -54,7 +54,7 @@ var mainAppModule = angular.module(qsApp, ['ngRoute', 'ngMessages', 'ngAnimate',
 	.config(['localStorageServiceProvider', function(localStorageServiceProvider) {
 		localStorageServiceProvider
 			.setPrefix(qsApp)
-			.setStorageType('sessionStorage')
+			.setStorageType('localStorage')
 			.setDefaultToCookie(false)
 			.setNotify(true, true);
 		console.log('localStorageServiceProvider object: ', localStorageServiceProvider);
