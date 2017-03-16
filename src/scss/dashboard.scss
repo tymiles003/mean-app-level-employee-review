@@ -218,6 +218,47 @@
 			&:hover {
 				opacity: 1;
 			}
+
+			@include breakpoint(xs) {
+				padding: 20px;
+				background-size: 26px 30px;
+				background-position: center;
+			}
+		}
+
+		// Paginator for cards
+		.card-sort {
+			font-size: .75em;
+
+			.paginator {
+				text-align: right;
+			}
+
+			.sort-input {
+				@include border($lightest-grey);
+				max-width: 100%;
+
+				&.page-number {
+					width: 28px;
+					padding-left: 2px;
+					vertical-align: middle;
+				}
+			}
+
+			.prev-arrow {
+				margin-right: 10px;
+				@include resp-img(8px, 12px, prev-arrow);
+			}
+
+			.next-arrow {
+				margin-left: 10px;
+				@include resp-img(8px, 12px, next-arrow);
+			}
+
+			.prev-arrow, .next-arrow {
+				display: inline-block;
+				vertical-align: middle;
+			}
 		}
 
 		// CALENDAR WHEEL (svg-specific styles)
