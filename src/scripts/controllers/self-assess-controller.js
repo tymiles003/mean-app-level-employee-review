@@ -1,7 +1,7 @@
 (function(document, window, angular) {
 
 	'use strict';
-
+console.log('yo');
 	var SelfAssessCtrl = function($scope, $http, $location){
 		// make object for form fields to be props of..
 		$scope.selfAssessFormInfo = {};
