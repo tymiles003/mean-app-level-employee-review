@@ -4,7 +4,7 @@
 		<h1 class="header-goals">LEVEL - Goal Setting</h1>
 	</header>
 
-	<form name="goalSetting" novalidate autocomplete="off" ng-submit="goalSetting.$valid && submit()">
+	<form name="goalsForm" novalidate autocomplete="off" ng-submit="goalsForm.$valid && saveGoals()">
 
 		<section class="row section flex-section">
 			<div class="col-md-3 section-header goals-setting-details">
@@ -13,8 +13,7 @@
 
 			<div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-1">
 				<div class="row">
-					<p>List your annual goal plan for the performance year based on the performance standards. 1‑2 goals per standard.
-						This form should be updated throughout the year as goals are On Track, projects change, etc.</p>
+					<p>Please list your goals for the performance year and update this form throughout the year as goals and projects change.</p>
 				</div>
 
 				<div class="row goals results">
@@ -23,28 +22,28 @@
 							<h3 class="subsection-header">Results</h3>
 						</div>
 						<div class="col-md-12 form-group">
-							<label for="resultGoalOne">Goal Description<span class="required">*</span></label>
-							<textarea name="resultGoalOne" id="resultGoalOne" rows="11" placeholder="Describe your goal: Acts on opportunities, committed to excellence, attentive to detail, meets commitments, etc." class="form-control" required ng-model="goalsFormInfo.resultGoalOne"></textarea>
-							<div ng-if="goalSetting.$submitted && goalSetting.resultGoalOne.$invalid">
+							<label for="resultsGoal1Desc">Goal Description<span class="required">*</span></label>
+							<textarea name="resultsGoal1Desc" id="resultsGoal1Desc" rows="11" class="form-control" placeholder="Describe your Results goal" ng-model="goalsFormInfo.resultsGoal1Desc" required></textarea>
+							<div ng-if="goalsForm.$submitted && goalsForm.resultsGoal1Desc.$invalid">
 								 <div when="required" class="validation-error">This field is required</div>
 							</div>
 						</div>
 						<div class="col-md-12 form-group">
 							<div class="row">
 								<div class="col-xs-12 col-sm-6 form-group due-date">
-									<label for="resultGoalOneDate">Target Date<span class="required">*</span></label>
-									<input name="resultGoalOneDate" id="resultGoalOneDate"  placeholder="MM/DD/YYYY" class="form-control" required ng-model="goalsFormInfo.resultGoalOneDate">
-									<div ng-if="goalSetting.$submitted && goalSetting.resultGoalOneDate.$invalid">
+									<label for="resultsGoal1Date">Target Date<span class="required">*</span></label>
+									<input name="resultsGoal1Date" id="resultsGoal1Date" placeholder="MM/DD/YYYY" class="form-control" ng-model="goalsFormInfo.resultsGoal1Date" required>
+									<div ng-if="goalsForm.$submitted && goalsForm.resultsGoal1Date.$invalid">
 										<div when="required" class="validation-error">This field is required</div>
 									</div>
 								</div>
 								<div class="col-xs-12 col-sm-6 form-group goal-status">
-									<label for="resultGoalOneStatus">Goal Status<span class="required">*</span></label>
-									<select name="resultGoalOneStatus" id="resultGoalOneStatus" class="form-control" ng-model="goalsFormInfo.resultGoalOneStatus" required>
+									<label for="resultsGoal1Status">Goal Status<span class="required">*</span></label>
+									<select name="resultsGoal1Status" id="resultsGoal1Status" class="form-control" ng-model="goalsFormInfo.resultsGoal1Status" required>
 										<option value="">Please select status</option>
 										<option ng-repeat="status in goalStatus" value="{{status}}">{{status}}</option>
 									</select>
-									<div ng-if="goalSetting.$submitted && goalSetting.resultGoalOneStatus.$invalid">
+									<div ng-if="goalsForm.$submitted && goalsForm.resultsGoal1Status.$invalid">
 										<div when="required" class="validation-error">This field is required</div>
 									</div>
 								</div>
@@ -59,28 +58,28 @@
 							<h3 class="subsection-header">Expertise</h3>
 						</div>
 						<div class="col-md-12 form-group">
-							<label for="expertGoalOne">Goal Description<span class="required">*</span></label>
-							<textarea name="expertGoalOne" id="expertGoalOne" rows="11" placeholder="Describe your goal: Understands role, seeks improvement, has necessary skills, manages tasks autonomously, etc." class="form-control" required ng-model="goalsFormInfo.expertGoalOne"></textarea>
-							<div ng-if="goalSetting.$submitted && goalSetting.expertGoalOne.$invalid">
+							<label for="expertGoal1Desc">Goal Description<span class="required">*</span></label>
+							<textarea name="expertGoal1Desc" id="expertGoal1Desc" rows="11" placeholder="Describe your Expertise goal" class="form-control" ng-model="goalsFormInfo.expertGoal1Desc" required></textarea>
+							<div ng-if="goalsForm.$submitted && goalsForm.expertGoal1Desc.$invalid">
 								 <div when="required" class="validation-error">This field is required</div>
 							</div>
 						</div>
 						<div class="col-md-12 form-group">
 							<div class="row">
 								<div class="col-xs-12 col-sm-6 form-group due-date">
-									<label for="expertGoalOneDate">Target Date<span class="required">*</span></label>
-									<input name="expertGoalOneDate" id="expertGoalOneDate" placeholder="MM/DD/YYYY" class="form-control" ng-model="goalsFormInfo.expertGoalOneDate" required>
-									<div ng-if="goalSetting.$submitted && goalSetting.expertGoalOneDate.$invalid">
+									<label for="expertGoal1Date">Target Date<span class="required">*</span></label>
+									<input name="expertGoal1Date" id="expertGoal1Date" placeholder="MM/DD/YYYY" class="form-control" ng-model="goalsFormInfo.expertGoal1Date" required>
+									<div ng-if="goalsForm.$submitted && goalsForm.expertGoal1Date.$invalid">
 										<div when="required" class="validation-error">This field is required</div>
 									</div>
 								</div>
 								<div class="col-xs-12 col-sm-6 form-group goal-status">
-									<label for="expertGoalOneStatus">Goal Status<span class="required">*</span></label>
-									<select name="expertGoalOneStatus" id="expertGoalOneStatus" class="form-control" required ng-model="goalsFormInfo.expertGoalOneStatus">
+									<label for="expertGoal1Status">Goal Status<span class="required">*</span></label>
+									<select name="expertGoal1Status" id="expertGoal1Status" class="form-control" ng-model="goalsFormInfo.expertGoal1Status" required>
 										<option value="">Please select status</option>
 										<option ng-repeat="status in goalStatus" value="{{status}}">{{status}}</option>
 									</select>
-									<div ng-if="goalSetting.$submitted && goalSetting.expertGoalOneStatus.$invalid">
+									<div ng-if="goalsForm.$submitted && goalsForm.expertGoal1Status.$invalid">
 										<div when="required" class="validation-error">This field is required</div>
 									</div>
 								</div>
@@ -95,28 +94,28 @@
 							<h3 class="subsection-header">Collaboration</h3>
 						</div>
 						<div class="col-md-12 form-group">
-							<label for="collabGoalOne">Goal Description<span class="required">*</span></label>
-							<textarea name="collabGoalOne" id="collabGoalOne" rows="11" placeholder="Describe your goal: Shares information and ideas, solid communication skills, embodies the Level Values, etc." class="form-control" required ng-model="goalsFormInfo.collabGoalOne"></textarea>
-							<div ng-if="goalSetting.$submitted && goalSetting.collabGoalOne.$invalid">
+							<label for="collabGoal1Desc">Goal Description<span class="required">*</span></label>
+							<textarea name="collabGoal1Desc" id="collabGoal1Desc" rows="11" placeholder="Describe your Collaboration goal" class="form-control" ng-model="goalsFormInfo.collabGoal1Desc" required></textarea>
+							<div ng-if="goalsForm.$submitted && goalsForm.collabGoal1Desc.$invalid">
 								 <div when="required" class="validation-error">This field is required</div>
 							</div>
 						</div>
 						<div class="col-md-12 form-group">
 							<div class="row">
 								<div class="col-xs-12 col-sm-6 form-group due-date">
-									<label for="collabGoalOneDate">Target Date<span class="required">*</span></label>
-									<input class="form-control" name="collabGoalOneDate" id="collabGoalOneDate" placeholder="MM/DD/YYYY" required ng-model="goalsFormInfo.collabGoalOneDate">
-									<div ng-if="goalSetting.$submitted && goalSetting.collabGoalOneDate.$invalid">
+									<label for="collabGoal1Date">Target Date<span class="required">*</span></label>
+									<input class="form-control" name="collabGoal1Date" id="collabGoal1Date" placeholder="MM/DD/YYYY" ng-model="goalsFormInfo.collabGoal1Date" required>
+									<div ng-if="goalsForm.$submitted && goalsForm.collabGoal1Date.$invalid">
 										<div when="required" class="validation-error">This field is required</div>
 									</div>
 								</div>
 								<div class="col-xs-12 col-sm-6 form-group goal-status">
-									<label for="collabGoalOneStatus">Goal Status<span class="required">*</span></label>
-									<select name="collabGoalOneStatus" id="collabGoalOneStatus" class="form-control" required ng-model="goalsFormInfo.collabGoalOneStatus">
+									<label for="collabGoal1Status">Goal Status<span class="required">*</span></label>
+									<select name="collabGoal1Status" id="collabGoal1Status" class="form-control" ng-model="goalsFormInfo.collabGoal1Status" required>
 										<option value="">Please select status</option>
 										<option ng-repeat="status in goalStatus" value="{{status}}">{{status}}</option>
 									</select>
-									<div ng-if="goalSetting.$submitted && goalSetting.collabGoalOneStatus.$invalid">
+									<div ng-if="goalsForm.$submitted && goalsForm.collabGoal1Status.$invalid">
 										<div when="required" class="validation-error">This field is required</div>
 									</div>
 								</div>
@@ -127,39 +126,35 @@
 			</div>
 		</section>
 
-	<!-- STOP PT for HTML cleanup -->
-
 		<section class="row section flex-section">
 			<div class="col-md-3 section-header goals-team-member-details">
 				<h2>Team Member Details</h2>
 			</div>
 			<div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-1">
 				<div class="row form-group">
-					<label for="memberFirstName">Team Member Name<span class="required">*</span></label>
-
+					<label for="empFirstName">Team Member Name<span class="required">*</span></label>
 					<div class="row name">
 						<div class="col-xs-12 col-sm-6">
-							<input type="text" name="memberFirstName" id="memberFirstName" placeholder="Your First Name" class="form-control" ng-model="goalsFormInfo.memberFirstName" required>
-							<div ng-if="goalSetting.$submitted && goalSetting.memberFirstName.$invalid">
+							<input type="text" name="empFirstName" id="empFirstName" placeholder="Team Member First Name" class="form-control" ng-model="goalsFormInfo.empFirstName" required>
+							<div ng-if="goalsForm.$submitted && goalsForm.empFirstName.$invalid">
 								 <div when="required" class="validation-error">This field is required</div>
 								</div>
 						</div>
 						<div class="col-xs-12 col-sm-6">
-							<input type="text" name="memberLastName" id="memberLastName" class="form-control" placeholder="Your Last Name" ng-model="goalsFormInfo.memberLastName" required>
-							<div ng-if="goalSetting.$submitted && goalSetting.memberLastName.$invalid">
+							<input type="text" name="empLastName" id="empLastName" class="form-control" placeholder="Team Member Last Name" ng-model="goalsFormInfo.empLastName" required>
+							<div ng-if="goalsForm.$submitted && goalsForm.empLastName.$invalid">
 								 <div when="required" class="validation-error">This field is required</div>
 							</div>
 						</div>
 					</div>
-
 				</div>
 
 				<div class="row form-group">
 					<div class="row">
 						<div class="col-sm-6 form-group">
-							<label for="memberTitle">Team Member Title<span class="required">*</span></label>
-							<input type="text" name="memberTitle" id="memberTitle" placeholder="Your Title" class="form-control" ng-model="goalsFormInfo.memberTitle" required>
-							<div ng-if="goalSetting.$submitted && goalSetting.memberTitle.$invalid">
+							<label for="empJobTitle">Team Member Job Title<span class="required">*</span></label>
+							<input type="text" name="empJobTitle" id="empJobTitle" class="form-control" placeholder="Team Member Job Title" ng-model="goalsFormInfo.empJobTitle" required>
+							<div ng-if="goalsForm.$submitted && goalsForm.empJobTitle.$invalid">
 								 <div when="required" class="validation-error">This field is required</div>
 							</div>
 						</div>
@@ -169,24 +164,24 @@
 								<option value="" disabled>Please select feedback year</option>
 								<option value="1" selected>2016/2017</option>
 							</select>
-							<div ng-if="goalSetting.$submitted && goalSetting.feedbackYear.$invalid">
+							<div ng-if="goalsForm.$submitted && goalsForm.feedbackYear.$invalid">
 								 <div when="required" class="validation-error">This field is required</div>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="row form-group">
-					<label for="managerFirstName">Team Member Manager<span class="required">*</span></label>
+					<label for="manFirstName">Team Member Manager<span class="required">*</span></label>
 					<div class="row name">
 						<div class="col-xs-12 col-sm-6">
-							<input type="text" name="managerFirstName" id="managerFirstName" placeholder="Your Manager's First Name" class="form-control" ng-model="goalsFormInfo.managerFirstName" required>
-							<div ng-if="goalSetting.$submitted && goalSetting.managerFirstName.$invalid">
+							<input type="text" name="manFirstName" id="manFirstName" placeholder="Manager First Name" class="form-control" ng-model="goalsFormInfo.manFirstName" required>
+							<div ng-if="goalsForm.$submitted && goalsForm.manFirstName.$invalid">
 								 <div when="required" class="validation-error">This field is required</div>
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-6">
-							<input type="text" name="managerLastName" id="managerLastName" placeholder="Your Manager's Last Name" class="form-control" ng-model="goalsFormInfo.managerLastName" required>
-							<div ng-if="goalSetting.$submitted && goalSetting.managerLastName.$invalid">
+							<input type="text" name="manLastName" id="manLastName" placeholder="Manager Last Name" class="form-control" ng-model="goalsFormInfo.manLastName" required>
+							<div ng-if="goalsForm.$submitted && goalsForm.manLastName.$invalid">
 								 <div when="required" class="validation-error">This field is required</div>
 							</div>
 						</div>
@@ -196,7 +191,14 @@
 		</section>
 
 		<section class="row section buttons">
-			<button type="submit" class="btn btn-default">Save Goals</button>
+			<div class="col-sm-12">
+				<div class="form-group">
+					<button type="submit" class="btn btn-default">Save Goals</button>
+				</div>
+				<div>
+					<pre> goalsFormInfo = {{ goalsFormInfo | json }}</pre>
+				</div>
+			</div>
 		</section>
 
 	</form>
