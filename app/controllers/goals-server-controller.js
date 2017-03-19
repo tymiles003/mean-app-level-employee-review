@@ -15,7 +15,7 @@
 			if (err) return console.error('theres an error', err);
 			console.log('data has been SAVED! and here is the goal which is the req.body', goal);
 			// send the object back to the client as the response -- next stop: client-side controller
-			res.send(goal); // this simple line sends the data back to the client
+			res.send(goal); // this simple line sends the data back to the client after the post
 		});
 	};
 
@@ -27,8 +27,8 @@
 		// query the db and then stuff the query results into the response object
 		// looks like you use the model to run the find; here, refer to Goal
 		// TODO: Remove this hard-coded db query anbd go with a dyanmic query based on lion login
-		Goal.find({teamMemberFName: 'Scott'}).limit(1).exec(function(error, results) {
-			console.log('GOAL results here!: ', results);
+		Goal.find({empFirstName: 'Megan'}).limit(1).exec(function(error, results) {
+			console.log('Megan GOAL results here!: ', results);
 			if (error) {
 				return next(error);
 			}

@@ -1,16 +1,54 @@
 var mongoose = require('mongoose'),
 	Schema = mongoose.Schema;
 
+// TODO: Order fields like they are in the View
 var GoalSchema = new Schema({
-	teamMemberFName: {
+
+	resultsGoal1Desc: {
 		type: String,
 		required: true
 	},
-	teamMemberLName: {
+	resultsGoal1Date: {
+		type: String, // Date
+		required: true
+	},
+	resultsGoal1Status: {
 		type: String,
 		required: true
 	},
-	teamMemberTitle: {
+	expertGoal1Desc: {
+		type: String,
+		required: true
+	},
+	expertGoal1Date: {
+		type: String, // Date
+		required: true
+	},
+	expertGoal1Status: {
+		type: String,
+		required: true
+	},
+	collabGoal1Desc: {
+		type: String,
+		required: true
+	},
+	collabGoal1Date: {
+		type: String, // Date
+		required: true
+	},
+	collabGoal1Status: {
+		type: String,
+		required: true
+	},
+	empFirstName: {
+		type: String,
+		required: true
+	},
+	empLastName: {
+		type: String,
+		required: true
+	},
+	empJobTitle: {
 		type: String,
 		required: true
 	},
@@ -18,50 +56,14 @@ var GoalSchema = new Schema({
 		type: Number,
 		required: true
 	},
-	memberManagerFName: {
+	manFirstName: {
 		type: String,
 		required: true
 	},
-	memberManagerLName: {
+	manLastName: {
 		type: String,
 		required: true
-	},
-	resultGoalDueDateOne: {
-		type: String, // TODO: Use type: Date when you can test this
-		required: true
-	},
-	resultGoalStatusOne: {
-		type: Number,
-		required: true
-	},
-	resultsGoalOne: {
-		type: String,
-		required: true
-	},
-	expertiseGoalDueDateOne: {
-		type: String, // TODO: Use type: Date when you can test this
-		required: true
-	},
-	expertiseGoalStatusOne: {
-		type: Number,
-		required: true
-	},
-	expertiseGoalOne: {
-		type: String,
-		required: true
-	},
-	collaborationGoalDueDateOne: {
-		type: String, // TODO: Use type: Date when you can test this
-		required: true
-	},
-	collaborationGoalStatusOne: {
-		type: Number,
-		required: true
-	},
-	collaborationsGoalOne: {
-		type: String,
-		rquired: true
-	},
+	}
 });
 
 mongoose.model('Goal', GoalSchema);
