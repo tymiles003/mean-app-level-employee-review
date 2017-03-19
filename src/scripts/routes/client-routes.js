@@ -42,8 +42,8 @@
                     })
                     .state('self-assess', {
                         url: '/reviews/self-assess',
-                        templateUrl: 'views/self-assess-view.html'
-                        // controller: 'SelfAssessCtrl'
+                        templateUrl: 'views/self-assess-view.html',
+                        controller: 'SelfAssessCtrl'
                     })
                     .state('annual-review', {
                         url: '/reviews/manager-review',
