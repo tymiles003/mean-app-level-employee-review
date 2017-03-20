@@ -1,6 +1,7 @@
 /*
  * file: peer-feedback-controller.js
  */
+
 (function(document, window, angular) {
 
     'use strict';
@@ -9,9 +10,7 @@
 
         $scope.peerFormInfo = {};
 
-        // scope properties
-        // TODO: use controller as syntax instead of $scope
-        $scope.codename = 'Skunkworks Quicksilver';
+        // define form UI shortcut scope properties
         $scope.ratings = [
             'Not at All',
             'Sometimes',
@@ -20,21 +19,28 @@
             'Always'
         ];
 
-        // TODO: move db post stuff from here into a data service
-        $scope.submitFeedback = function() {
-            console.log('pending form submission via $http.post...');
+        $scope.getFeedback = function() {
+            $http.get('/perform-api/feedback-get')
+                .then(function(response){
+                    console.log(' the full Feedback RESPONSE: ', response);
+                    // assign the response object to the $scope.peerFormInfo object to get form fields to prefill
+                    $scope.peerFormInfo = response.data[0];
+                });
 
-            $http.post('/perform-api/feedback-set', $scope.peerFormInfo) // needs a back-end route to tie to
+        }
+
+        $scope.submitFeedback = function() {
+            $http.post('/perform-api/feedback-set', $scope.peerFormInfo)
                 .then(
                     function(response) {
-                        // process the response / re-load the $scope
                         $location.path('/dashboard');
                     }
                 );
-
-
-
         };
+
+        // call getFeedback to get any saved feedbacks for pre-fill
+        $scope.getFeedback();
+
     };
 
     module.exports = PeerFeedbackCtrl;

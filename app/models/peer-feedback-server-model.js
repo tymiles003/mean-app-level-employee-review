@@ -1,6 +1,7 @@
 /*
  * file: peer-feedback-server-model.js
  */
+
 // 1- require the mongoose libs you need
 var mongoose = require('mongoose'),
 	Schema = mongoose.Schema;
@@ -15,11 +16,11 @@ var PeerFeedbackSchema = new Schema({
 		type: String,
 		required: true
 	},
-	employeeFirstName: {
+	empFirstName: {
 		type: String,
 		required: true
 	},
-	employeeLastName: {
+	empLastName: {
 		type: String,
 		required: true
 	},
@@ -47,19 +48,19 @@ var PeerFeedbackSchema = new Schema({
 		type: String,
 		required: true
 	},
-	expertiseRole: {
+	expertRole: {
 		type: String,
 		required: true
 	},
-	expertiseImprove: {
+	expertImprove: {
 		type: String,
 		required: true
 	},
-	expertiseSkills: {
+	expertSkills: {
 		type: String,
 		required: true
 	},
-	expertiseAutonomous: {
+	expertAutonomous: {
 		type: String,
 		required: true
 	},
@@ -75,7 +76,6 @@ var PeerFeedbackSchema = new Schema({
 		type: String,
 		required: true
 	},
-
 	supportingComments: {
 		type: String,
 		required: true

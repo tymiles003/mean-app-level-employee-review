@@ -6,7 +6,7 @@
 
 		$scope.goalsFormInfo = {};
 
-		// goal status select options
+		// define form UI shortcut scope properties
 		$scope.goalStatus = [
 			'Not Started',
 			'Behind Schedule',
@@ -14,8 +14,7 @@
 			'Completed'
 		];
 
-
-		$scope.prefillGoals = function(){
+		$scope.getGoals = function(){
 			$http.get('/perform-api/goal-get')
 				.then(function(response){
 					console.log(' the full RESPONSE: ', response);
@@ -32,7 +31,6 @@
 			// make var for if goals submitted flag -- then check it and if true, use $http.put
 
 			$http.post('/perform-api/goal-set', $scope.goalsFormInfo)
-
 					.then(
 					function(response) {
 						// process the response / re-load the $scope
@@ -42,10 +40,10 @@
 				);
 		};
 
-	$scope.prefillGoals();
+		// call getGoals to get any saved goals for pre-fill
+		$scope.getGoals();
 
 	};
-
 
 	module.exports = GoalsCtrl;
 
