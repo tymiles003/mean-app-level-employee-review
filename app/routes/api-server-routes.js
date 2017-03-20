@@ -20,6 +20,7 @@ module.exports = function(app) {
 
 	// Peer Feedback
 	app.route('/perform-api/feedback-set').post(feedbackServerCntl.postFeedbackData);
+	app.route('/perform-api/feedback-get').get(feedbackServerCntl.getFeedbackData);
 
 	// Halfway Checkin Test
 	app.route('/perform-api/halfway-set').post(halfwayServerCntl.postData);

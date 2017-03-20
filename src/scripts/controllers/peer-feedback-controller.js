@@ -19,22 +19,27 @@
             'Always'
         ];
 
+        $scope.getFeedback = function() {
+            $http.get('/perform-api/feedback-get')
+                .then(function(response){
+                    console.log(' the full Feedback RESPONSE: ', response);
+                    // assign the response object to the $scope.peerFormInfo object to get form fields to prefill
+                    $scope.peerFormInfo = response.data[0];
+                });
+
+        }
 
         $scope.submitFeedback = function() {
-            console.log('pending form submission via $http.post...');
-
-            $http.post('/perform-api/feedback-set', $scope.peerFormInfo) // still needs a back-end route to tie to
+            $http.post('/perform-api/feedback-set', $scope.peerFormInfo)
                 .then(
                     function(response) {
-                        // process the response / re-load the $scope
                         $location.path('/dashboard');
                     }
                 );
-
-
-
         };
 
+        // call getFeedback to get any saved feedbacks for pre-fill
+        $scope.getFeedback();
 
     };
 
