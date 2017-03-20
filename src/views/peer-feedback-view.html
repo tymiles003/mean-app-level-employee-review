@@ -16,16 +16,15 @@
 
                 <div class="row form-group">
                     <label for="peerFirstName">Peer Reviewer Name<span class="required">*</span></label>
-
                     <div class="row">
                         <div class="col-xs-12 col-sm-6 form-group">
-                            <input type="text" name="peerFirstName" id="peerFirstName" placeholder="First Name" class="form-control" ng-model="peerFormInfo.peerFirstName" required>
+                            <input type="text" name="peerFirstName" id="peerFirstName" placeholder="Peer Reviewer First Name" class="form-control" ng-model="peerFormInfo.peerFirstName" required>
                             <div ng-messages="peerForm.peerFirstName.$error" ng-show="peerForm.peerFirstName.$invalid && peerForm.$submitted">
                                 <div ng-message="required" class="validation-error">This field is required</div>
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-6 form-group">
-                            <input type="text" name="peerLastName" id="peerLastName" placeholder="Last Name" class="form-control" ng-model="peerFormInfo.peerLastName" required>
+                            <input type="text" name="peerLastName" id="peerLastName" placeholder="Peer Reviewer Last Name" class="form-control" ng-model="peerFormInfo.peerLastName" required>
                             <div ng-messages="peerForm.peerLastName.$error" ng-show="peerForm.peerLastName.$invalid && peerForm.$submitted">
                                 <div ng-message="required" class="validation-error">This field is required</div>
                             </div>
@@ -34,18 +33,18 @@
                 </div>
 
                 <div class="row form-group">
-                    <label for="employeeFirstName">Team Member Name<span class="required">*</span></label>
+                    <label for="empFirstName">Team Member Name<span class="required">*</span></label>
 
                     <div class="row">
                         <div class="col-xs-12 col-sm-6 form-group">
-                            <input type="text" name="employeeFirstName" id="employeeFirstName" placeholder="First Name" class="form-control" ng-model="peerFormInfo.employeeFirstName" required>
-                            <div ng-messages="peerForm.employeeFirstName.$error" ng-show="peerForm.employeeFirstName.$invalid && peerForm.$submitted">
+                            <input type="text" name="empFirstName" id="empFirstName" placeholder="Team Member First Name" class="form-control" ng-model="peerFormInfo.empFirstName" required>
+                            <div ng-messages="peerForm.empFirstName.$error" ng-show="peerForm.empFirstName.$invalid && peerForm.$submitted">
                                 <div ng-message="required" class="validation-error">This field is required</div>
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-6 form-group">
-                            <input type="text" name="employeeLastName" id="employeeLastName" placeholder="Last Name" class="form-control" ng-model="peerFormInfo.employeeLastName" required>
-                            <div ng-messages="peerForm.employeeLastName.$error" ng-show="peerForm.employeeLastName.$invalid && peerForm.$submitted">
+                            <input type="text" name="empLastName" id="empLastName" placeholder="Team Member Last Name" class="form-control" ng-model="peerFormInfo.empLastName" required>
+                            <div ng-messages="peerForm.empLastName.$error" ng-show="peerForm.empLastName.$invalid && peerForm.$submitted">
                                 <div ng-message="required" class="validation-error">This field is required</div>
                             </div>
                         </div>
@@ -69,8 +68,8 @@
                         <label for="feedbackYear">Feedback Year<span class="required">*</span></label>
                         <select name="feedbackYear" id="feedbackYear" class="form-control" ng-model="peerFormInfo.feedbackYear" required>
                             <option value="">Please select a year</option>
-                            <option value="2016-2017">2016-2017</option>
-                            <option value="2017-2018">2017-2018</option>
+                            <option value="2017">2016-2017</option>
+                            <option value="2018">2017-2018</option>
                         </select>
                         <div ng-messages="peerForm.feedbackYear.$error" ng-show="peerForm.feedbackYear.$invalid && peerForm.$submitted">
                             <div ng-message="required" class="validation-error">This field is required</div>
@@ -136,52 +135,52 @@
 
                     <div class="row form-group">
                         <h3 class="subsection-subheader">Expertise</h3>
-                        <label for="expertiseRole" class="col-xs-12 col-sm-6">This individual understands their role and responsibilities</label>
+                        <label for="expertRole" class="col-xs-12 col-sm-6">This individual understands their role and responsibilities</label>
                         <div class="col-xs-12 col-sm-6">
-                            <select name="expertiseRole" id="expertiseRole" class="form-control" ng-model="peerFormInfo.expertiseRole" required>
+                            <select name="expertRole" id="expertRole" class="form-control" ng-model="peerFormInfo.expertRole" required>
                                 <option value="">Please select a rating</option>
                                 <option ng-repeat="rating in ratings" value="{{rating}}">{{rating}}</option>
                             </select>
-                            <div ng-messages="peerForm.expertiseRole.$error" ng-show="peerForm.expertiseRole.$invalid && peerForm.$submitted">
+                            <div ng-messages="peerForm.expertRole.$error" ng-show="peerForm.expertRole.$invalid && peerForm.$submitted">
                                 <div ng-message="required" class="validation-error">This field is required</div>
                             </div>
                         </div>
                     </div>
 
                     <div class="row form-group">
-                        <label for="expertiseImprove" class="col-xs-12 col-sm-6">This individual is regularly looking to improve their skills</label>
+                        <label for="expertImprove" class="col-xs-12 col-sm-6">This individual is regularly looking to improve their skills</label>
                         <div class="col-xs-12 col-sm-6">
-                            <select name="expertiseImprove" id="expertiseImprove" class="form-control" ng-model="peerFormInfo.expertiseImprove" required>
+                            <select name="expertImprove" id="expertImprove" class="form-control" ng-model="peerFormInfo.expertImprove" required>
                                 <option value="">Please select a rating</option>
                                 <option ng-repeat="rating in ratings" value="{{rating}}">{{rating}}</option>
                             </select>
-                            <div ng-messages="peerForm.expertiseImprove.$error" ng-show="peerForm.expertiseImprove.$invalid && peerForm.$submitted">
+                            <div ng-messages="peerForm.expertImprove.$error" ng-show="peerForm.expertImprove.$invalid && peerForm.$submitted">
                                 <div ng-message="required" class="validation-error">This field is required</div>
                             </div>
                         </div>
                     </div>
 
                     <div class="row form-group">
-                        <label for="expertiseSkills" class="col-xs-12 col-sm-6">This individual has the necessary skills &amp; experience for their role</label>
+                        <label for="expertSkills" class="col-xs-12 col-sm-6">This individual has the necessary skills &amp; experience for their role</label>
                         <div class="col-xs-12 col-sm-6">
-                            <select name="expertiseSkills" id="expertiseSkills" class="form-control" ng-model="peerFormInfo.expertiseSkills" required>
+                            <select name="expertSkills" id="expertSkills" class="form-control" ng-model="peerFormInfo.expertSkills" required>
                                 <option value="">Please select a rating</option>
                                 <option ng-repeat="rating in ratings" value="{{rating}}">{{rating}}</option>
                             </select>
-                            <div ng-messages="peerForm.expertiseSkills.$error" ng-show="peerForm.expertiseSkills.$invalid && peerForm.$submitted">
+                            <div ng-messages="peerForm.expertSkills.$error" ng-show="peerForm.expertSkills.$invalid && peerForm.$submitted">
                                 <div ng-message="required" class="validation-error">This field is required</div>
                             </div>
                         </div>
                     </div>
 
                     <div class="row form-group">
-                        <label for="expertiseAutonomous" class="col-xs-12 col-sm-6">This individual manages their work autonomously</label>
+                        <label for="expertAutonomous" class="col-xs-12 col-sm-6">This individual manages their work autonomously</label>
                         <div class="col-xs-12 col-sm-6">
-                            <select name="expertiseAutonomous" id="expertiseAutonomous" class="form-control" ng-model="peerFormInfo.expertiseAutonomous" required>
+                            <select name="expertAutonomous" id="expertAutonomous" class="form-control" ng-model="peerFormInfo.expertAutonomous" required>
                                 <option value="">Please select a rating</option>
                                 <option ng-repeat="rating in ratings" value="{{rating}}">{{rating}}</option>
                             </select>
-                            <div ng-messages="peerForm.expertiseAutonomous.$error" ng-show="peerForm.expertiseAutonomous.$invalid && peerForm.$submitted">
+                            <div ng-messages="peerForm.expertAutonomous.$error" ng-show="peerForm.expertAutonomous.$invalid && peerForm.$submitted">
                                 <div ng-message="required" class="validation-error">This field is required</div>
                             </div>
                         </div>
@@ -241,7 +240,6 @@
             </div>
 </section>
 
-        
         <section class="row section buttons">
             <div class="col-sm-12">
                 <div class="form-group">

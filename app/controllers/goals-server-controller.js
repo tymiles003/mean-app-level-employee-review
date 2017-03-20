@@ -1,11 +1,16 @@
+/*
+ * file: goals-server-controller.js
+ */
+
 (function(require, exports) {
 
 	'use strict';
 
-	// Module dependencies
+	// mongoose, model dependencies
 	var mongoose = require('mongoose'),
 		Goal = mongoose.model('Goal');
 
+	// Post to DB
 	exports.postGoalData = function(req, res, next) {
 
 		var goal = new Goal(req.body);
