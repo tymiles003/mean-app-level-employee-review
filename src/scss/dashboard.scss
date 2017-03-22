@@ -196,8 +196,23 @@
 		}
 
 		// Completed cards
+		.completed {
+
+			.icon-row {
+				text-align: center;
+				font-size: 60px;
+				color: $light-grey;
+			}
+		}
+
 		.completed-block {
 			@include border($lightest-grey);
+
+			&.completed-recent {
+				background: rgba($success, .2);
+
+				@include border($success);
+			}
 		}
 
 		.icon-edit {
