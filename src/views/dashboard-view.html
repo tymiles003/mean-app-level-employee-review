@@ -25,7 +25,7 @@
 		<div class="col-sm-12 dash-card completed">
 			<h3>Recently Completed:</h3>
 
-			<div class="completed-block">
+			<div class="completed-block completed-recent">
 				<p class="completed-item">Peer Feedback: Praise Burnham</p>
 				<p class="completed-date">Submission period ended. <a ui-sref="peer-feedback" target="_blank">View Submission.</a></p>
 				<p class="completed-date">Date submitted: 08/25/2017</p>
@@ -42,17 +42,7 @@
 				<p class="completed-date">Submission period ended. <a ui-sref="peer-feedback" target="_blank">View Submission.</a></p>
 				<p class="completed-date">Date submitted: 08/15/2017</p>
 			</div>
-
-			<div class="row card-sort">
-				<div class="filter col-xs-6">
-					<input type="search" placeholder="Filter by name" class="sort-input search" />
-				</div>
-				<div class="paginator col-xs-6">
-					<div class="prev-arrow"></div>
-					<input type="number" value="1" name="completed-page" class="sort-input page-number"/> of <span class="total-pages">30</span>
-					<div class="next-arrow"></div>
-				</div>
-			</div>
+			<button class="btn btn-alt" ui-sref="dash-archive">View Archive</button>
 		</div>
 
 		<div class="col-sm-12 dash-card cycle">
