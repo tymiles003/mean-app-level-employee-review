@@ -250,9 +250,19 @@
 				text-align: right;
 			}
 
+			.filter, .view-amount, .paginator {
+				margin: 0 0 10px;
+			}
+
+			.view-select {
+				padding-right: 40px;
+				background-size: 15px 10px;
+				@include border($lightest-grey);
+			}
+
 			.sort-input {
 				@include border($lightest-grey);
-				max-width: 100%;
+				width: 100%;
 
 				&.page-number {
 					width: 28px;
