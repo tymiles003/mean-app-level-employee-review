@@ -168,6 +168,15 @@
 			margin: 0;
 		}
 
+		.completed, .to-do {
+
+			.icon-row {
+				text-align: center;
+				font-size: 60px;
+				color: $light-grey;
+			}
+		}
+
 		// To Do cards
 		.to-do-block {
 			@include border($red);
@@ -196,15 +205,6 @@
 		}
 
 		// Completed cards
-		.completed {
-
-			.icon-row {
-				text-align: center;
-				font-size: 60px;
-				color: $light-grey;
-			}
-		}
-
 		.completed-block {
 			@include border($lightest-grey);
 
