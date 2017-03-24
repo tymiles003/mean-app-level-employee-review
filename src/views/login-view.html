@@ -14,14 +14,14 @@
 				<div class="row">
 					<div class="col-xs-12 col-sm-6 form-group">
 						<label for="userLogin">User Login<span class="required">*</span></label>
-						<input type="text" name="userLogin" id="userLogin" placeholder="User Login" class="form-control" required ng-model="credentials.userLogin">
+						<input type="text" name="userLogin" id="userLogin" placeholder="User Login" class="form-control" required ng-model="loginFormInfo.userLogin">
 						<div ng-messages="loginForm.userLogin.$error" ng-if="loginForm.userLogin.$invalid && loginForm.$submitted">
 							<div ng-message="required" class="validation-error">This field is required</div>
 						</div>
 					</div>
 					<div class="col-xs-12 col-sm-6 form-group">
 						<label for="password">Password<span class="required">*</span></label>
-						<input type="password" name="password" id="password" placeholder="Password" class="form-control" required ng-model="credentials.password">
+						<input type="password" name="password" id="password" placeholder="Password" class="form-control" required ng-model="loginFormInfo.password">
 						<div ng-messages="loginForm.password.$error" ng-if="loginForm.password.$invalid && loginForm.$submitted">
 							<div ng-message="required" class="validation-error">This field is required</div>
 						</div>
@@ -36,7 +36,7 @@
 					<button type="submit" class="btn btn-default">Log In</button>
 				</div>
 				<div>
-					<pre>credentials = {{ credentials | json}}</pre>
+					<pre>loginFormInfo = {{ loginFormInfo | json}}</pre>
 				</div>
 			</div>
 		</section>
