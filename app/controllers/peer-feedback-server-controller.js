@@ -1,29 +1,37 @@
 /*
  * file: peer-feedback-server-controller.js
  */
+
 (function(require, exports) {
 
     'use strict';
 
-    // require mongoose and the associated model
+    // Mongoose, model dependencies
     var mongoose = require('mongoose');
     var PeerFeedback = mongoose.model('PeerFeedback');
 
-    // post feedback data to the db using the PeerFeedback model
+    // GET Feedbacks from DB
+    exports.getFeedbackData = function(req, res, next) {
+
+        // query the db with a model and process results
+        PeerFeedback.find({peerFirstName: 'Megan'}).limit(1).exec(function(error, results) {
+            console.log('Megan FEEDBACK results here!: ', results);
+            if (error) return next(error);
+            // Respond with valid data
+            res.json(results);
+        });
+    };
+
+    // POST Feedback to DB
     exports.postFeedbackData = function(req, res, next) {
 
-        var feedback = new PeerFeedback(req.body); // create a new instance of your model based on the request data
-        console.log('new feedback object instance from feedback view page comin at ya', feedback);
+        var feedback = new PeerFeedback(req.body);
 
         // save this object to the mongo db
         feedback.save(function(err, feedback) {
-            if (err) {
-                return console.error('theres an error', err);
-            }
-
-            console.log('feedback data has been SAVED! and here is the feedback which is the req.body', feedback);
-            // send the feedback object back to the client as the response -- next stop: client-side peer feedback controller
-            res.send(feedback); // sends the data back to the client as the response (res)
+            if (err) return console.error('theres an error', err);
+            // Send Feedback data object back to the client as response (res)
+            res.send(feedback);
         });
     };
 

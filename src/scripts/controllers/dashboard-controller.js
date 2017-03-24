@@ -1,8 +1,19 @@
 (function(document, window, angular) {
 	'use strict';
 
-	var DashboardCtrl = function($scope, $stateParams) {
-		$scope.name = 'Megan Prior-Pfeifer';
+	var DashboardCtrl = function ($scope, UserStorageService) {
+
+
+		// set name to the currentUser from the UserStorageService (+ do some hard-coded pretty print for name)
+		if (UserStorageService.currentUser === 'skao') {
+			$scope.name = 'Scott Kao';
+		} else if (UserStorageService.currentUser === 'mprior') {
+			$scope.name = 'Megan Prior-Pfeiffer';
+		} else if (UserStorageService.currentUser === 'willoran') {
+			$scope.name = 'Will Lorand';
+		} else {
+			$scope.name = UserStorageService.currentUser;
+		}
 
 		var today = new Date();
 		var monthArray = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
