@@ -26,7 +26,6 @@ var HalfwayCheckinCtrl = require('./controllers/halfway-checkin-controller');
 var PeerFeedbackCtrl = require('./controllers/peer-feedback-controller');
 var ManagerReviewCtrl = require('./controllers/manager-review-controller');
 var SelfAssessCtrl = require('./controllers/self-assess-controller');
-var NineBoxCtrl = require('./controllers/nine-box-controller');
 
 // include Ang Service js files into the build
 
@@ -48,7 +47,6 @@ var mainAppModule = angular.module(qsApp, ['ngRoute', 'ngMessages', 'ngAnimate',
 	.controller('PeerFeedbackCtrl', ['$scope', '$http', '$location', PeerFeedbackCtrl])
 	.controller('ManagerReviewCtrl', ['$scope', '$http', '$location', ManagerReviewCtrl])
 	.controller('SelfAssessCtrl', ['$scope', '$http', '$location', SelfAssessCtrl])
-	.controller('NineBoxCtrl', ['$scope', '$http', '$location', NineBoxCtrl])
 
 	// Register Services for your App
 
