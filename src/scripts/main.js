@@ -26,11 +26,13 @@ var HalfwayCheckinCtrl = require('./controllers/halfway-checkin-controller');
 var PeerFeedbackCtrl = require('./controllers/peer-feedback-controller');
 var ManagerReviewCtrl = require('./controllers/manager-review-controller');
 var SelfAssessCtrl = require('./controllers/self-assess-controller');
+var NineBoxCtrl = require('./controllers/nine-box-controller');
 
 // include Ang Service js files into the build
 
 // include Ang Directive js files into the build
 var calendarWheelDirective = require('./directives/calendar-wheel-directive');
+var nineBoxDirective = require('./directives/nine-box-directive');
 
 // Define the main angular application module name by var
 var qsApp = 'quicksilver';
@@ -46,11 +48,13 @@ var mainAppModule = angular.module(qsApp, ['ngRoute', 'ngMessages', 'ngAnimate',
 	.controller('PeerFeedbackCtrl', ['$scope', '$http', '$location', PeerFeedbackCtrl])
 	.controller('ManagerReviewCtrl', ['$scope', '$http', '$location', ManagerReviewCtrl])
 	.controller('SelfAssessCtrl', ['$scope', '$http', '$location', SelfAssessCtrl])
+	.controller('NineBoxCtrl', ['$scope', '$http', '$location', NineBoxCtrl])
 
 	// Register Services for your App
 
 	// Register Directives for your App
 	.directive('lvlCalendarWheel', calendarWheelDirective)
+	.directive('lvlNineBox', nineBoxDirective)
 
 	// configure Local Storage as an angular .config
 	.config(['localStorageServiceProvider', function(localStorageServiceProvider) {
