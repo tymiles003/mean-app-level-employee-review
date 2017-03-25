@@ -25,6 +25,10 @@
                         url: '/dashboard/resources',
                         templateUrl: 'views/dashboard-resources-view.html'
                     })
+                    .state('dash-archive', {
+                        url: '/dashboard/archive',
+                        templateUrl: 'views/dashboard-archive-view.html'
+                    })
                     .state('goals', {
                         url: '/goals',
                         templateUrl: 'views/goals-view.html',

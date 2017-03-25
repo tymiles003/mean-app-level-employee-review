@@ -3,9 +3,13 @@ select {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
-	background: #fff url('/assets/images/select-triangle-large.png') no-repeat 98% center !important;
+	background: #fff url('/assets/images/select-triangle-large.png') no-repeat 98% center;
 	border-radius: 0;
 	/*padding-right: 40px !important;*/
 	padding-right: 0;
 	padding-left: 0;
+
+	&.form-control {
+		background: #fff url('/assets/images/select-triangle-large.png') no-repeat 98% center;
+	}
 }

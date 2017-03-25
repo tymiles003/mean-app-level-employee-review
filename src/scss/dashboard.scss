@@ -168,6 +168,15 @@
 			margin: 0;
 		}
 
+		.completed, .to-do {
+
+			.icon-row {
+				text-align: center;
+				font-size: 60px;
+				color: $light-grey;
+			}
+		}
+
 		// To Do cards
 		.to-do-block {
 			@include border($red);
@@ -198,6 +207,12 @@
 		// Completed cards
 		.completed-block {
 			@include border($lightest-grey);
+
+			&.completed-recent {
+				background: rgba($success, .2);
+
+				@include border($success);
+			}
 		}
 
 		.icon-edit {
@@ -235,9 +250,19 @@
 				text-align: right;
 			}
 
+			.filter, .view-amount, .paginator {
+				margin: 0 0 10px;
+			}
+
+			.view-select {
+				padding-right: 40px;
+				background-size: 15px 10px;
+				@include border($lightest-grey);
+			}
+
 			.sort-input {
 				@include border($lightest-grey);
-				max-width: 100%;
+				width: 100%;
 
 				&.page-number {
 					width: 28px;
