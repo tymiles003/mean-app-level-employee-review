@@ -33,6 +33,7 @@ var UserStorageService = require('./services/user-storage-service');
 // include Ang Directive js files into the build
 // TODO: Add Ninebox as a custom Directive here
 var calendarWheelDirective = require('./directives/calendar-wheel-directive');
+var nineBoxDirective = require('./directives/nine-box-directive');
 
 // Define the main angular application module name by var
 var qsApp = 'quicksilver';
@@ -54,6 +55,7 @@ var mainAppModule = angular.module(qsApp, ['ngRoute', 'ngMessages', 'ngAnimate',
 
 	// Register Directives for your App
 	.directive('lvlCalendarWheel', calendarWheelDirective)
+	.directive('lvlNineBox', nineBoxDirective)
 
 	// configure Local Storage as an angular .config
 	.config(['localStorageServiceProvider', function(localStorageServiceProvider) {
