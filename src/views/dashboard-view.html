@@ -8,7 +8,7 @@
 		 	</div> -->
 
 		<div class="col-sm-12 dash-card user-details">
-			<h1 class="per-dash-user"><img src="/assets/images/profile-large-2x.png" alt="User profile image"/> {{name}} </h1>
+			<h1 class="per-dash-user"><img ng-src="/assets/images/profile/profile-{{ user }}-2x.png" alt="{{ name }} user profile image"/> {{ name }} </h1>
 			<p class="per-dash-date">Today is <span id="date"></span> {{mm}} {{dd}}, {{yyyy}}</p>
 		</div>
 		<div class="col-sm-12 dash-card to-do">
@@ -23,7 +23,7 @@
 			</div> -->
 
 			<div class="due-soon to-do-block">
-				<p class="due-item">Set Goals: Megan Prior-Pfeifer</p>
+				<p class="due-item">Set Goals: {{ name }}</p>
 				<p class="due-tasks">
 					<a class="icon-edit" ui-sref="goals"></a>
 					<a class="icon-ical"></a>
