@@ -2,10 +2,15 @@
 
 	'use strict';
 
-	var GoalsCtrl = function($scope, $http, $location) {
+	var GoalsCtrl = function($scope, $http, $location, UserStorageService) {
 
 		$scope.goalsFormInfo = {};
 
+		// Debug
+		console.log('IN GOALS AND CURRENT USER IS: ', UserStorageService.currentUser);
+		// Debug II - set the current User to one of the form fields
+		$scope.USER = UserStorageService.currentUser;
+	
 		// define form UI shortcut scope properties
 		$scope.goalStatus = [
 			'Not Started',
