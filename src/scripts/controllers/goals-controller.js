@@ -8,9 +8,7 @@
 
 		// Debug
 		console.log('IN GOALS AND CURRENT USER IS: ', UserStorageService.currentUser);
-		// Debug II - set the current User to one of the form fields
-		$scope.USER = UserStorageService.currentUser;
-	
+
 		// define form UI shortcut scope properties
 		$scope.goalStatus = [
 			'Not Started',
@@ -31,22 +29,28 @@
 		};
 
 		$scope.saveGoals = function() {
-			console.log('inside saveGoals & here is goalsFormInfo: ', JSON.stringify($scope.goalsFormInfo));
+
+			// add currentUser to the goalsFormInfo object before submitting (verify in dev console by outputting the whole object
+			$scope.goalsFormInfo.currentUser = UserStorageService.currentUser;
+			console.log('Has currentUser been added to the object? ', JSON.stringify($scope.goalsFormInfo));
+
 			// send form data to the server and .then use a promise to process the response
 			// make var for if goals submitted flag -- then check it and if true, use $http.put
 
-			$http.post('/perform-api/goal-set', $scope.goalsFormInfo)
-					.then(
-					function(response) {
-						// process the response / re-load the $scope
-						console.log('got response back from goal-set server-side method and here is response: ', response);
-						$location.path('/dashboard');
-					}
-				);
+			// $http.post('/perform-api/goal-set', $scope.goalsFormInfo)
+			// 		.then(
+			// 		function(response) {
+			// 			// process the response / re-load the $scope
+			// 			console.log('got response back from goal-set server-side method and here is response: ', response);
+			// 			$location.path('/dashboard');
+			// 		}
+			// 		);
 		};
 
 		// call getGoals to get any saved goals for pre-fill
 		$scope.getGoals();
+
+
 
 	};
 
