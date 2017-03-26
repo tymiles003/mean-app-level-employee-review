@@ -63,6 +63,10 @@ var GoalSchema = new Schema({
 	manLastName: {
 		type: String,
 		required: true
+	},
+	currentUser: {
+		type: String,
+		required: false
 	}
 });
 

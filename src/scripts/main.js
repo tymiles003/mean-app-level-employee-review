@@ -44,7 +44,7 @@ var mainAppModule = angular.module(qsApp, ['ngRoute', 'ngMessages', 'ngAnimate',
 	.controller('RegCtrl', ['$scope', '$http', '$location', RegCtrl])
 	.controller('LoginCtrl', ['$scope', '$http', '$location', 'UserStorageService', LoginCtrl])
 	.controller('DashboardCtrl', ['$scope', 'UserStorageService', DashboardCtrl])
-	.controller('GoalsCtrl', ['$scope', '$http', '$location', GoalsCtrl])
+	.controller('GoalsCtrl', ['$scope', '$http', '$location', 'UserStorageService', GoalsCtrl])
 	.controller('HalfwayCheckinCtrl', ['$scope', '$http', '$location', HalfwayCheckinCtrl])
 	.controller('PeerFeedbackCtrl', ['$scope', '$http', '$location', PeerFeedbackCtrl])
 	.controller('ManagerReviewCtrl', ['$scope', '$http', '$location', ManagerReviewCtrl])
