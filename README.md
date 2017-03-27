@@ -43,5 +43,4 @@ View the [Contributing Guide](https://wiki.level-studios.com/display/PROJ/Contri
 ## Release History
 View the [CHANGELOG](CHANGELOG.md).
 
-## License
-Copyright (c) 2016 LEVEL Studios. All rights reserved.
+
